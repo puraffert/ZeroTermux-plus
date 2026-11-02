@@ -342,6 +342,7 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_termux);
+        setupQuickTriggers();
 
         // Load termux shared preferences
         // This will also fail if TermuxConstants.TERMUX_PACKAGE_NAME does not equal applicationId
@@ -2970,6 +2971,23 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         mTerminalView.getTextSelectionCursorControllerView().setAskAiListener(this::showAiAgentPanel);
 
         mTerminalView.setActionPointer2ClickListener(() -> openToolDialog(true, 0, -1));
+    }
+
+    private void setupQuickTriggers() {
+        android.widget.TextView menuBtn = findViewById(R.id.btn_open_menu);
+        android.widget.TextView toolboxBtn = findViewById(R.id.btn_open_toolbox);
+        if (menuBtn != null) {
+            menuBtn.setOnClickListener(v -> {
+                v.performHapticFeedback(android.view.HapticFeedbackConstants.VIRTUAL_KEY);
+                if (mSlidingConsumer != null) mSlidingConsumer.smoothLeftOpen();
+            });
+        }
+        if (toolboxBtn != null) {
+            toolboxBtn.setOnClickListener(v -> {
+                v.performHapticFeedback(android.view.HapticFeedbackConstants.VIRTUAL_KEY);
+                openToolDialog(true, 0, -1);
+            });
+        }
     }
 
     private void openToolDialog(boolean isShowToolDialog, int index, int findKey) {

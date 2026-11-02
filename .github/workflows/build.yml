@@ -82,6 +82,9 @@ jobs:
       - name: 给 gradlew 执行权限
         run: chmod +x gradlew
 
+      - name: 下载 Bootstrap
+        run: ./gradlew downloadBootstraps
+
       - name: 映射架构名称
         id: abi
         run: |

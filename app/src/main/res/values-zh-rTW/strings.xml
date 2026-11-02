@@ -1,0 +1,2006 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources xmlns:ns0="http://schemas.android.com/tools">
+    <string name="application_name">ZeroTermux</string>
+    <string name="shared_user_label">ZeroTermux 用戶</string>
+
+    <string name="app_name">ZeroTermux</string>
+
+    
+    <string name="permission_run_command_label">運行命令 ZeroTermux 環境</string>
+    <string name="permission_run_command_description">內執行任意命令 ZeroTermux 環境</string>
+
+
+    
+    <string name="bootstrap_installer_body">安裝引導程序包…</string>
+    <string name="bootstrap_error_title">無法安裝引導程序</string>
+    <string name="bootstrap_error_body">ZeroTermux無法安裝引導程序包。</string>
+    <string name="bootstrap_error_abort">中止</string>
+    <string name="bootstrap_error_try_again">重試</string>
+    <string name="bootstrap_error_not_primary_user_message">ZeroTermux 只能以主用戶身份運行。\n編譯的 Bootstrap 二進位文件 ZeroTermux
+        有硬編碼 $PREFIX 路徑，不能安裝在任何路徑下 %1$s.</string>
+
+
+    
+    <string name="action_new_session">新會話</string>
+    <string name="action_new_session_failsafe">故障安全</string>
+    <string name="action_repair_mode">維修模式</string>
+    <string name="title_max_terminals_reached">達到最大終端</string>
+    <string name="msg_max_terminals_reached">在創建新的之前關閉現有的,如果在備份或恢復當中請忽略。</string>
+
+    <string name="title_rename_session">設置會話名稱</string>
+    <string name="action_rename_session_confirm">設置</string>
+    <string name="title_create_named_session">新命名的會話</string>
+    <string name="action_create_named_session_confirm">創建</string>
+
+    <string name="action_toggle_soft_keyboard">鍵盤</string>
+
+    <string name="msg_enabling_terminal_toolbar">啟用終端工具欄</string>
+    <string name="msg_disabling_terminal_toolbar">禁用終端工具欄</string>
+
+
+    
+    <string name="action_select_url">選擇網址</string>
+    <string name="title_select_url_dialog">點擊網址複製或長按打開</string>
+    <string name="title_select_url_none_found">在終端中找不到 URL。</string>
+    <string name="msg_select_url_copied_to_clipboard">網址已複製到剪貼板</string>
+
+    <string name="action_share_transcript">分享終端內容</string>
+    <string name="title_share_transcript">終端轉錄本</string>
+    <string name="title_share_transcript_with">將成績單發送至：</string>
+
+    <string name="action_autofill_password">自動填充密碼</string>
+
+    <string name="action_reset_terminal">重啟</string>
+    <string name="msg_terminal_reset">終端復位</string>
+
+    <string name="action_kill_process">關閉當前終端 (%d)</string>
+    <string name="title_confirm_kill_process">你確定殺死該會話?</string>
+
+    <string name="action_style_terminal">樣式</string>
+    <string name="action_toggle_keep_screen_on">保持屏幕開啟</string>
+    <string name="action_open_help">幫助</string>
+    <string name="action_open_settings">設置</string>
+
+    <string name="action_report_issue">報告問題</string>
+    <string name="msg_generating_report">生成報告</string>
+
+    <string name="error_styling_not_installed">這個 Termux:Styling 未安裝插件應用程式.</string>
+    <string name="action_styling_install">安裝</string>
+
+
+    
+    <string name="notification_action_exit">退出</string>
+    <string name="notification_action_wake_lock">獲取喚醒鎖</string>
+    <string name="notification_action_wake_unlock">釋放喚醒鎖</string>
+
+
+    
+    <string name="error_run_command_service_invalid_intent_action">對 RunCommandService 的無效意圖操作： `%1$s`</string>
+    <string name="error_run_command_service_mandatory_extra_missing">RunCommandService 缺少必要的額外內容： \"%1$s\"</string>
+    <string name="error_run_command_service_allow_external_apps_ungranted">RunCommandService 請求 `allow-external-apps` 要設置的屬性 `true` 裡 `~/.termux/termux.properties` 文件.</string>
+    <string name="error_run_command_service_api_help">訪問 %1$s 有關 RUN_COMMAND 意圖用法的更多信息。</string>
+
+
+    
+    <string name="msg_executable_absolute_path">可執行絕對路徑： \"%1$s\"</string>
+    <string name="msg_working_directory_absolute_path">工作目錄絕對路徑： \"%1$s\"</string>
+
+
+    
+    <string name="action_copy">複製</string>
+    <string name="action_share">分享</string>
+
+    <string name="title_share_with">共同分享</string>
+    <string name="title_report_text">報告文本</string>
+
+
+    
+    <string name="title_file_received">將文件保存在 ~/downloads/</string>
+    <string name="action_file_received_edit">編輯</string>
+    <string name="action_file_received_open_directory">打開目錄</string>
+
+
+    
+    <string name="error_allow_external_apps_ungranted">%1$s requires `allow-external-apps`
+        property to be set to `true` in `%2$s` file.</string>
+
+
+    
+    <string name="title_activity_termux_settings">ZeroTermux 設置</string>
+
+    
+    <string name="termux_preferences_title">ZeroTermux</string>
+    <string name="termux_preferences_summary">配置文件在 ZeroTermux app</string>
+
+    
+    <string name="termux_debugging_preferences_title">調試</string>
+    <string name="termux_debugging_preferences_summary">調試首選項</string>
+
+    
+    <string name="termux_logging_header">日誌記錄</string>
+
+    
+    <string name="termux_log_level_title">日誌等級</string>
+
+    
+    <string name="termux_terminal_view_key_logging_enabled_title">終端視圖鍵記錄</string>
+    <string name="termux_terminal_view_key_logging_enabled_off">日誌將沒有終端視圖鍵的條目。 （默認）</string>
+    <string name="termux_terminal_view_key_logging_enabled_on">Logcat 日誌將包含終端視圖鍵的條目。這些非常冗長，在正常情況下應該禁用，否則會導致性能問題。</string>
+
+    
+    <string name="termux_plugin_error_notifications_enabled_title">插件錯誤通知</string>
+    <string name="termux_plugin_error_notifications_enabled_off">禁用插件錯誤的閃爍和通知。</string>
+    <string name="termux_plugin_error_notifications_enabled_on">顯示插件錯誤的閃爍和通知。 （默認）</string>
+
+    
+    <string name="termux_crash_report_notifications_enabled_title">崩潰報告通知</string>
+    <string name="termux_crash_report_notifications_enabled_off">禁用崩潰報告的通知。</string>
+    <string name="termux_crash_report_notifications_enabled_on">顯示崩潰報告的通知。 （默認）</string>
+
+
+    
+    <string name="termux_terminal_io_preferences_title">終端輸入/輸出</string>
+    <string name="termux_terminal_io_preferences_summary">終端 I/O 的首選項</string>
+
+    
+    <string name="termux_keyboard_header">鍵盤</string>
+
+    
+    <string name="termux_soft_keyboard_enabled_title">軟鍵盤已啟用</string>
+    <string name="termux_soft_keyboard_enabled_off">軟鍵盤將被禁用。</string>
+    <string name="termux_soft_keyboard_enabled_on">軟鍵盤將被啟用。（默認）</string>
+
+    
+    <string name="termux_soft_keyboard_enabled_only_if_no_hardware_title">無硬體時僅軟鍵盤</string>
+    <string name="termux_soft_keyboard_enabled_only_if_no_hardware_off">即使連接了硬體鍵盤，也將啟用軟鍵盤。 （默認）</string>
+    <string name="termux_soft_keyboard_enabled_only_if_no_hardware_on">只有在沒有連接硬體鍵盤時才會啟用軟鍵盤。</string>
+
+
+    
+    <string name="termux_tasker_preferences_title">Termux:Tasker</string>
+    <string name="termux_tasker_preferences_summary">配置文件在 Termux:Tasker app</string>
+    <string name="action_autofill_username">自動填充用戶名</string>
+    <string name="error_termux_service_start_failed_general">TermuxService 啟動失敗。請查看logcat中的異常信息。</string>
+    <string name="error_termux_service_start_failed_bg">應用在後臺時TermuxService啟動失敗，原因是android啟動了前臺服務</string>
+
+
+    
+    <string name="about_preference_title">關於</string>
+
+    
+    <string name="donate_preference_title">捐贈</string>
+    <string name="切换源">切換源</string>
+    <string name="容器切换">容器切換</string>
+    <string name="备份恢复">備份/恢復</string>
+    <string name="发行版本">發行版本</string>
+    <string name="QEMU">QEMU</string>
+    <string name="命令定义">命令定義</string>
+    <string name="短信通话">簡訊/通話</string>
+    <string name="打开目录">打開目錄</string>
+    <string name="开机启动">開機啟動(關)</string>
+    <string name="开机启动开">開機啟動(開)</string>
+    <string name="MOE">MOE</string>
+    <string name="MOE全能">MOE全能</string>
+    <string name="清华源">清華源</string>
+    <string name="北京源">北京源</string>
+    <string name="官方源">官方源</string>
+    <string name="警告">警告</string>
+    <string name="该操作会覆盖您的文件记录">該操作會覆蓋您的文件記錄,是否繼續?</string>
+    <string name="确定">確定</string>
+    <string name="无名称系统">無名稱容器</string>
+    <string name="删除">刪除</string>
+    <string name="切换">切換</string>
+    <string name="删除完成_需要重进才能刷新">請選擇菜單功能</string>
+    <string name="备份">備份</string>
+    <string name="恢复">恢復</string>
+    <string name="设置">設置</string>
+    <string name="有任务正在进行">有任務正在進行</string>
+    <string name="有任务进行中">有任務進行中</string>
+    <string name="按钮一开始启动您的备份">開始啟動您的備份</string>
+    <string name="开始备份">開始備份</string>
+    <string name="你没有SD卡权限">你沒有SD卡權限</string>
+    <string name="选择您的备份方式">選擇您的備份方式</string>
+    <string name="默认备份">默認備份</string>
+    <string name="强制备份">強制備份</string>
+    <string name="没有找到目录">沒有找到目錄</string>
+    <string name="这块直接输入回车即可">echo "這塊直接輸入回車即可" \n</string>
+    <string name="开始">開始</string>
+    <string name="不要说备份着闪退之类的">不要說備份著閃退之類的</string>
+    <string name="备份完成">備份完成</string>
+    <string name="已成功备份已成功备份">已成功備份已成功備份</string>
+    <string name="我知道了">我知道了</string>
+    <string name="开始检测备份环境">開始檢測備份環境</string>
+    <string name="备份环境监测完成">備份環境監測完成</string>
+    <string name="开始检测是否有sd卡软链接">開始檢測是否有sd卡軟連結</string>
+    <string name="没有找到storage目录">沒有找到storage目錄</string>
+    <string name="已检测到软连接">已檢測到軟連接</string>
+    <string name="秒后开始备份">秒後開始備份</string>
+    <string name="没有SD卡权限">沒有可恢復文件!</string>
+    <string name="恢复方式">恢復方式</string>
+    <string name="默认恢复">默認恢復</string>
+    <string name="强制恢复">強制恢復</string>
+    <string name="请输入系统名称">請輸入系統名稱</string>
+    <string name="请稍等此过程禁止切屏">請稍等此過程禁止切屏</string>
+    <string name="正在搜索多系统">正在搜索多系統</string>
+    <string name="危险">危險</string>
+    <string name="恢复设备数据会擦除掉之前所有的数据">恢復設備數據會擦除掉之前所有的數據</string>
+    <string name="我清楚我在做什么">我清楚我在做什麼</string>
+    <string name="我在考虑考虑">我在考慮考慮</string>
+    <string name="开始清除数据">開始清除數據</string>
+    <string name="恢复完成会自定退出">恢復完成會自定退出</string>
+    <string name="恢复完成会自定退出擦除">恢復完成會自定退出擦除</string>
+    <string name="恢复完成会自定退出写入">恢復完成會自定退出寫入</string>
+    <string name="恢复完成会自定退出写展开">恢復完成會自定退出寫展開</string>
+    <string name="恢复完成会自定退出写恢复">恢復完成會自定退出寫恢復</string>
+    <string name="恢复完成请重启APP">恢復完成請重啟APP</string>
+    <string name="恢复成功如果很短">恢復成功如果很短</string>
+    <string name="你必须重启APP才能使用新的恢复系统">你必須重啟APP才能使用新的恢復系統</string>
+    <string name="出现了一个错误">出現了一個錯誤</string>
+    <string name="确定开始">確定開始備份您的當前系統?</string>
+    <string name="提示">提示</string>
+    <string name="确定要恢复">確定要恢復並創建一個新容器系統?</string>
+    <string name="海的QEMU">海的QEMU</string>
+    <string name="当前为自动">當前為自動</string>
+    <string name="键盘">鍵盤</string>
+    <string name="文件名不能为空">文件名不能為空</string>
+    <string name="出错了">出錯了</string>
+    <string name="添加一个命令">添加一個命令</string>
+    <string name="添加一个命令解释">添加一個命令解釋</string>
+    <string name="请选择运行的架构">請選擇運行的架構</string>
+    <string name="删除当前命令">刪除當前命令</string>
+    <string name="修改当前命令">修改當前命令</string>
+    <string name="名称不能为空">名稱不能為空</string>
+    <string name="命令不能为空">命令不能為空</string>
+    <string name="添加成功">添加成功</string>
+    <string name="请输入命令名称">請輸入命令名稱</string>
+    <string name="请输入您要添加的命令">請輸入您要添加的命令</string>
+    <string name="自动回车">自動回車</string>
+    <string name="保存当前配置">保存當前配置</string>
+    <string name="好的">好的</string>
+    <string name="镜像运行结束">鏡像運行結束</string>
+    <string name="您的命令出错了">您的命令出錯了</string>
+    <string name="清空">清空</string>
+    <string name="已完成清空">已完成清空</string>
+    <string name="修改">修改</string>
+    <string name="已完成修改">已完成修改</string>
+    <string name="修改成功">修改成功</string>
+    <string name="请再试一次">請再試一次</string>
+    <string name="删除成功">刪除成功</string>
+    <string name="切换成功">切換成功</string>
+    <string name="没有找到命令">沒有找到命令</string>
+    <string name="命令出错">命令出錯</string>
+    <string name="加载中">加載中</string>
+    <string name="回到主目录">回到主目錄</string>
+    <string name="返回上层">返回上層</string>
+    <string name="查看文件">查看文件</string>
+    <string name="打开">打開</string>
+    <string name="运行">運行</string>
+    <string name="自动出错">自動出錯</string>
+    <string name="当前目录不在">當前目錄不在</string>
+    <string name="会话">會話</string>
+    <string name="自动命令">幫助</string>
+    <string name="搜索文件">搜索文件</string>
+    <string name="再次输入您要搜索的文件">再次輸入您要搜索的文件</string>
+    <string name="请输入您要查找的命令">請輸入您要查找的命令</string>
+    <string name="恢复默认命令">恢復默認命令</string>
+    <string name="自定义方案">自定義方案</string>
+    <string name="导入导出命令">導入導出命令</string>
+    <string name="配置文件出错">配置文件出錯</string>
+    <string name="导入">導入</string>
+    <string name="导出">導出</string>
+    <string name="已导入配置文件">已導入配置文件</string>
+    <string name="当前没有数据">當前沒有數據</string>
+    <string name="保存成功">保存成功</string>
+    <string name="请选择一个配置文件">請選擇一個配置文件</string>
+    <string name="当前目录下没有镜像文件">當前目錄下沒有鏡像文件</string>
+    <string name="使用默认命令">使用默認命令</string>
+    <string name="当前目录下没有配置文件">當前目錄下沒有配置文件</string>
+    <string name="目录下有一个相同文件">目錄下有一個相同文件</string>
+    <string name="保存文件">保存文件</string>
+    <string name="请输入保存的文件名">請輸入保存的文件名</string>
+    <string name="安装短信读取工具">簡訊/通訊錄工具</string>
+    <string name="该操作有风险">該操作有風險,您的手機可能會被攻擊從而洩露你的簡訊與通訊錄,是否繼續安裝?(您可以在不使用的情況下關閉簡訊敏感權限)</string>
+    <string name="您已安装工具">您已安裝工具,無需重複安裝.使用命令(簡訊:smsread、通訊錄:readcontacts)</string>
+    <string name="您当前未安装">您當前未安裝</string>
+    <string name="是否安装">是否安裝?</string>
+    <string name="安装完成">安裝完成,請輸入(簡訊:smsread、通訊錄:readcontacts)使用</string>
+    <string name="您已安装工具1">您已安裝工具</string>
+    <string name="您未安装该插件">即將開始安裝插件,是否繼續?</string>
+    <string name="需要在您的手机">
+        需要您的內部存儲權限!\n
+        需要在您的手機創建以下目錄:\n
+        [內部存儲/xinhao/data/]備份包 \n
+        [內部存儲/xinhao/apk/]臨時APK \n
+        [內部存儲/xinhao/windows/]qemu目錄 \n
+        [內部存儲/xinhao/command/]命令目錄 \n
+        [內部存儲/xinhao/font/]字體目錄 \n
+        [內部存儲/xinhao/iso/]鏡像目錄 \n
+        [內部存儲/xinhao/mysql/]mysql臨時文件 \n
+        [內部存儲/xinhao/online_system/]離線termux包 \n
+        [內部存儲/xinhao/qemu/]qemu目錄 \n
+        [內部存儲/xinhao/server/]server目錄 \n
+        [內部存儲/xinhao/share/]分享目錄 \n
+        [內部存儲/xinhao/web_config/]web臨時目錄 \n
+
+    </string>
+    <string name="版本">版本</string>
+    <string name="会话窗口在右侧">提示:會話窗口在右側\n雙擊命令窗口打開快捷命令\n使用許可:學習交流</string>
+    <string name="开源地址">開源/鳴謝</string>
+    <string name="已打开开机启动命令">已打開開機啟動命令,重啟APP生效</string>
+    <string name="已关闭开机启动命令">已關閉開機啟動命令,重啟後生效</string>
+    <string name="悬浮窗口">懸浮窗口</string>
+    <string name="draw_overlay_permission_explanation">這個應用程式需要權限來繪製覆蓋。</string>
+    <string name="grant_permission">獲取</string>
+    <string name="initial_instruction_toast">長按在窗口上移動\n\n長按在窗口上縮放手勢,縮放窗口大小</string>
+    <string name="notification_title">Termux:懸浮</string>
+    <string name="notification_message_visible">觸摸隱藏窗口。</string>
+    <string name="notification_message_hidden">觸摸隱藏窗口。</string>
+    <string name="正在载入中">正在載入中,請稍後。</string>
+    <string name="字体选择">字體選擇</string>
+    <string name="您一切选择的字体来源于互联网">您一切選擇的字體來源於網際網路</string>
+    <string name="没有在内部存储">沒有在[內部存儲/xinhao/font]找到任何字體文件</string>
+    <string name="Utermux默认字体">ZeroTermux默認字體</string>
+    <string name="Utermux中文字体">ZeroTermux中文字體</string>
+    <string name="创建文件错误">創建文件錯誤</string>
+    <string name="字体设置成功">字體設置成功</string>
+    <string name="如果进入终端没有任何显示">如果進入終端沒有任何顯示代表您的字體文件損壞,請重新設置字體</string>
+    <string name="字体设置">字體設置</string>
+    <string name="局域服务器">伺服器版本</string>
+    <string name="未连接">未連接</string>
+    <string name="公共仓库">公共倉庫</string>
+    <string name="正在连接到自定义服务器">正在連接到自定義伺服器</string>
+    <string name="请输入自定义服务器IP">請輸入自定義伺服器IP</string>
+    <string name="默认地址">http://10.242.164.19</string>
+    <string name="无法连接到自定义服务器">無法連接到自定義伺服器!</string>
+    <string name="连接">連接</string>
+    <string name="如何创建服务器">如何創建伺服器</string>
+    <string name="服务器数据格式不正确">伺服器數據格式不正確</string>
+    <string name="服务器">伺服器</string>
+    <string name="地址">地址</string>
+    <string name="大小">大小</string>
+    <string name="简介">簡介</string>
+    <string name="剩余">剩餘</string>
+    <string name="第三方服务器上的可执行文件">第三方伺服器上的可執行文件可能不安全,確定是否安裝?</string>
+    <string name="下载站">下載站</string>
+    <string name="正在连接到下载站服务器">正在連接到下載站伺服器</string>
+    <string name="无法连接到下载站服务器">無法連接到下載站伺服器</string>
+    <string name="正在连接">正在連接</string>
+    <string name="VNC">VNC</string>
+    <string name="快速VNC">快速VNC</string>
+    <string name="自定VNC">自定VNC</string>
+    <string name="高级VNC">高級VNC</string>
+    <string name="请下载插件">請下載插件</string>
+    <string name="请输入地址">請輸入地址</string>
+    <string name="请输入端口">請輸入埠</string>
+    <string name="请输入密码">請輸入密碼</string>
+    <string name="连接到自定VNC">連接到自定VNC</string>
+    <string name="协议">協議</string>
+
+
+    <string name="许可证">法律聲明:\n
+
+
+
+
+        ZeroTermux 是根據 Termux 二次開發的一個非盈利性的軟體\n\n部分版權歸ZeroTermux所屬\n\n對任何法律問題及風險不承擔任何責任，沒有任何商業目的\n\n\n
+        切勿使用到違法用途！\n
+        \n
+        請遵紀守法，做一個良好公民,\n
+        \n
+        ZeroTermux 的初心是讓你更快的走進linux世界,為以後建設社會貢獻一份精神,出一份力\n
+        \n
+
+        在使用一定程度之後,極力建議你過渡到官方termux[入門之後開始使用](推薦),\n
+        \n
+
+        畢竟ZT能幫你一時，卻幫不了你一世!\n
+        \n
+
+
+        注意:【切換系統】功能當中的【刪除功能可能會清空您的SD卡】\n
+        \n
+        請關閉sd卡授權在執行該【刪除】功能\n
+        \n
+        如果由你的操作(不局限於【切換系統】的【刪除功能】,這裡說明的是ZeroTermux的所有功能)失誤導致你的SD卡包括:\n
+        \n
+        照片\n
+        視頻\n
+        音頻\n
+        以及其它所有數據,由你(ZeroTermux(簡稱ZT)的個人使用用戶)自己承擔\n
+        \n
+
+
+        公共倉庫下載來源不可控,不屬於ZeroTermux所能控制的,全部來源於第三方倉庫,ZeroTermux以及作者不會對第三方倉庫來源的所有東西負責!\n
+\n
+        \n
+        如果第三方倉庫有屬於一切違法的活動/文件,由提供第三方倉庫的作者承擔任何法律責任!ZeroTermux以及作者不承擔任何法律/其它責任!
+
+        \n
+        \n
+        授權許可:\n
+        \n
+
+        ZeroTermux所有功能只能用於個人學習交流使用，不得用於商業用途!以及非法用途!\n
+        \n
+        ZeroTermux所有功能只能用於個人學習交流使用，不得用於商業用途!以及非法用途!\n\n
+        ZeroTermux所有功能只能用於個人學習交流使用，不得用於商業用途!以及非法用途!\n\n
+
+        1.本軟體(ZeroTermux)為開源軟體,你可以自由分發、複製、更改,但請遵循GPL協議!\n\n
+        2.軟體遵循GPL協議(http://www.opensource.org/licenses/gpl-2.0.php)\n\n
+        3.本軟體(ZeroTermux)的所有功能均為學習交流使用,切勿商用,如用戶(使用ZeroTermux用戶)的意外操作、有意操作、無意操作等由用戶承擔!\n
+        4.本軟體(ZeroTermux)由第一條例一樣為免費學習交流使用，軟體內涉及的圖標以及字體均來源於網際網路。\n
+         4.1.字體為Android默認字體,如使用其他字體請用戶(使用ZeroTermux用戶)承擔所有風險以及法律責任。\n
+         4.2.圖標使用為阿里巴巴ICO公用圖庫，使用該圖標的原則是學習與交流,並非商用,如有侵權立即刪除。\n
+        5.在本軟體(ZeroTermux)內使用的的恢復包、數據包、zip包等都有使用風險，切全部都來源於網際網路，請用戶酌情使用,如有造成無法挽回的損失,請用戶承擔風險。\n
+        6.所有恢復包、數據包、模塊包、zip包ZeroTermux不能控制其內容,如有包內侵權本軟體作者不承擔任何責任，均由恢復包、數據包、zip包製作者承擔(tar.gz備份功能法律聲明)。\n
+        7.感謝所有該項目所應用到功能的作者。\n
+        8.使用ZeroTermux會有直接或間接的損害你的設備,如有造成無法挽回的損失由用戶承擔,本軟體以及作者不承擔任何法律等責任\n
+
+
+    </string>
+    <string name="不同意">不同意</string>
+    <string name="同意">同意</string>
+    <string name="请认真阅读许可协议">請認真閱讀許可協議以及責任劃分</string>
+    <string name="无法创建">無法創建(內部存儲/xinhao/data)文件夾,請手動創建!</string>
+    <string name="无法创建1">無法創建(內部存儲/xinhao/apk)文件夾,請手動創建!</string>
+    <string name="已开始打印APP实时delog">已開始列印APP實時log</string>
+    <string name="暂未开放下载">暫未開放下載</string>
+    <string name="雪花关">雪花(關)</string>
+    <string name="雪花开">雪花(開)</string>
+    <string name="官方插件">官方插件</string>
+    <string name="TermuxApi">T…x:Api</string>
+    <string name="TermuxTasker">T…x:Tasker</string>
+    <string name="TermuxBoot">T…x:Boot</string>
+    <string name="TermuxStyling">T…x:Styling</string>
+    <string name="全屏模式">全屏模式</string>
+    <string name="语言切换">語言切換</string>
+    <string name="中文">中文</string>
+    <string name="English">English</string>
+    <string name="取消">取消</string>
+    <string name="termux_x11">termux-x11</string>
+
+
+    <string name="本机IP">本機IP</string>
+
+    <string name="Zero功能">Zero功能</string>
+    <string name="ZeroTermux内置功能">ZeroTermux 腳本區域(長按打開作者地址)</string>
+    <string name="内置nginx">Nginx(內置)</string>
+    <string name="Nginx开关">Nginx開關</string>
+    <string name="访问linux目录">訪問linux目錄</string>
+    <string name="访问目录">訪問目錄(/)</string>
+    <string name="访问目录sd">訪問目錄(SD)</string>
+    <string name="WebStart开关">WebStart開關</string>
+    <string name="端口">埠</string>
+    <string name="路径">路徑</string>
+    <string name="访问地址">訪問地址</string>
+    <string name="原作者地址">原作者地址</string>
+    <string name="项目地址">項目地址</string>
+    <string name="所选的端口号范围超出65535最大值">所選的埠號範圍超出65535最大值,將默認更改為7766埠</string>
+    <string name="开启成功">服務開啟成功!</string>
+
+
+    <string name="软件开发">軟體開發分類</string>
+    <string name="MyServer">MyServer</string>
+    <string name="Termux_ADB">Termux-ADB</string>
+    <string name="实验功能">實驗功能</string>
+    <string name="ZeroTermux实验功能">ZeroTermux 實驗功能</string>
+    <string name="网络ADB">網絡ADB</string>
+    <string name="网络ADBNo">網絡ADB(無ROOT)</string>
+    <string name="没有找到本机的ROOT权限">沒有找到本機的ROOT權限,是否強制繼續?</string>
+    <string name="运行完成">命令執行完成,請確保在Root下執行\n請使用:\n \n adb.exe connect</string>
+    <string name="网络ADBClose">關ADB</string>
+    <string name="关闭成功">ADB命令關閉成功</string>
+
+
+    <string name="欢迎来到windows模拟器页面">歡迎來到windows模擬器頁面</string>
+    <string name="环境">環境</string>
+    <string name="qamu环境">qemu環境</string>
+    <string name="qamu环境开">[已安裝]</string>
+    <string name="qamu环境关">[未安裝]</string>
+    <string name="点击安装">點擊安裝</string>
+    <string name="显示环境">顯示環境</string>
+    <string name="显示环境开">[已安裝]</string>
+    <string name="显示环境关">[未安裝]</string>
+    <string name="ROOT运行">ROOT運行</string>
+    <string name="ROOT运行1">請在Termux輸入tsu進入</string>
+    <string name="帮我安装">幫我安裝</string>
+    <string name="快捷运行">快捷運行</string>
+    <string name="警告测dsfsdf">警告:如果出現【system call bad】請在終端執行【termux-chroot】後在進入!</string>
+    <string name="win10系统">win10系統</string>
+    <string name="win7系统">win7系統</string>
+    <string name="winXP系统">winXP系統</string>
+    <string name="替换官方版本">替換官方版本</string>
+    <string name="用官版的请点击">用官版的請點擊</string>
+    <string name="MAC系统">MAC系統</string>
+    <string name="我自己的系统">我自己的系統</string>
+    <string name="打开当前VNC任务">打開當前VNC任務</string>
+    <string name="Windows注意">注意:該鏡像會被複製到UTermux的工作區域[/Home/UTWindow/]</string>
+    <string name="当前操作镜像">當前操作鏡像:</string>
+    <string name="无">無</string>
+    <string name="打开操作镜像">打開操作鏡像</string>
+    <string name="清空操作镜像">清空操作鏡像</string>
+    <string name="请显示QEMU命令">請顯示QEMU命令</string>
+    <string name="请输入QEMU命令">請輸入QEMU命令</string>
+    <string name="清空命令行">清空命令行</string>
+    <string name="QEMU执行并打开显示器">QEMU執行並打開顯示器</string>
+    <string name="QEMU执行">QEMU執行</string>
+    <string name="填充默认命令">填充默認命令</string>
+    <string name="提示dsfsdfmmm">
+        可能會影響性能,或進入不了系統!!\n
+        可能會影響性能,或進入不了系統!\n
+        如果開啟慢，請刪除掉\n
+        -drive file=fat:rw:/home/storage/shared/xinhao/share\n
+        與虛擬機交互文件放入【內部存儲/xinhao/share】目錄下\n
+        複製新的文件必須重啟虛擬機才能看見文件!!\n
+        複製新的文件必須重啟虛擬機才能看見文件!!\n
+        提示:如需要共享文件(虛擬機交互文件)默認已加入\n
+        請在 -vnc前邊加入:\n
+        -drive file=fat:rw:/sdcard/xinhao/share\n
+        命令,長按可複製該指令
+    </string>
+    <string name="正在疏通所需要的环境">正在疏通所需要的環境</string>
+    <string name="请输入回车键继续">請輸入回車鍵繼續</string>
+    <string name="请选择一个镜像">請選擇一個鏡像</string>
+    <string name="请选择模拟器配置文件">請選擇模擬器配置文件</string>
+    <string name="成功">成功</string>
+    <string name="qemu_x86_win">Win/linux/(x64_x86)</string>
+    <string name="qemu_i386_win">Win/linux/(i386)</string>
+    <string name="qemu_ppc_win">MAC(ppc)</string>
+    <string name="请在下载站下载VNC插件">請在[下載站]下載VNC插件</string>
+    <string name="环境不达要求">環境不達要求</string>
+    <string name="你没有安装tyu65t6y5u">"你沒有安裝 wget 或者 proot \n是否立即安裝"</string>
+    <string name="给我安装">給我安裝</string>
+    <string name="不安装">不安裝</string>
+    <string name="错误">錯誤</string>
+    <string name="你没有安装相关环境qemuppp5555p">"你沒有安裝相關環境,請點擊安裝"</string>
+    <string name="在线安装">在線安裝</string>
+    <string name="请等待安装完成在进入">請等待安裝完成在進入</string>
+    <string name="稍后">稍後</string>
+    <string name="系统初始化失败">系統初始化失敗</string>
+    <string name="请输入回车键继续55">請輸入回車鍵繼續</string>
+    <string name="获取镜像">提取碼:6b7w</string>
+    <string name="是否前往下载系统">是否前往下載系統</string>
+    <string name="前往">前往</string>
+    <string name="Zero">Zero/UTermux模擬</string>
+    <string name="一键启动">一鍵啟動</string>
+    <string name="确定重置所有任务">確定重置並刪除所有任務?\n如果您的下載狀態錯亂/不正確請應用此設置\n注意:已下載完成的不會被刪除\n正在下載的會被刪除</string>
+    <string name="重置成功">重置成功</string>
+
+
+    
+    <string name="termux_terminal_view_preferences_title">終端視圖</string>
+    <string name="termux_terminal_view_preferences_summary">終端視圖的首選項</string>
+
+    
+    <string name="termux_terminal_view_view_header">視圖</string>
+
+    
+    <string name="termux_terminal_view_terminal_margin_adjustment_title">終端距離自動調整</string>
+    <string name="termux_terminal_view_terminal_margin_adjustment_off">
+終端距離自動調整將被禁用</string>
+    <string name="termux_terminal_view_terminal_margin_adjustment_on">將啟用終端距離自動調整。應該啟用它以嘗試修復軟鍵盤覆蓋部分額外鍵/終端視圖的問題。如果它導致設備上的屏幕閃爍，請禁用它。 （默認）</string>
+    <string name="VSCODE">VSCODE</string>
+    <string name="X86_Alpine">X86_Alpine</string>
+    <string name="请在下载站下载Alpine插件">請在下載站下載Alpine插件</string>
+    <string name="没有权限">沒有內存權限,下載站無法打開!</string>
+
+
+    <string name="可能检测到OTG设备">可能檢測到OTG設備,但是讀取失敗,請拔插設備再試,或者給予讀取OTG權限!</string>
+    <string name="检测到OTG设备">檢測到OTG設備,即將創建OTG映射目錄\n~/home/xinhaoLink/</string>
+    <string name="下次提示">下次提示</string>
+    <string name="如果下次想继续使用OTG设备">如果下次想繼續使用OTG設備,請退出APP重新進入,該提示會再次出現</string>
+    <string name="OTG设备异常">
+        OTG設備異常\n
+        無法讀取到USB(OTG)可用的目錄\n
+        目錄結構為空!
+    </string>
+    <string name="无联系人">無聯繫人或無權限</string>
+    <string name="姓名">姓名</string>
+    <string name="电话">電話</string>
+    <string name="备注">備註</string>
+    <string name="序号">序號</string>
+    <string name="无权限读取">無權限讀取</string>
+    <string name="请等待">請等待</string>
+    <string name="远程控制下请先安装vim">遠程控制下請先安裝vim,否則程序不會創建sms.txt以及phone.txt</string>
+    <string name="网络访问linux目录">網絡目錄</string>
+    <string name="filebrowser已运行">filebrowser已運行,埠19951,帳戶:admin 密碼:admin</string>
+    <string name="WinXp">Windows Xp</string>
+    <string name="Win7模拟">Win7模擬</string>
+
+    <string name="msg_add_termux_debug_info">添加 termux 調試信息以報告？</string>
+    
+    <string name="termux_api_preferences_title">Termux:API</string>
+    <string name="termux_api_preferences_summary">偏好 Termux:API 應用</string>
+    
+    <string name="error_display_over_other_apps_permission_not_granted">ZeroTermux
+        需要「在其他應用上顯示」權限才能從 Android &gt;= 10 的後臺啟動終端會話。從「設置」-&gt;「應用」-&gt; 授予它 ZeroTermux
+        -&gt; 選中</string>
+    <string name="选择方式">選擇方式</string>
+    <string name="要获取最新版本">要獲取最新版本，你需要在線下載，舊版本可以選擇本地腳本</string>
+    <string name="获取线上">獲取線上</string>
+    <string name="线上脚本">線上腳本</string>
+    <string name="本地脚本">本地腳本</string>
+    <string name="请双击命令窗口试试">ZeroTermux\n雙擊命令窗口打開快捷欄\n雙擊最左(音量+按鍵)\n右(音量-按鍵)打開菜單/會話欄\n雙指單擊打開 工具箱\n右側菜單打開內置文件瀏覽器</string>
+    <string name="ZeroTermux论坛">ZeroTermux論壇</string>
+    <string name="Zero论坛">Zero論壇</string>
+
+
+    <string name="在线脚本">在線腳本</string>
+    <string name="在线脚本服务器名称">Server Name</string>
+    <string name="数据载入中">數據載入中</string>
+    <string name="服务器已离线">伺服器已離線</string>
+    <string name="服务器在线但数据格式出错">伺服器在線,但數據格式出錯</string>
+    <string name="当前文件下载已被禁止">當前文件下載已被禁止</string>
+    <string name="此脚本数据错误">此腳本數據錯誤,請嘗試聯繫管理員</string>
+
+    <string name="美化设置">美化設置</string>
+    <string name="字体颜色">字體顏色</string>
+    <string name="背景颜色">背景顏色</string>
+    <string name="字体颜色透明度">字體顏色透明度</string>
+    <string name="背景颜色透明度">背景顏色透明度</string>
+    <string name="背景颜色半透明">背景顏色半透明(可與背景圖片疊加)</string>
+    <string name="背景图片">背景圖片</string>
+    <string name="显示背景字体">顯示背景字體</string>
+    <string name="重置">重置</string>
+    <string name="如果看到该页面">如果看到該頁面，請按下返回鍵退出</string>
+    <string name="nju">NJU</string>
+    <string name="ustc">USTC</string>
+    <string name="hit">HIT</string>
+
+    <string name="启动器新">啟動器[新]</string>
+    <string name="启动器旧">啟動器[舊]</string>
+    <string name="系统切换成功">啟動器切換成功,重啟之後生效</string>
+    
+
+    <string name="error_termux_service_invalid_execution_command_runner">傳給TermuxService的執行命令運行器無效：`%1$s`</string>
+    <string name="error_termux_service_unsupported_execution_command_runner">傳給TermuxService的執行命令運行器不受支持：`%1$s`</string>
+    <string name="error_termux_service_unsupported_execution_command_session_create_mode">傳給TermuxService的會話創建模式不受支持：`%1$s`</string>
+    <string name="error_termux_service_execution_command_session_name_unset">未設置會話名稱，但傳入了`%1$s`會話創建模式</string>
+
+    
+    <string name="error_run_command_service_invalid_execution_command_runner">傳給RunCommandService的執行命令運行器無效：`%1$s`</string>
+    <string name="error_termux_service_unsupported_execution_command_shell_create_mode">傳給TermuxService的shell創建模式不受支持：`%1$s`</string>
+    <string name="error_termux_service_execution_command_shell_name_unset">未設置shell名稱，但傳入了`%1$s`shell創建模式</string>
+    <string name="error_display_over_other_apps_permission_not_granted_to_start_terminal">ZeroTermux
+        requires
+        \"Display over other apps\" permission to start terminal sessions from background on Android &gt;= 10.
+        Grants it from Settings -&gt; Apps -&gt; ZeroTermux -&gt; Advanced</string>
+    <string name="bootstrap_error_installed_on_portable_sd">ZeroTermux cannot be installed on
+        portable/external/removable sd card on your device.
+        \nBootstrap binaries compiled for ZeroTermux have hardcoded $PREFIX path and cannot be installed
+        under any path other than:\n%1$s.</string>
+
+    <string name="title_share_selected_text">終端文本</string>
+    <string name="title_share_selected_text_with">將選中文本發送到：</string>
+    <string name="add_commend_msg_fail">無法添加空命令</string>
+    <string name="add_commend_msg_ok">添加成功。詳見"命令定義"中的設置</string>
+    <string name="tool_cent">工具箱</string>
+    <string name="linux_commend">常用命令</string>
+    <string name="linux_clipboard">剪貼板</string>
+    <string name="font_name">字體名稱:</string>
+    <string name="font_instance">字體示例:</string>
+    <string name="font_path">字體路徑:</string>
+    <string name="instance_zero">ZeroTermux|中文字體</string>
+
+    <string name="clipboard_text">注意：此剪貼板只會記錄APP內的內容</string>
+    <string name="clipboard_title">剪貼板標題:</string>
+    <string name="clipboard_msg">剪貼板內容:</string>
+    <string name="clipboard_note">刪除此記錄</string>
+    <string name="clipboard_empty">剪貼板沒有使用內容</string>
+    <string name="clipboard_empty_copy">複製內容不能為空噢</string>
+
+    <string name="tool_other">其他選項</string>
+
+    <string name="vedio_select_name">視頻背景</string>
+    <string name="keyboard_select_name">內置鍵盤</string>
+
+    <string name="image_size_error">文件過大</string>
+
+    <string name="zero_eg_not_install">未檢測到引擎,即將跳轉到 github 頁面..</string>
+
+    <string name="install_environment">安裝所需環境?</string>
+
+    <string name="x86_alpine_run">X86 Alpine</string>
+
+    <string name="clear_style_dialog">清空美化</string>
+
+    <string name="engine_vision">引擎</string>
+
+    <string name="engine_not_install">未安裝</string>
+
+    <string name="web_linux">瀏覽器終端</string>
+
+    <string name="ttyd_install_complete">IP:0.0.0.0\n埠:7681</string>
+
+    <string name="qq_group">複製群號</string>
+
+    <string name="telegram_group">Telegram</string>
+
+    <string name="opne_in_zerotermux">使用ZeroTermux打開</string>
+
+    <string name="move_file_to_zt">移動文件到Zero Termux</string>
+
+    <string name="file_name_copy">文件信息:{file}\n\n大小:{size}\n\n路徑:{path}\n\n後戳名(文件類型):{suffix}\n\n複製路徑:~</string>
+
+    <string name="copy_file_to_zt">複製完成，複製在路徑在:"~"</string>
+
+    <string name="not_file_msg">文件錯誤，不能複製到ZeroTermux應用中!</string>
+
+    <string name="ttyd_install_msg">當前沒有安裝當前環境，請等待安裝完成之後【再此點擊此入口】!</string>
+
+    <string name="ftp">FTP服務</string>
+
+    <string name="storage_warning">警告：當前存儲暫不可用，您可能需要取消掛載。</string>
+
+    <string name="ftp_title">說明</string>
+    <string name="ftp_port_msg">埠超出範圍!</string>
+
+    <string name="ftp_msg">核心根據apache改進而來，默認目錄為本Linux目錄\n此版本為2.0，修復了FTP連接異常問題，更換了核心,確保此功能穩定!</string>
+
+    <string name="ftp_error">文件未被加載或讀取失敗, 請加載後打開或重試</string>
+
+    <string name="ftp_start_window">跳轉至FTP網頁</string>
+
+    <string name="ftp_prot_error">當前所選埠被佔用!</string>
+
+    <string name="container_management">容器管理</string>
+
+    <string name="back_message">請選擇以下備份格式,一般推薦"tar.gz"格式</string>
+
+    <string name="storage_error">"~/storage"目錄在操作過程中目錄丟失，請手動termux-setup-storage創建或重新打開"容器管理"讓程序自動創建</string>
+    <string name="backup_success">備份完成，備份文件在-&gt;內部存儲/xinhao/data/|目錄下</string>
+    <string name="backup_msg_dialog">開始備份當前容器,系統需要新建一個會話來進行備份操作,點擊確定繼續</string>
+    <string name="delete_restore_data">刪除此數據包</string>
+    <string name="data_file_name">數據包名稱:</string>
+    <string name="data_file_size">數據包大小:</string>
+    <string name="data_file_path">數據包路徑:</string>
+    <string name="file_delete_msg">確定要永久刪除此數據包？刪除之後可沒有辦法恢復噢。</string>
+    <string name="file_delete_fail">無法刪除此文件，請在內部存儲手動刪除!</string>
+    <string name="file_sd_msg">當前程序需要創建內存卡軟連結,需要申請SD卡權限，如果拒絕則無法使用容器管理內所有內容!</string>
+    <string name="file_sd_fail">拒絕了內存卡權限,此模塊無法工作,退出。。。</string>
+    <string name="file_sd_success">權限獲取成功</string>
+    <string name="system_create_container">創建恢復的系統容器</string>
+    <string name="system_create_container_empty">系統容器名稱不能為空</string>
+    <string name="system_create_container_fail">系統創建失敗!請重試</string>
+    <string name="system_restore_success">系統恢復完成,請在切換系統，切換您的系統</string>
+    <string name="unrecognized_compression_format">不能識別的數據包!</string>
+    <string name="create_xinhao_path_fail">創建~/xinhaoLink文件夾失敗，請手動創建!</string>
+    <string name="commonly_used_soft_links">快捷方式</string>
+    <string name="create_soft_links">將創建以下快捷方式:\n內部存儲 微信、QQ、下載目錄\n內部連結:~/xinhaoLink,由於Android 11+ 限制/內部存儲/Android/data/ 目錄訪問將不能創建 /內部存儲/Android/data/ 目錄,但是程序還是會強制創建</string>
+    <string name="create_soft_links_fail">創建失敗,請重新嘗試一下也可以手動創建 ~/xinhaoLink</string>
+    <string name="my_commonly_used_soft_links">自定快捷</string>
+    <string name="my_commonly_used_soft_links_path">輸入要連結的目錄</string>
+    <string name="my_commonly_used_soft_links_repeat">輸入的目錄不存在!</string>
+    <string name="action_share_selected_text">分享選中文本</string>
+    <string name="data_message">數據包簡介:</string>
+    <string name="create_data_message">數據包信息</string>
+    <string name="data_message_hint">創建你的數據包信息，對數據包使用進行說明，設置後數據包相關信息會顯示左側欄, 可使用 markdown 語法</string>
+    <string name="data_message_empty">數據包簡介不能為空</string>
+    <string name="zero_uninstall">卸載</string>
+    <string name="install_module">安裝模塊</string>
+    <string name="install_module_download">安裝模塊(下載模塊)</string>
+    <string name="install_module_message">注意:安裝後不能卸載,只對當前容器生效(如果路徑已經放入模塊包但是不顯示，請檢查SD卡權限)</string>
+    <string name="install_empty">內部存儲/xinhao/module,沒有模塊包</string>
+    <string name="install_message">控制臺:\n開始安裝模塊</string>
+    <string name="delete_module_data">刪除此模塊包</string>
+    <string name="data_module_name">模塊包名稱:</string>
+    <string name="data_module_size">模塊包大小:</string>
+    <string name="data_module_path">模塊包路徑:</string>
+    <string name="file_module_msg">確定要永久刪除此模塊包？刪除之後可沒有辦法恢復噢。</string>
+    <string name="install_module_msg1">正在準備安裝模塊</string>
+    <string name="install_module_msg2">正在展開安裝模塊</string>
+    <string name="install_module_msg3">展開模塊錯誤！</string>
+    <string name="install_module_msg4">模塊展開完成,開始安裝</string>
+    <string name="install_module_msg5">無效模塊安裝包,安裝文件[INSTALL.txt]無法找到</string>
+    <string name="install_module_msg6">安裝腳本錯誤,無法找到[目標文件][目標位置][權限]3個參數</string>
+    <string name="install_module_msg7">目標文件存在！選擇覆蓋此文件</string>
+    <string name="install_module_msg8">目標文件存在！選擇覆蓋此文件錯誤</string>
+    <string name="install_module_msg9">權限設置錯誤, 設置默認0700</string>
+    <string name="install_module_msg10">模塊安裝完成!有些功能需要重啟後生效</string>
+    <string name="install_module_msg11">檢測到權限為空,將跳過設置文件權限</string>
+    <string name="install_def_bash">默認啟動</string>
+    <string name="install_def_bash_msg_ok">默認啟動文件恢復成功</string>
+    <string name="install_def_bash_msg_error">默認啟動文件恢復錯誤!!</string>
+    <string name="install_def_bash_is_writer">確定要恢復到默認的系統啟動腳本(bash.bashrc)? 操作無法更改!</string>
+    <string name="install_module_switch">您確定要安裝此模塊包?</string>
+    <string name="install_module_clear_tempmodule">清空臨時文件夾出現異常,請手動刪除~/tempmodule文件夾!</string>
+    <string name="edit_save">保存</string>
+    <string name="edit_cancel">取消</string>
+    <string name="edit_find">查找</string>
+    <string name="edit_replace">替換</string>
+    <string name="edit_search_hint">搜索</string>
+    <string name="edit_replace_hint">替換為</string>
+    <string name="edit_replace_all">全部替換</string>
+    <string name="editor_toolbar_menu">側欄菜單</string>
+    <string name="editor_toolbar_files">保存</string>
+    <string name="editor_toolbar_undo">撤銷</string>
+    <string name="editor_toolbar_redo">重做</string>
+    <string name="editor_toolbar_more">更多操作</string>
+    <string name="editor_toolbar_terminal">Shell 終端</string>
+    <string name="editor_toolbar_format">格式化代碼</string>
+    <string name="editor_toolbar_duplicate_line">複製當前行</string>
+    <string name="editor_toolbar_keyboard">彈出軟鍵盤</string>
+    <string name="editor_toolbar_goto_def">轉到定義模式</string>
+    <string name="editor_toolbar_goto_def_on">點擊類或符號即可進入定義，再點一次按鈕退出</string>
+    <string name="editor_toolbar_extra_toggle">終端 / GUI 欄</string>
+    <string name="editor_toolbar_extra_show">顯示終端 / GUI 欄</string>
+    <string name="editor_toolbar_extra_hide">隱藏終端 / GUI 欄</string>
+    <string name="editor_terminal_title">終端</string>
+    <string name="editor_terminal_hide">隱藏終端</string>
+    <string name="editor_terminal_ctrl_c">發送 Ctrl+C 中斷</string>
+    <string name="editor_x11_button">GUI</string>
+    <string name="editor_dock_hide">隱藏面板</string>
+    <string name="editor_x11_hide">Hide GUI</string>
+    <string name="editor_x11_maximize">最大化 X11</string>
+    <string name="editor_x11_restore">還原 X11</string>
+    <string name="editor_x11_connect">連接</string>
+    <string name="editor_x11_display_env">DISPLAY</string>
+    <string name="editor_x11_display_set">已設置 DISPLAY=:99</string>
+    <string name="editor_x11_status_connected">GUI 已連接</string>
+    <string name="editor_x11_status_disconnected">GUI 未連接</string>
+    <string name="editor_x11_internal_required">正在準備 GUI 環境，請稍候…</string>
+    <string name="editor_x11_setup_open_settings">重試</string>
+    <string name="editor_x11_env_missing">GUI 環境未就緒，點擊重試安裝</string>
+    <string name="editor_x11_init_failed">GUI 窗口初始化失敗</string>
+    <string name="editor_x11_installing_env">正在安裝 GUI 環境（Xvfb、ImageMagick、xdotool），請稍候…</string>
+    <string name="editor_x11_starting_env">正在啟動內置 GUI 服務…</string>
+    <string name="editor_x11_start_failed">GUI 啟動失敗，點擊重試</string>
+    <string name="editor_x11_retry">重試</string>
+    <string name="editor_x11_install_repo">[ZeroTermux Editor] 安裝 x11-repo…</string>
+    <string name="editor_x11_install_packages">[ZeroTermux Editor] 安裝 xorg-server-xvfb scrot xdotool…</string>
+    <string name="editor_x11_status_starting">GUI 啟動中</string>
+    <string name="editor_x11_status_installing">GUI 環境安裝中</string>
+    <string name="editor_x11_status_connecting">GUI 連接中</string>
+    <string name="editor_vnc_install_repo">正在安裝 x11-repo…</string>
+    <string name="editor_vnc_install_packages">正在安裝 Xvfb 與 x11vnc…</string>
+    <string name="editor_vnc_installing_env">正在安裝 GUI/VNC 環境（x11-repo、Xvfb、x11vnc），請稍候…</string>
+    <string name="editor_vnc_starting_env">正在啟動 VNC 服務，請稍候…</string>
+    <string name="editor_vnc_env_missing">缺少 X11/VNC 組件。打開 GUI 標籤將自動安裝；也可點擊重試。</string>
+    <string name="editor_vnc_start_failed">VNC 調試環境啟動失敗。請確認終端可執行 pkg install，然後點擊重試。</string>
+    <string name="editor_vnc_retry">重試</string>
+    <string name="editor_vnc_init_failed">VNC 窗口初始化失敗</string>
+    <string name="editor_vnc_status_connected">VNC 已連接</string>
+    <string name="editor_vnc_status_connecting">VNC 連接中…</string>
+    <string name="editor_vnc_status_installing">正在安裝環境…</string>
+    <string name="editor_vnc_status_starting">正在啟動 VNC…</string>
+    <string name="editor_vnc_status_disconnected">VNC 未連接</string>
+    <string name="editor_toolbar_run">運行 build.sh</string>
+    <string name="editor_build_script_long_press">長按運行按鈕可編輯 build.sh</string>
+    <string name="editor_build_script_header_note">可手動編輯或由 AI 修改</string>
+    <string name="editor_build_script_add_commands">請在 build.sh 中添加編譯/運行命令</string>
+    <string name="editor_build_script_edit_for_file">請編輯 build.sh 以構建/運行 %1$s</string>
+    <string name="editor_build_script_current_file">當前文件: %1$s</string>
+    <string name="editor_build_script_install_java">[ZeroTermux Editor] 正在安裝 OpenJDK 21…</string>
+    <string name="editor_build_script_install_java_failed">[ZeroTermux Editor] OpenJDK 21 安裝失敗</string>
+    <string name="editor_build_script_install_c">[ZeroTermux Editor] 正在安裝 C 編譯器 (clang)…</string>
+    <string name="editor_build_script_install_c_failed">[ZeroTermux Editor] C 編譯器安裝失敗</string>
+    <string name="editor_build_script_install_python">[ZeroTermux Editor] 正在安裝 Python…</string>
+    <string name="editor_build_script_install_python_failed">[ZeroTermux Editor] Python 安裝失敗</string>
+    <string name="editor_build_script_install_php">[ZeroTermux Editor] 正在安裝 PHP 與 Composer…</string>
+    <string name="editor_build_script_install_php_failed">[ZeroTermux Editor] PHP 安裝失敗</string>
+    <string name="editor_build_script_install_node">[ZeroTermux Editor] 正在安裝 Node.js 與 npm…</string>
+    <string name="editor_build_script_install_node_failed">[ZeroTermux Editor] Node.js 安裝失敗</string>
+    <string name="editor_build_script_running">[ZeroTermux Editor] 正在運行 %1$s</string>
+    <string name="editor_build_script_install_gui_fonts">[ZeroTermux Editor] 正在安裝 GUI 字體…</string>
+    <string name="editor_build_script_display_not_ready">[ZeroTermux Editor] DISPLAY 未就緒，請先點擊運行或打開 GUI 面板</string>
+    <string name="editor_build_script_gui_started">[ZeroTermux Editor] GUI 程序已啟動</string>
+    <string name="editor_build_script_gui_view_hint">[ZeroTermux Editor] 提示：如為帶窗口的代碼，請點擊右上角 GUI 按鈕查看畫面</string>
+    <string name="editor_build_script_gui_set_visible_hint">[ZeroTermux Editor] 提示：main() 中需調用 new Hello().setVisible(true) 才能顯示窗口</string>
+    <string name="editor_java_install_jdk_title">安裝 JDK</string>
+    <string name="editor_java_install_jdk_message">未檢測到 Java 開發環境（JDK）。是否在 Termux 中安裝 OpenJDK？</string>
+    <string name="editor_java_install_jdk_confirm">安裝</string>
+    <string name="editor_run_install_c_title">安裝 C 編譯器</string>
+    <string name="editor_run_install_c_message">未檢測到 C 編譯環境（gcc/clang）。是否在 Termux 中安裝？</string>
+    <string name="editor_run_install_python_title">安裝 Python</string>
+    <string name="editor_run_install_python_message">未檢測到 Python 運行環境。是否在 Termux 中安裝？</string>
+    <string name="editor_run_install_php_title">安裝 PHP</string>
+    <string name="editor_run_install_php_message">未檢測到 PHP/Composer 運行環境。是否在 Termux 中安裝？</string>
+    <string name="editor_run_install_node_title">安裝 Node.js</string>
+    <string name="editor_run_install_node_message">未檢測到 Node.js/npm 運行環境。是否在 Termux 中安裝？</string>
+    <string name="editor_java_terminal_unavailable">無法連接 Termux 終端，請先從主界面打開終端後再試</string>
+    <string name="editor_java_save_failed">保存文件失敗，無法運行</string>
+    <string name="editor_sidebar_files">文件</string>
+    <string name="editor_sidebar_page_browser">瀏覽</string>
+    <string name="editor_sidebar_page_project">創建項目</string>
+    <string name="editor_sidebar_project_path_label">將在以下目錄下創建 project_java / project_c / project_python / project_php / project_node 等文件夾：</string>
+    <string name="editor_sidebar_create_java">創建 Java 項目</string>
+    <string name="editor_sidebar_create_c">創建 C 語言項目</string>
+    <string name="editor_sidebar_create_python">創建 Python 項目</string>
+    <string name="editor_sidebar_create_php">創建 PHP (Composer) 項目</string>
+    <string name="editor_sidebar_create_node">創建 Node.js (npm) 項目</string>
+    <string name="editor_sidebar_create_android">創建 Android 項目</string>
+    <string name="editor_sidebar_android_project_created">已創建 Android 項目：%1$s</string>
+    <string name="editor_sidebar_android_project_failed">創建 Android 項目失敗</string>
+    <string name="editor_toolbar_android_build">構建 Android 項目</string>
+    <string name="editor_android_install_gradle_title">安裝 Android 構建環境</string>
+    <string name="editor_android_install_gradle_message">未檢測到 Android 構建環境（OpenJDK、Android SDK、aapt2）。是否在 Termux 中安裝？首次安裝 SDK 可能較慢。</string>
+    <string name="editor_android_install_gradle_confirm">安裝</string>
+    <string name="editor_sidebar_project_created">已創建項目文件夾 %1$s</string>
+    <string name="editor_sidebar_project_exists">文件已存在：%1$s</string>
+    <string name="editor_sidebar_project_dir_invalid">無法獲取當前目錄</string>
+    <string name="editor_sidebar_search">搜索</string>
+    <string name="editor_sidebar_search_hint">搜索當前文件</string>
+    <string name="editor_sidebar_search_empty">輸入關鍵字搜索當前文件</string>
+    <string name="editor_sidebar_no_result">沒有搜索結果</string>
+    <string name="editor_sidebar_result_count">%1$d 個結果</string>
+    <string name="editor_sidebar_result_count_limited">已顯示前 %1$d 個結果</string>
+    <string name="editor_sidebar_invalid_regex">正則錯誤: %1$s</string>
+    <string name="editor_sidebar_regex">正則</string>
+    <string name="editor_sidebar_match_case">區分大小寫</string>
+    <string name="editor_sidebar_file_empty">沒有文件</string>
+    <string name="editor_sidebar_go_up">.. 返回上層目錄</string>
+    <string name="editor_sidebar_new_menu">新建</string>
+    <string name="editor_sidebar_create_folder">創建文件夾</string>
+    <string name="editor_sidebar_create_file">創建文件</string>
+    <string name="editor_sidebar_create_name_hint">名稱</string>
+    <string name="editor_sidebar_create_exists">已存在：%1$s</string>
+    <string name="editor_sidebar_create_failed">創建失敗</string>
+    
+    <string name="editor_sidebar_java_file_template">"/**\n手動創建java文件\n創建日期：%1$s\n**/\nclass %2$s {\n}\n"</string>
+    <string name="editor_sidebar_copy">複製</string>
+    <string name="editor_sidebar_cut">剪切</string>
+    <string name="editor_sidebar_paste">粘貼</string>
+    <string name="editor_sidebar_delete">刪除</string>
+    <string name="editor_sidebar_open_terminal">打開終端</string>
+    <string name="editor_sidebar_delete_confirm_file">確定刪除文件「%1$s」嗎？此操作不可恢復。</string>
+    <string name="editor_sidebar_delete_confirm_folder">確定刪除文件夾「%1$s」及其全部內容嗎？此操作不可恢復。</string>
+    <string name="editor_sidebar_clipboard_copied">已複製：%1$s</string>
+    <string name="editor_sidebar_clipboard_cut">已剪切：%1$s</string>
+    <string name="editor_sidebar_paste_success">已粘貼：%1$s</string>
+    <string name="editor_sidebar_paste_failed">粘貼失敗</string>
+    <string name="editor_sidebar_delete_success">已刪除：%1$s</string>
+    <string name="editor_sidebar_delete_failed">刪除失敗</string>
+    <string name="editor_file_not_text">非文本文件不可打開</string>
+    <string name="editor_image_preview">圖片預覽</string>
+    <string name="editor_svg_preview_mode">預覽 SVG</string>
+    <string name="editor_svg_edit_mode">編輯 SVG</string>
+    <string name="editor_markdown_preview_mode">預覽 Markdown</string>
+    <string name="editor_markdown_edit_mode">編輯 Markdown</string>
+    <string name="editor_symbol_customize">自定義擴展鍵盤</string>
+    <string name="editor_symbol_customize_title">自定義擴展鍵盤</string>
+    <string name="editor_symbol_customize_hint">輸入 JSON 數組，例如 ["{", {"display":"Tab","insert":"\\t"}]</string>
+    <string name="editor_symbol_customize_summary">使用 JSON 數組自定義擴展鍵盤；字符串會直接插入，對象支持 display/insert 欄位。</string>
+    <string name="editor_symbol_customize_save">保存</string>
+    <string name="editor_symbol_customize_reset">恢復默認</string>
+    <string name="editor_symbol_customize_invalid">沒有有效的擴展鍵</string>
+    <string name="editor_settings">編輯器設置</string>
+    <string name="editor_settings_tab_size">Tab 長度</string>
+    <string name="editor_settings_theme">編輯器主題</string>
+    <string name="editor_settings_font">自定義字體文件</string>
+    <string name="editor_settings_font_hint">留空使用默認字體，或輸入字體文件路徑</string>
+    <string name="editor_settings_font_select">選擇字體文件</string>
+    <string name="editor_settings_font_invalid">字體文件無效或無法讀取</string>
+    <string name="editor_settings_font_picker_error">無法打開字體文件選擇器</string>
+    <string name="editor_settings_symbols">擴展鍵盤</string>
+    <string name="editor_settings_symbols_edit">設置編輯器擴展鍵盤</string>
+    <string name="editor_settings_lsp">LSP 代碼補全</string>
+    <string name="editor_settings_lsp_enable">啟用 LSP 代碼補全</string>
+    <string name="editor_settings_lsp_timeout">LSP 請求超時</string>
+    <string name="editor_settings_lsp_timeout_hint">毫秒，例如 3000</string>
+    <string name="editor_settings_lsp_download_desc">支持 JSON、JS/TS、Python、YAML、Shell 等語言的智能補全。首次使用會自動安裝 Shell 基礎 LSP，其他語言可在下方下載。</string>
+    <string name="editor_settings_lsp_download">下載 / 管理 LSP 伺服器</string>
+    <string name="editor_settings_lsp_download_title">LSP 伺服器</string>
+    <string name="editor_settings_lsp_installed">已安裝</string>
+    <string name="editor_settings_lsp_installing">正在下載</string>
+    <string name="editor_settings_lsp_not_installed">未安裝，點擊下載</string>
+    <string name="editor_settings_lsp_dialog_hint">點擊未安裝項即可安裝。若缺少 npm，將自動向 Termux 終端發送 pkg install 命令；LSP 包通過 npm install -g 安裝。請保持 Termux 會話可用並等待終端執行完成。</string>
+    <string name="editor_settings_lsp_dialog_close">關閉</string>
+    <string name="editor_settings_lsp_supported_languages">支持：%1$s</string>
+    <string name="editor_settings_lsp_status_not_installed">未安裝</string>
+    <string name="editor_settings_lsp_action_install">點擊安裝</string>
+    <string name="editor_settings_lsp_action_retry">點擊重試</string>
+    <string name="editor_settings_lsp_action_installed">已就緒</string>
+    <string name="editor_settings_lsp_required_badge">推薦</string>
+    <string name="editor_lsp_install_prompt_title">語言提示與糾錯</string>
+    <string name="editor_lsp_install_prompt_message">檢測到當前語言有糾錯和提示功能，需要安裝環境，需要現在安裝嗎？</string>
+    <string name="editor_lsp_install_prompt_install">安裝</string>
+    <string name="editor_lsp_install_prompt_cancel">取消</string>
+    <string name="editor_lsp_install_prompt_never">不再提示</string>
+    <string name="editor_lsp_hover">查看信息</string>
+    <string name="editor_lsp_popup_tip">點擊外部關閉 · 點擊條目可跳轉</string>
+    <string name="editor_java_create_method">新建方法</string>
+    <string name="editor_lsp_goto_definition">轉到定義</string>
+    <string name="editor_lsp_go_back">返回上一位置</string>
+    <string name="editor_lsp_find_references">查找引用</string>
+    <string name="editor_lsp_organize_imports">整理 Import</string>
+    <string name="editor_lsp_code_actions">代碼操作</string>
+    <string name="editor_lsp_quick_fix">快速修復</string>
+    <string name="editor_lsp_no_hover">無懸停信息</string>
+    <string name="editor_lsp_no_definition">未找到定義</string>
+    <string name="editor_lsp_loading_class_source">正在加載 class 源碼…</string>
+    <string name="editor_lsp_class_source_failed">無法加載 class 對應的 Java 源碼</string>
+    <string name="editor_lsp_no_references">未找到引用</string>
+    <string name="editor_lsp_no_code_action">沒有可用的修復</string>
+    <string name="editor_lsp_organize_imports_done">已整理 Import</string>
+    <string name="editor_lsp_organize_imports_failed">整理 Import 失敗</string>
+    <string name="editor_lsp_references_title">引用（%1$d）</string>
+    <string name="editor_lsp_references_for">引用：%1$s</string>
+    <string name="editor_lsp_hover_for">信息：%1$s</string>
+    <string name="editor_lsp_format_done">已格式化</string>
+    <string name="editor_lsp_format_failed">格式化失敗</string>
+    <string name="editor_lsp_working">處理中…</string>
+    <string name="editor_lsp_goto_loading">正在轉到定義，請稍候…</string>
+    <string name="editor_lsp_goto_loading_close">關閉</string>
+    <string name="editor_unsaved_title">文件未保存</string>
+    <string name="editor_unsaved_exit_message">有 %1$d 個文件未保存，確定要退出嗎？</string>
+    <string name="editor_unsaved_close_message">%1$s 尚未保存，確定要關閉嗎？</string>
+    <string name="editor_unsaved_discard">不保存</string>
+    <string name="changed_bash">編輯啟動</string>
+    <string name="save_error_">保存失敗</string>
+    <string name="save_ok_">保存成功,有些文件需要重啟APP生效</string>
+    <string name="start_msg">修改歡迎語</string>
+    <string name="create_folder">創建文件夾</string>
+    <string name="rohibit_toolbox_msg">在你調整字體大小或三指截圖的時候，可以選擇禁止顯示工具箱\n啟用工具箱:[長按終端-&gt;啟用工具箱]</string>
+    <string name="rohibit_toolbox_select">禁用顯示</string>
+    <string name="rohibit_toolbox_ok_">已禁用顯示,如要開啟請:[長按終端-&gt;啟用工具箱]</string>
+    <string name="module_un7z_">模塊展開中...</string>
+    <string name="module_install_pro">正在處理命令:</string>
+    <string name="file_manager">文件管理</string>
+    <string name="select_session">切換會話</string>
+    <string name="http_folder">文件夾</string>
+    <string name="http_file">文件</string>
+    <string name="no_http_msg">似乎沒有連結網絡?請手動在瀏覽器打開本機IP:19956</string>
+    <string name="open_ttyd_http">網絡終端(ttyd)</string>
+    <string name="open_file_http">網絡文件</string>
+    <string name="buffer_size_key">緩衝大小</string>
+    <string name="auto_shell_key">自動終端</string>
+    <string name="startup_command_key">啟動命令</string>
+    <string name="adb_command">輸入配對碼</string>
+    <string name="adb_tool">輸入埠號</string>
+
+
+    <string name="notification_channel_foreground_service">前臺服務</string>
+    <string name="notification_channel_attention">提示</string>
+    <string name="notification_ftp_start_error_title">FTP服務無法啟動</string>
+    <string name="notification_ftp_start_errer_message">FTP服務無法啟動，請檢查網絡、權限、運行模式</string>
+    <string name="item_charset_gbk">GBK(簡體中文)</string>
+    <string name="item_charset_utf">UTF-8(默認)</string>
+    <string name="permission_write_external">請授權存儲讀寫權限</string>
+    <string name="snackbar_action_goto">前往設置</string>
+    <string name="attention_ftp_is_running">需要先關閉FTP服務才可以修改設置</string>
+    <string name="attention_no_user_account">請添加一個帳戶或者使用匿名模式來打開FTP服務</string>
+    <string name="ftp_status_not_running">FTP服務沒有運行</string>
+    <string name="ftp_status_running_head">FTP服務運行於</string>
+    <string name="attention_opening_ftp">正在打開FTP服務…</string>
+    <string name="attention_closing_ftp">正在關閉FTP服務…</string>
+    <string name="word_stop">停止</string>
+    <string name="ftp_title_no">ZeroTermux:FTP</string>
+    <string name="docker_check">Docker檢查</string>
+    <string name="termux_copy_ll">複製文件到~</string>
+    <string name="termux_moudle_ll">安裝模塊包</string>
+    <string name="termux_targz_ll">安裝恢復包</string>
+    <string name="termux_install_module_switch">確定要安裝此模塊?</string>
+
+    <string name="label_server_ip">輸入要被遠程機器的IP</string>
+    <string name="label_video_resolution">解析度</string>
+    <string name="label_video_bitrate">傳輸質量</string>
+    <string name="label_x">x</string>
+    <string name="action_start">啟動</string>
+    <string name="appswitch_button">=</string>
+    <string name="home_button">o</string>
+    <string name="back_button">v</string>
+    <string name="switch0">無控制（如果不需要遠程設備控制，請選中此項）</string>
+    <string name="switch1">導航欄（如果遠程設備沒有屏幕導航欄，請選中此項）</string>
+    <string name="label_server_title">遠程連接(BATE)</string>
+    <string name="ip_connect">0.0.0.0</string>
+    <string name="remote_connection">ADB遠程連接</string>
+    <string name="press_again">再按一次退出</string>
+    <string name="adb_title_msg">正在連接...請勿多次點擊\'啟動\'！</string>
+    <string name="copy_uri_error">URI複製錯誤，請等待開發者修復...</string>
+    <string name="developer_activity">請在DEBUG模式下進入</string>
+    <string name="input_content_cannot_be_empty">輸入內容不能為空</string>
+    <string name="common_functions">常用功能</string>
+    <string name="menu_create_project">創建項目</string>
+    <string name="menu_create_project_c">C</string>
+    <string name="menu_create_project_java">JAVA</string>
+    <string name="menu_create_project_python">PYTHON</string>
+    <string name="menu_create_project_php">PHP</string>
+    <string name="menu_create_project_npm">NPM</string>
+    <string name="menu_create_project_vscode">VS Code</string>
+    <string name="menu_vscode_install_title">正在安裝環境</string>
+    <string name="menu_vscode_install_message">正在終端中安裝 VS Code Server（code-server），可能需要一些時間。\n\n安裝完成後，請再次點擊「VS Code」打開。\n\n也可使用外部瀏覽器打開：\n%1$s</string>
+    <string name="menu_vscode_open_message">正在啟動 VS Code Server，即將進入…\n外部地址：%1$s</string>
+    <string name="menu_vscode_open_builtin">內置瀏覽器</string>
+    <string name="menu_vscode_open_external">外部打開</string>
+    <string name="menu_vscode_opening_browser">正在用內置瀏覽器打開 VS Code…</string>
+    <string name="menu_vscode_loading_enter">正在啟動 VS Code，即將進入…\n請稍候，勿關閉</string>
+    <string name="menu_open_project">打開項目</string>
+    <string name="beautification_function">美化/UI</string>
+    <string name="online_features">線上功能</string>
+    <string name="zt_features">ZT功能</string>
+    <string name="zt_settings">ZeroTermux設置</string>
+    <string name="zt_settings1">ZT設置</string>
+    <string name="zt_settings_note">ZeroTermux 相關設置選項</string>
+<string name="zt_editor_word_wrap">文本編輯器自動換行</string>
+    <string name="zt_editor_word_wrap_summary">開啟後內置文本編輯器將自動換行顯示</string>
+    <string name="container_settings">容器設置</string>
+    <string name="container_settings_note">應用容器內應用程式，只針對當前容器設置</string>
+    <string name="about_zerotermux">關於ZeroTermux</string>
+    <string name="about_zerotermux_note">版本信息、鳴謝、GITHUB</string>
+    <string name="termux_settings">Termux原生設置</string>
+    <string name="termux_settings_note">進入Termux原生設置內容</string>
+    <string name="install_termux_software">安裝/還原Termux官方軟體</string>
+    <string name="install_termux_software_note">使用安裝ZT相同籤名的原生Termux、API、X11等</string>
+    <string name="zt_download_service">ZT下載伺服器</string>
+    <string name="zt_download_service_note">默認埠為:19956</string>
+    <string name="zt_workstation">ZT電腦工作站</string>
+    <string name="zt_workstation_note">可在網頁端打開工作站，方便在電腦或遠程當中控制當前程序(19999埠)。各子功能開啟時將分別申請所需權限</string>
+    <string name="zt_workstation_permission_denied">需要相應權限才能開啟此功能</string>
+    <string name="zt_workstation_permission_denied_camera">需要攝像頭權限才能開啟攝像頭功能</string>
+    <string name="zt_workstation_permission_denied_files">需要存儲讀寫權限才能開啟文件夾功能</string>
+    <string name="zt_workstation_permission_denied_phone_sms">需要簡訊、電話、通訊錄權限才能開啟簡訊/電話功能</string>
+    <string name="zt_workstation_notification_title">ZT電腦工作站</string>
+    <string name="zt_workstation_notification_text">Web 工作站運行中，埠 19999</string>
+    <string name="zt_workstation_settings_title">ZT電腦工作站</string>
+    <string name="zt_workstation_master">工作站總開關</string>
+    <string name="zt_workstation_master_note">關閉後 Web 工作站服務停止，子功能開關僅作預設</string>
+    <string name="zt_workstation_auto_start">開啟APP自動啟動</string>
+    <string name="zt_workstation_auto_start_risk">高危：啟動 APP 時自動運行以下已選中的子功能開關</string>
+    <string name="zt_workstation_terminal">允許使用終端</string>
+    <string name="zt_workstation_terminal_risk">高風險：謹慎操作。打開後網頁端可直接操控你的終端，並完全接管文件管理，包括刪除、複製到其他設備</string>
+    <string name="zt_workstation_camera">允許使用攝像頭</string>
+    <string name="zt_workstation_camera_risk">高風險：打開之後可無感知查看你的攝像頭。如造成隱私洩露，需使用者自行承擔</string>
+    <string name="zt_workstation_files">允許使用文件夾</string>
+    <string name="zt_workstation_files_risk">高風險：完全接管你的所有文件，包括刪除、複製到其他設備</string>
+    <string name="zt_workstation_phone_sms">允許使用簡訊/電話</string>
+    <string name="zt_workstation_phone_sms_risk">高風險：可能洩露你的通訊錄以及簡訊</string>
+    <string name="zt_workstation_status_on">已開啟</string>
+    <string name="zt_workstation_status_off">未開啟</string>
+    <string name="zt_workstation_enter">進入設置</string>
+    <string name="zt_workstation_disclaimer_title">高危風險免責聲明</string>
+    <string name="zt_workstation_disclaimer_message">此頁面均為高危風險，請仔細閱讀免責聲明。\n\n點擊「確認」即表示同意，「取消」即表示拒絕。\n\n本頁面內容強烈建議你在具備自主管控意識、能明白每一個開關含義後再操作。若不明白，請退出，不要打開。\n\n若本頁面對你造成隱私洩露、文件刪除、文件複製、文件轉發等後果，本應用及作者不承擔任何法律責任。你必須非常明確自己在做什麼，並在充分理解後同意下一步。</string>
+    <string name="zt_workstation_confirm_enable">確認開啟</string>
+    <string name="confirm">確認</string>
+    <string name="cancel">取消</string>
+    <string name="zt_workstation_web_blocked">該功能未在手機端打開開關，請在 ZeroTermux 設置 → ZT電腦工作站 中開啟對應權限後再使用。</string>
+    <string name="zt_download_service_note1">請注意！此功能沒有帳號密碼保護，默認即可打開下載。打開後請注意個人隱私外洩！</string>
+    <string name="zt_sidebar_closes_automatically">側邊欄自動關閉</string>
+    <string name="zt_sidebar_closes_automatically_note">調出輸入法就自動關閉側邊欄(左、右)</string>
+    <string name="zt_landscaping_settings">點擊「美化設置」關閉左側欄</string>
+    <string name="zt_landscaping_settings_note">按照個人設置習慣使用打開還是關閉側邊欄</string>
+    <string name="toolbox_display_settings">禁止工具箱顯示</string>
+    <string name="toolbox_display_settings_note">雙指放大或縮小字體造成手勢衝突，可在此\n臨時關閉</string>
+    <string name="user_bottom_keyboard_settings">打開鍵盤規則模式</string>
+    <string name="user_bottom_keyboard_settings_note">強制使用ZT設置鍵盤規則,其它設置鍵盤\n規則一律無效</string>
+    <string name="bottom_keyboard_settings">設置鍵盤規則</string>
+    <string name="bottom_keyboard_settings_note">輸入個性化的鍵盤規則,提高輸入效率</string>
+    <string name="log_output">輸出LOG到存儲卡</string>
+    <string name="log_output_note">日誌目錄 xinhao/ZeroTermuxLog/\n• ZeroTermux.log — 通用日誌\n• timer_diag.log — 定時任務調度/觸發/跳過（排查偶爾未執行）\n另有 ~/.timerdir/log/timer_diag.log\n可能影響性能，僅排查時開啟</string>
+    <string name="zt_about">關於ZeroTermux</string>
+    <string name="zt_about_zerotermux">ZeroTermux GITHUB</string>
+    <string name="zt_about_zerotermux_note">跳轉到ZeroTermux GITHUB頁面</string>
+    <string name="zt_about_zerotermux_core_manage">ZeroCoreManage GITHUB(擴展引擎)</string>
+    <string name="zt_about_zerotermux_core_manage_note">跳轉到ZeroTermux GITHUB頁面\nZeroTermux的額外擴展引擎包</string>
+    <string name="zt_about_card_title">ZeroTermux</string>
+    <string name="zt_about_card_title_note">ZeroTermux 是基於Termux二次開發，增加了\n相對於Termux沒有的的輔助功能，方便快速上手\n此軟體可相當於一個微型linux系統,可額外安裝\n其他發行版本如：Ubuntu、CentOs等</string>
+    <string name="zeroCore_about_card_title">ZeroCoreManage</string>
+    <string name="zeroCore_about_card_title_note">ZeroCoreManage 是基於ZeroTermux的擴展包,對於\nZeroTermux功能的擴展,目的是為了減小ZeroTermux\n的軟體包大小,不安裝此擴展包ZeroTermux依舊可以正常運行\n引擎額外內容:\n\n1. 內置鍵盤\n2. WEB訪問內存卡\n3. X86 Alpine</string>
+    <string name="zt_developer">開發/貢獻</string>
+    <string name="zt_developer_note">hotianbexuanto、Kevin Williams、狂吃不胖沒辦法、SharpIce 銳冰龍、WINLOG \n小潼(XiaoTong6666)、XINHAO_HAN、Xieansecn等(排名不分先後)</string>
+    <string name="zt_install">還原/擴展官方版本</string>
+    <string name="zt_install_float">沒有安裝此插件！請到【設置 -&gt; 安裝/還原Termux官方軟體 -&gt; Termux Float】安裝插件</string>
+    <string name="zt_install_file">沒有安裝此插件！請到【設置 -&gt; 安裝/還原Termux官方軟體 -&gt; (Zero)Utermux File Plug】安裝插件</string>
+    <string name="zt_timer">定時任務</string>
+    <string name="zt_timer_settings">定時任務設置(BATE)</string>
+
+    <string name="zt_timer_start">啟動定時任務</string>
+    <string name="zt_timer_start_sum">啟動定時任務到達時間會執行一次命令代碼</string>
+    <string name="zt_timer_this_check">當前選擇</string>
+    <string name="zt_timer_30_second">30秒</string>
+    <string name="zt_timer_1_minute">1分鐘</string>
+    <string name="zt_timer_10_minute">10分鐘</string>
+    <string name="zt_timer_30_minute">30分鐘</string>
+    <string name="zt_timer_minute">分鐘</string>
+    <string name="zt_timer_1_hour">1小時</string>
+    <string name="zt_timer_customize">自定義</string>
+    <string name="zt_timer_message">自定義單位為秒\n1 分鐘 = 60 秒\n1 小時 = 60 分鐘 * 60 秒 = 3600 秒 \n1 天 = 24 小時 * 60 分鐘 * 60 秒 = 86400秒</string>
+
+    <string name="zt_timer_log">日誌目錄</string>
+    <string name="zt_timer_log_sum">LOG目錄在:\n~/.timerdir/log/,請查看此處LOG運行情況.</string>
+    <string name="zt_timer_edit">腳本目錄</string>
+    <string name="zt_timer_edit_sum">請手動修改Termux目錄下：\nZT環境下：~/.timerdir/termux_timer.sh\nSHELL環境下：~/.timerdir/shell_timer.sh\n注意！注意！注意\n在ZeroTermux 環境下請不要授予APP ROOT權限，否則無法運行!</string>
+
+    <string name="zt_timer_environment">當前運行環境</string>
+    <string name="zt_timer_environment_sum">當前運行環境為:</string>
+    <string name="zt_timer_other_title_dialog">自定義時常(秒)</string>
+    <string name="zt_timer_other_input_numer_dialog">請輸入數字或者輸入數字大於long最大值(單位為秒)</string>
+    <string name="zt_timer_notification_timer_title">(ZT)定時任務當前正在運行</string>
+    <string name="zt_timer_notification_timer_sum">當前計劃時間間隔:</string>
+    <string name="zt_timer_notification_timer_cunt">當前執行次數:</string>
+    <string name="zt_timer_notification_timer_kill">正在強制關閉當前任務！</string>
+    <string name="zt_timer_countdown_label">下次執行倒計時</string>
+    <string name="zt_timer_execute_count_label">已執行次數</string>
+    <string name="zt_timer_edit_script">編輯腳本</string>
+    <string name="zt_timer_edit_script_sum">打開並編輯當前環境對應的定時腳本</string>
+    <string name="zt_timer_view_log">查看日誌</string>
+    <string name="zt_timer_view_log_sum">打開 ~/.timerdir/log/ 下的執行日誌文件</string>
+    <string name="zt_timer_execution_log_label">執行日誌</string>
+    <string name="zt_timer_execution_log_sum">最多顯示最近 100 行，最新日誌在最上方</string>
+    <string name="zt_timer_log_empty">暫無執行日誌</string>
+    <string name="zt_timer_second_unit">秒</string>
+    <string name="zt_timer_status_executing">正在執行定時腳本…</string>
+    <string name="zt_timer_waiting_script">正在等待腳本完成</string>
+    <string name="zt_timer_executing_current_script">正在執行當前腳本</string>
+    <string name="zt_timer_notification_permission_required">定時任務需要通知權限，請授予後再使用</string>
+    <string name="zt_timer_notification_open_settings">請在系統設置中為 ZeroTermux 開啟「通知」權限，開啟後返回本頁即可使用</string>
+    <string name="zt_timer_main_program_missing">主程序終端不存在，請先打開 ZeroTermux 主界面</string>
+    <string name="zt_timer_script_missing">腳本文件不存在，請稍後重試</string>
+    <string name="zt_timer_mode_interval">間隔重複</string>
+    <string name="zt_timer_mode_daily">每日定時</string>
+    <string name="zt_timer_daily_at">每日 %1$s</string>
+    <string name="zt_timer_daily_pick">選擇每日執行時間</string>
+    <string name="zt_timer_daily_pick_with_time">每日執行時間：%1$s（點擊修改）</string>
+    <string name="zt_timer_always_allow">始終允許此計時任務</string>
+    <string name="zt_timer_always_allow_sum">開啟後，退出 APP 再打開會自動恢復未完成的定時任務與倒計時</string>
+    <string name="zt_timer_countdown_target">目標時刻 %1$s</string>
+    <string name="zt_timer_cannot_change_while_running">定時任務運行中，請先停止後再修改</string>
+    <string name="zt_env_shell_title">ADB Shell運行Termux</string>
+    <string name="zt_env_shell_sum">打開此選項輸出sh腳本到指定目錄\n關閉則取消此腳本輸出</string>
+    <string name="zt_env_shell_sum_msg">打開adb shell 運行以下命令:\n1.adb shell\n2.</string>
+    <string name="zt_particle_animation">粒子動畫</string>
+    <string name="zt_volume_function_title">還原音量+-鍵</string>
+    <string name="zt_volume_function_summary">禁用當前使用音量+-鍵進行彈出左/右面板</string>
+
+    <string name="zt_nav_page_opened">已打開：%1$s</string>
+    <string name="zt_nav_page_termux">主終端</string>
+    <string name="zt_nav_page_zt_settings">ZeroTermux 設置</string>
+    <string name="zt_nav_page_zero_termux_settings">ZeroTermux 功能設置</string>
+    <string name="zt_nav_page_left_menu_settings">左側菜單設置</string>
+    <string name="zt_nav_page_menu_settings">菜單設置</string>
+    <string name="zt_nav_page_zt_developer_options">開發者選項</string>
+    <string name="zt_nav_page_menu_update_source">菜單更新源</string>
+    <string name="zt_nav_page_ai_settings">AI 設置</string>
+    <string name="zt_nav_page_agent_ai_settings">智能體 AI 配置</string>
+    <string name="zt_nav_page_agent_skills">Skills（技能包）</string>
+    <string name="zt_nav_page_deepseek_settings">DeepSeek 設置</string>
+    <string name="zt_nav_page_deepseek_key">DeepSeek Key</string>
+    <string name="zt_nav_page_llm_settings">自定義 LLM 設置</string>
+    <string name="zt_nav_page_termux_settings">Termux 原生設置</string>
+    <string name="zt_nav_page_zt_about">關於 ZeroTermux</string>
+    <string name="zt_nav_page_zt_install">安裝 Termux 軟體</string>
+    <string name="zt_nav_page_zt_online_server">在線伺服器</string>
+    <string name="zt_nav_page_timer">定時任務</string>
+    <string name="zt_nav_page_container_settings">容器設置</string>
+    <string name="zt_nav_page_workstation_settings">ZT 電腦工作站</string>
+    <string name="zt_nav_page_developer">開發者選項</string>
+    <string name="zt_nav_page_guide">開機嚮導（協議頁）</string>
+    <string name="zt_nav_page_guide_usage">開機嚮導（使用習慣）</string>
+    <string name="zt_nav_page_save_path">開機嚮導（創建文件夾）</string>
+    <string name="zt_nav_page_backup">備份恢復</string>
+    <string name="zt_nav_page_font">字體設置</string>
+    <string name="zt_nav_page_switch_system">切換系統</string>
+    <string name="zt_nav_page_scrcpy">Scrcpy 投屏</string>
+    <string name="zt_nav_page_qemu_run">QEMU 運行窗口</string>
+    <string name="zt_nav_page_webview">內置瀏覽器</string>
+    <string name="zt_nav_page_help">幫助</string>
+    <string name="zt_nav_page_zt_command_socket">ZT 命令調試</string>
+    <string name="zt_nav_page_editor">文本編輯器</string>
+    <string name="zt_agent_ai_locale_reply_prompt">重要：請始終使用與用戶相同的語言回復。用戶用英文則用英文，用中文則用中文。工具返回的 JSON 僅作狀態參考，向用戶說明時須用用戶語言概括，勿逐字複述界面文案。</string>
+
+    <string name="zt_ai_agent_panel_title">打開新版本智能體</string>
+    <string name="zt_ai_agent_panel_summary">將右側面板調整喚醒為AI智能體，可控制終端自動下發命令</string>
+    <string name="zt_ai_agent_panel_title_bar">AI 智能體</string>
+    <string name="zt_ai_agent_running_banner">AI 智能體正在運行…</string>
+    <string name="zt_ai_agent_tool_rounds_progress">工具輪次 %1$d/%2$d</string>
+    <string name="zt_ai_agent_stop">打斷</string>
+    <string name="zt_ai_agent_stopped">（已打斷）</string>
+    <string name="zt_ai_agent_panel_hint">在此與 AI 對話…</string>
+    <string name="zt_ai_agent_panel_send">發送</string>
+    <string name="zt_ai_agent_panel_context_label">來自終端選中：</string>
+    <string name="zt_ai_agent_panel_empty">歡迎使用ZeroTermux智能體\n
+        注意：需要配置key\n
+        \n
+        你可以說: \n\"給我安裝ubuntu系統\"\n\"當前終端報錯\"\n\"你幫我修復下\"\n\n
+        也可以說: \n\"把字體改成紅色\"\n\"背景改成白色\"\n\"切換一個容器\"\n
+    </string>
+    <string name="zt_ai_agent_not_configured">請先在 ZeroTermux 設置 → 配置智能體AI 中填寫 API Key 與模型。</string>
+    <string name="zt_ai_agent_thinking">思考中…</string>
+    <string name="zt_ai_agent_panel_open_menu">打開右側菜單</string>
+    <string name="zt_moe_remove">MOE目前作者已經不在維護，可能會出現ZeroTermux不可預知的錯誤結果。</string>
+
+    <string-array name="options_resolution_keys">
+        <item>1920x1080</item>
+        <item>1280x720</item>
+        <item>800x448</item>
+        <item>640x360</item>
+    </string-array>
+
+    <string-array name="options_resolution_values">
+        <item>1920,1080</item>
+        <item>1280,720</item>
+        <item>800,448</item>
+        <item>640,360</item>
+    </string-array>
+
+    <string-array name="options_bitrate_keys">
+        <item>6 Mbps</item>
+        <item>4 Mbps</item>
+        <item>2 Mbps</item>
+        <item>1 Mbps</item>
+    </string-array>
+
+    <integer-array name="options_bitrate_values">
+        <item>6144000</item>
+        <item>4096000</item>
+        <item>2048000</item>
+        <item>1024000</item>
+    </integer-array>
+
+    <string name="x11_features">X11功能</string>
+    <string name="x11_features_settings">X11設置</string>
+    <string name="x11_features_settings_internal">內部通道X11設置</string>
+    <string name="x11_features_settings_summary">詳細(原生)設置，解析度、底部鍵盤顯示等</string>
+    <string name="x11_display_terminal">顯示終端</string>
+    <string name="x11_hide_terminal">隱藏終端</string>
+    <string name="x11_environment">X11環境</string>
+    <string name="x11_not_connect">X11沒有任何連接,請連接會話後重試</string>
+    <string name="x11_msg_error">查詢到終端顯示異常,現已恢復</string>
+    <string name="x11_internal_passage">內部通道</string>
+    <string name="x11_external_channels">外部通道</string>
+    <string name="x11_external_summary">切換完成請重啟APP生效\n\n內部通道：使用內部通道X11顯示輸出直接會在終端背景顯示\n外部通道：外部通道X11顯示輸出會在Termux:X11 APK 顯示\n內部通道可能會影響一定的性能\n\n注意：已知問題，如果在終端連續返回進入，內部通道可能會黑屏，再次按返回鍵退出，重新進入即可恢復\n\n操作：如果開啟內部通道，音量上下(加減)鍵會被強制替換成打開左/右面板,如需需要使用Termux 原生上下鍵功能，請關閉內部通道</string>
+    <string name="x11_internal_passage_install_error">內部通道文件安裝失敗，請手動設置權限(/usr/libexec/termux-x11/loader.apk)為444\n或重新安裝</string>
+    <string name="x11_error">沒有安裝基礎環境，請在左側欄點擊 「 X11環境 」</string>
+    <string name="x11_error_set_env">環境設置失敗，只能強制使用內部通道!如果一直提示此錯誤，請聯繫開發者</string>
+    <string name="x11_environment_msg">安裝日誌：</string>
+    <string name="x11_environment_error">Loader.apk刪除失敗，請手動刪除目錄下：/usr/libexec/termux-x11/loader.apk</string>
+    <string name="x11_environment_error_x11">termux-x11刪除失敗，請手動刪除目錄下：/usr/bin/termux-x11</string>
+    <string name="x11_dialog_reset">切換成功，需要重啟生效，現在需要重啟嗎？</string>
+    <string name="x11_so_install">修環境</string>
+    <string name="x11_so_install_ok">修復成功，請使用termux-x11重試</string>
+    <string name="x11_so_install_not">環境正常無需修復</string>
+    <string name="x11_so_install_error">修復失敗，請在 左側欄 -&gt; X11設置 切換通道來顯示詳細信息</string>
+    <string name="x11_install_apk">安裝X11</string>
+    <string name="x11_install_apk_not">沒有安裝X11，請先安裝X11 APK</string>
+    <string name="x11_boom_keyboard_gone">隱藏鍵盤</string>
+    <string name="x11_boom_keyboard_visible">顯示鍵盤</string>
+    <string name="update_online_sh">在線腳本伺服器</string>
+    <string name="update_online_sh_summary">修改在線腳本伺服器</string>
+    <string name="content_ssh_list">切換SSH</string>
+    <string name="content_command_list">切換命令</string>
+    <string name="content_ssh_list_summary">暫無SSH設備，請點擊上方添加</string>
+    <string name="content_ssh_list_toast_hint">正在初始化中，請耐心等待...</string>
+    <string name="content_ssh_list_toast_ssh_hint">初次使用，正在初始化SSH環境...</string>
+    <string name="content_ssh_list_toast_ssh_wait">環境尚未就緒，請稍候...</string>
+    <string name="zt_terminal_unavailable_command_not_sent">終端未就緒，命令未發送</string>
+    <string name="zt_terminal_unavailable_key_not_sent">終端未就緒，按鍵未發送</string>
+    <string name="zt_terminal_unavailable_text_not_read">終端未就緒，無法讀取終端內容</string>
+    <string name="content_ssh_remove_device">刪除設備</string>
+    <string name="content_ssh_remove_device_dialog">確定要刪除\'%1$s\'嗎？\n(IP: \'%2$s\')</string>
+    <string name="content_ssh_remove_ok">已刪除</string>
+    <string name="content_ssh_add_device">添加SSH設備</string>
+    <string name="content_ssh_alias">別名</string>
+    <string name="content_ssh_host_name">主機名(IP/域名)</string>
+    <string name="content_ssh_host_post_def">埠(默認22)</string>
+    <string name="content_ssh_host_username_def">用戶名(默認root)</string>
+    <string name="content_ssh_host_key_def">使用密鑰登錄(~/.ssh/別名.key)</string>
+    <string name="content_ssh_password">密碼</string>
+    <string name="content_ssh_generate">生成</string>
+    <string name="content_ssh_import">導入</string>
+    <string name="content_ssh_copy_public_key">複製公鑰</string>
+    <string name="content_ssh_alias_summary">請先填寫別名，密鑰文件將以別名命名</string>
+    <string name="content_ssh_generate_key">生成密鑰</string>
+    <string name="content_ssh_rsa">"將生成新的RSA密鑰對：\n~/.ssh/%s.key\n\n如果該文件已存在，將被覆蓋"</string>
+    <string name="content_ssh_generate_keying">正在後臺生成密鑰...</string>
+    <string name="content_ssh_please_fill_alias_first">請先填寫別名</string>
+    <string name="content_ssh_key_not_exets">"公鑰文件不存在，請先點擊生成密鑰"</string>
+    <string name="content_ssh_key_copy_clipboard">"公鑰已複製到剪貼板"</string>
+    <string name="content_ssh_key_read_failed">"讀取失敗"</string>
+    <string name="content_ssh_enter_alias">先填寫別名，需要根據別名保存密鑰文件</string>
+    <string name="content_ssh_alias_exist">別名已存在，無法導入，請修改別名</string>
+    <string name="content_ssh_equipment_alias">請輸入設備別名</string>
+    <string name="content_ssh_host_address">請輸入主機地址</string>
+    <string name="content_ssh_alias_exist_replace">"別名%s已存在，請更換"</string>
+    <string name="content_ssh_host_format_error">主機地址格式錯誤</string>
+    <string name="content_ssh_port_invalid">埠無效(1-65535)</string>
+    <string name="content_ssh_port_is_number">埠必須是數字</string>
+    <string name="content_ssh_edit_ssh_device">編輯SSH設備</string>
+    <string name="content_ssh_username">用戶名</string>
+    <string name="content_ssh_alias_ip_not_empty">別名和IP不能為空</string>
+    <string name="content_ssh_add_new_ssh_device">+ 添加新SSH設備</string>
+    <string name="content_ssh_name">SSH</string>
+
+    <string name="zt_command_version">ZeroTermux-命令版本：0.2 (2025 ~ 2026)</string>
+    <string name="zt_command_error">不支持或ZT版本低不識別: \"</string>
+    <string name="zt_command_help" ns0:ignore="TypographyDashes">
+        可用命令:\n
+        ZeroTermux 終端命令解釋 \n
+        版本 0.1 \n
+        \n
+        \n
+        --------0.1版本更新--------\n
+        \n
+        基礎類：\n
+        \n
+        help - 顯示幫助 \n
+        openleft(ol) - 打開左側面板 \n
+        openright(or) - 打開右側面板 \n
+        reboot(rb) - 重啟termux \n
+        toast - 底部彈出信息，顯示自定義消息 \n
+        toast[ \n
+        示例：zt toast hello \n
+        ] \n
+        version(v) - 查看當前版本信息 \n
+        \n
+        \n
+        圖形連接相關:\n
+        \n
+        vnc - 連接vnc(zt vnc 地址_埠_用戶名_密碼) \n
+        vnc[ \n
+        示例: zt vnc 127.0.0.1_5900_admin_admin \n
+        用戶名或密碼為空則輸入none \n
+        示例(密碼為空)：zt vnc 127.0.0.1_5900_admin_none \n
+        示例(用戶名為空)：zt vnc 127.0.0.1_5900_none_admin \n
+        示例(或都為空)：zt vnc 127.0.0.1_5900_none_none \n
+        注意 地址和埠不能為空！\n
+        ] \n
+        x11commandshow(x11xs) - 顯示終端(x11需打開) \n
+        x11commandhide(x11xh) - 隱藏終端(x11需打開) \n
+        x11keyboardshow(x11kbs) -顯示x11鍵盤 \n
+        x11keyboardhide(x11kbh) -隱藏x11鍵盤 \n
+        \n
+        \n
+        創建軟連接 \n
+        ln - 創建軟連接 \n
+        ln[ \n
+        說明：當前目錄 內部存儲路徑 \n
+        注意：兩個路徑都必須是全路徑 \n
+        示例：ln /data/data/com.termux/files/home/自定義名稱 /sdcard/ \n
+        示例(或指定一個目錄)：ln /data/data/com.termux/files/home/自定義名稱 /sdcard/自定義目錄/ \n
+        ] \n
+             \n
+        \n
+        --------0.2版本更新--------\n
+        zt dialog \n
+        dialog[\n
+        使用幫助：\n
+        -c 確定取消彈框(確定或者取消)，示例 zt dialog -c -t 標題 -m 消息內容 \n
+        -s 顯示彈框 (只有一個確定)，示例 zt dialog -s -m 消息內容 \n
+        -e 顯示編輯彈框，示例 zt dialog -e -t 標題 \n
+        ]\n
+        \n
+        zt x11status 查詢當前x11連結情況 (內部通道有用)\n
+        \n
+        zt backgroundimage(bgi) 圖片路徑(設置當前終端背景)\n
+        backgroundimage(bgi)[\n
+        使用幫助(必須全路徑):\n
+        zt backgroundimage /data/data/com.termux/files/home/.img/back.jpg \n
+        zt bgi /data/data/com.termux/files/home/.img/back.jpg \n
+        ]\n
+        \n
+         zt qr 打開掃一掃 (掃描二維碼或者條形碼)\n
+        \n
+        \n
+        頁面跳轉:\n
+        \n
+        openpage(op) - 打開 App 內頁面 \n
+        openpage[\n
+        示例：zt openpage list  列出可打開頁面 \n
+        示例：zt openpage zt_settings  打開 ZeroTermux 設置 \n
+        示例：zt openpage guide  打開開機嚮導 \n
+        示例：zt openpage agent_ai_settings  打開智能體 AI 配置 \n
+        ]\n
+        \n
+        \n
+
+    </string>
+
+    <string name="zt_command_timeout">連接超時</string>
+    <string name="zt_command_dialog_windows_finish">窗口異常銷毀</string>
+    <string name="zt_command_dialog_finish">彈窗被銷毀</string>
+    <string name="zt_command_dialog_help">
+        使用幫助：\n
+        -c 確定取消彈框(確定或者取消)，示例 zt dialog -c -t 標題 -m 消息內容 \n
+        -s 顯示彈框 (只有一個確定)，示例 zt dialog -s -m 消息內容 \n
+        -e 顯示編輯彈框，示例 zt dialog -e -t 標題 \n
+    </string>
+    <string name="zt_command_image_backgroup">輸入的背景圖片路徑無效</string>
+    <string name="no_permission">沒有權限</string>
+
+    <string name="deepseek_zs">你是一個ZeroTermux助手，幫助使用ZeroTermux、Termux的用戶來回答一些基礎的 linux知識,所有的命令最好都使用一行如果有多行儘量使用&amp;&amp;來拼接為1行</string>
+    <string name="deepseek_zs_command">當前會話文本:</string>
+    <string name="deepseek_input_key_error_info">可能的問題:\n\n返回401，沒有設置 DeepSeek Key 或者輸入了錯誤的key</string>
+
+    <string name="deepseek_input_key_error_info_1">可能的問題:\n\n請求頭錯誤\，輸入的 API KEY 可能有特殊字符(中文的標點符號),請重新檢查API KEY</string>
+    <string name="deepseek_input_key_error_start_info">錯誤信息:\n</string>
+    <string name="deepseek_empty">當前無會話，請點擊右上角新增會話</string>
+    <string name="deepseek_send_command">發送到終端</string>
+    <string name="deepseek_settings_seepseek">設置 DeepSeek</string>
+    <string name="deepseek_settings_seepseek_summary">設置相關deepseek選擇 列如:key</string>
+
+    <string name="deepseek_settings_recognition">輸入代碼識別關鍵字 </string>
+    <string name="deepseek_settings_recognition_edit">將代碼識別關鍵字輸入到此處，將自動保存</string>
+    <string name="deepseek_settings_recognition_edit_summary">將代碼識別關鍵字輸入到此處，將自動保存</string>
+    <string name="deepseek_settings_recognition_edit_info">注意！！設置完成之後，請重新在右側欄刷新會話(在右側欄點擊左上方的返回然後重新選擇進入會話)\n
+        輸入代碼識別參數，以逗號隔開的方式。可在 DeepSeek 會話當中顯示成藍色字符，可直接進行點擊到終端操作，而不是長按複製,點擊此處恢復默認</string>
+    <string name="deepseek_settings_recognition_edit_keyword">點擊此處恢復默認</string>
+    <string name="deepseek_settings_recognition_error_toast">格式化命令失敗,請重新設置 「代碼識別關鍵字」</string>
+
+    <string name="deepseek_settings_url">輸入 DeepSeek 接口地址</string>
+    <string name="deepseek_settings_url_edit">將官網的密鑰輸入到此處，將自動保存</string>
+    <string name="deepseek_settings_url_edit_summary">將官網的密鑰輸入到此處，將自動保存</string>
+    <string name="deepseek_settings_url_edit_info">目前默認的是 DeepSeek API接口，此處不清楚的話不要隨意修改，隨意修改可能導致接口無法訪問</string>
+
+    <string name="deepseek_settings_key">輸入 DeepSeek 密鑰</string>
+    <string name="deepseek_settings_key_edit">將官網的密鑰輸入到此處，將自動保存</string>
+    <string name="deepseek_settings_key_edit_summary">將官網的密鑰輸入到此處，將自動保存</string>
+    <string name="deepseek_settings_key_edit_info">請輸入 DeepSeek 官網申請的密鑰，填寫到此處即可。不清楚密鑰怎麼獲取，可點擊：密鑰獲取方式</string>
+    <string name="deepseek_settings_key_edit_info_keyword">密鑰獲取方式</string>
+
+    <string name="deepseek_settings_send_command">點擊藍色命令直接執行</string>
+    <string name="deepseek_settings_send_command_summary">點擊顯示藍色的指令之後，直接在終端執行，而不是顯示在終端</string>
+
+    <string name="deepseek_settings_send_close">發送到終端之後關閉側邊欄</string>
+    <string name="deepseek_settings_send_close_summary">在 長按 會話顯示菜單當中，「發送到終端」 選項點擊之後關閉右側側邊欄</string>
+
+    <string name="deepseek_settings_ai_see">讓AI看到你的終端</string>
+    <string name="deepseek_settings_ai_see_summary">不用在會話當中輸入你的終端錯誤，直接說: 終端報錯,AI會自動瀏覽你的終端內容(AI只能讀取到你最近記錄的上限600個字符內)</string>
+
+    <string name="deepseek_settings_ai_session_name">編輯會話名稱</string>
+
+    <string name="deepseek_settings_ai_get_deepseek_key">獲取 DeepSeek Key</string>
+    <string name="deepseek_settings_ai_get_deepseek_key_1">獲取DeepSeek,先打開DeepSeek官方網站點擊此處打開,然後如下圖</string>
+    <string name="deepseek_settings_ai_get_deepseek_key_1_keyword">點擊此處打開</string>
+    <string name="deepseek_settings_ai_get_deepseek_key_1_url">https://platform.deepseek.com/</string>
+    <string name="deepseek_settings_ai_get_deepseek_key_2">登錄帳號之後，點擊左側欄的 API Keys</string>
+    <string name="deepseek_settings_ai_get_deepseek_key_3">然後點擊 「創建 API keys」</string>
+    <string name="deepseek_settings_ai_get_deepseek_key_4">隨意輸入一個名稱就行</string>
+    <string name="deepseek_settings_ai_get_deepseek_key_5">複製此處的key到 ZT 裡邊的 DeepSeek 設置編輯框即可</string>
+
+    <string name="zt_ssh_improt_fail">導入失敗：別名丟失</string>
+    <string name="zt_ssh_improt_fail_error">導入失敗</string>
+    <string name="zt_ssh_improt_success">"密鑰導入成功\n已保存為:"</string>
+
+    <string name="zt_root_fun">ROOT功能</string>
+    <string name="zt_engine">插件/引擎</string>
+    <string name="zt_data_info_title">信息</string>
+    <string name="zt_data_info_content">
+        # 此處寫入的信息 \n
+        ## 會備份到整合包 \n
+        ### 下次恢復的時候 \n
+        #### 會直接 \n
+        ```\n顯示到左側欄\n```\n
+        [連結文字](https://www.baidu.com)
+    </string>
+
+    <string name="zt_new">新版本</string>
+    <string name="zt_command_key">底部鍵盤</string>
+    <string name="zt_command_edit_h">輸入你的終端底部代碼…</string>
+    <string name="zt_command_def">默認</string>
+    <string name="zt_command_key_error">格式錯誤!</string>
+    <string name="zt_command_path_error">文件操作失敗!</string>
+    <string name="zt_command_path_ok">保存成功，重啟APP生效</string>
+    <string name="zt_adb_shell_run_debug">此功能只能在debug版本上使用,是否下載 debug APP 以繼續使用此功能?</string>
+    <string name="zt_recreate">請等待，正在重啟當前Activity.</string>
+    <string name="zt_fold_menu_close">關閉摺疊功能</string>
+    <string name="zt_fold_menu_close_summary">(需要重啟APP)打開此選項左側的菜單欄目會始終保持展開狀態</string>
+    <string name="zt_app_crash">程序出錯,請將以下信息傳遞給開發者[截圖]\n開發者群一(QQ):</string>
+    <string name="zt_menu_title_config">配置終端</string>
+    <string name="zt_adb_shell_run">SHELL 運行</string>
+    <string name="zt_adb_shell_run_summary">
+        在 adb shell 終端運行 termux 命令終端
+        文件已成功寫入到:\n
+        home/termux-adb-shell.sh \n
+        請使用以下步驟 \n
+        \n
+        adb shell \n
+        run-as com.termux \n
+        cd files/home/ \n
+        sh termux-adb-shell.sh \n
+        cd ~ &amp;&amp; pkg update -y \n
+    </string>
+
+    <string name="zt_xml_menu">沒有在xml配置click事件，配置事件之後使用 zt menu update 重試或重啟APP。</string>
+    <string name="zt_xml_menu_error">XML格式不正確,請修改後重新使用命令\nzt menu update\n再試,或者使用命令:\nzt menu reset\n來重置,\n\n-點擊此錯誤信息,將直接打開編輯器-\n\n錯誤信息:\n\n</string>
+    <string name="zt_xml_settings_title">禁用使用配置文件來設置左菜單</string>
+    <string name="zt_xml_settings_summary">(需重啟APP)打開此選項將不在載入xml配置文件作為左側菜單數據源</string>
+
+    <string name="menu_package_card_title">Menu 菜單</string>
+    <string name="menu_package_current_menu">當前菜單：%1$s</string>
+    <string name="menu_package_network_update">默認菜單</string>
+    <string name="menu_package_update">更新</string>
+    <string name="menu_package_install">安裝菜單包</string>
+    <string name="menu_package_install_time_prefix">安裝時間：</string>
+    <string name="menu_package_backup">備份</string>
+    <string name="menu_package_delete">刪除</string>
+    <string name="menu_package_delete_confirm">確定刪除菜單包「%1$s」嗎？</string>
+    <string name="menu_package_delete_confirm_active">確定刪除當前菜單「%1$s」嗎？刪除後將切換為程序菜單。</string>
+    <string name="menu_package_delete_success">菜單包已刪除</string>
+    <string name="menu_package_delete_fail">刪除失敗</string>
+    <string name="menu_package_network_update_confirm">如果繼續更新會覆蓋掉當前的菜單選項，確認繼續嗎？</string>
+    <string name="menu_package_backup_name_title">備份菜單</string>
+    <string name="menu_package_backup_name_hint">請輸入備份名稱</string>
+    <string name="menu_package_backup_name_empty">備份名稱不能為空</string>
+    <string name="menu_package_install_pick_title">選擇菜單包</string>
+    <string name="menu_package_install_path_hint">zip 包目錄：%1$s</string>
+    <string name="menu_package_install_empty">%1$s 目錄下沒有 zip 菜單包\n（安裝後將解壓到應用內部 menu）</string>
+    <string name="menu_package_default_label">默認菜單</string>
+    <string name="menu_package_program_label">程序菜單</string>
+    <string name="menu_package_ai_created_label">AI創建</string>
+    <string name="menu_package_network_label">網絡菜單</string>
+    <string name="menu_package_local_label">本地菜單</string>
+    <string name="menu_settings_title">菜單設置</string>
+    <string name="menu_settings_summary">摺疊菜單與左側菜單相關選項</string>
+    <string name="zt_developer_options_title">開發者選項</string>
+    <string name="zt_developer_options_summary">下載服務、工作站、AI 調試與日誌等高級選項</string>
+    <string name="left_menu_settings_title">左側菜單</string>
+    <string name="left_menu_settings_summary">配置左側菜單更新源等選項</string>
+    <string name="menu_update_source_settings_title">菜單更新源</string>
+    <string name="menu_update_source_settings_summary">選擇或添加菜單 zip 下載地址</string>
+    <string name="menu_update_source_default">默認源</string>
+    <string name="menu_update_source_custom">自定義源</string>
+    <string name="menu_update_source_add">添加源</string>
+    <string name="menu_update_source_input_title">請輸入菜單地址</string>
+    <string name="menu_update_source_input_hint">https://example.com/menu.zip</string>
+    <string name="menu_update_source_input_empty">菜單地址不能為空</string>
+    <string name="menu_update_source_input_duplicate">該地址已存在</string>
+    <string name="menu_package_network_success">菜單已從網絡更新</string>
+    <string name="menu_package_network_update_fail">菜單更新失敗，已保持當前菜單</string>
+    <string name="menu_package_network_fallback">網絡獲取失敗，已使用內置默認菜單</string>
+    <string name="menu_package_apply_success">菜單已切換</string>
+    <string name="menu_package_apply_fail">菜單切換失敗</string>
+    <string name="menu_package_install_success">菜單包安裝成功</string>
+    <string name="menu_package_install_fail">菜單包安裝失敗</string>
+    <string name="menu_package_backup_success">已備份到 %1$s</string>
+    <string name="menu_package_backup_fail">備份失敗</string>
+    <string name="menu_package_install_pick">請選擇菜單 zip 包</string>
+
+    <string name="zt_usage_habits_title">使用習慣</string>
+    <string name="zt_usage_habits_content">注意(使用習慣相關選項可以在ZT設置重新自定義)\n
+        選擇一個使用習慣\n
+        termux(按鍵完全使用原生)\n
+        ZeroTermux(按鍵完全使用ZT布局)\n
+        請選擇一個使用習慣</string>
+    <string name="zt_usage_habits_termux">設置成功Termux使用習慣,更改配置請到設置</string>
+    <string name="zt_usage_habits_ztermux">設置成功ZeroTermux使用習慣,更改配置請到設置</string>
+    <string name="zt_guide">雙擊屏幕邊緣彈出左/右菜單欄\n如果你設置了ZT使用習慣,則為音量+-鍵\n如果打開左/右側欄無法關閉此窗口\n長按此處強制關閉</string>
+    <string name="zt_core_date_error">核心終端上下數據出錯，請返回到桌面再次進入重試.</string>
+
+    <string name="deepseek_input_key_error_info_400">可能的問題:\n\n返回400，沒有設置 DeepSeek Key 或者輸入了錯誤的key</string>
+    <string name="deepseek_input_key_error_info_401">可能的問題:\n\n返回401，API key 錯誤，認證失敗，解決方法：請檢查您的 API key 是否正確</string>
+    <string name="deepseek_input_key_error_info_402">可能的問題:\n\n返回402，帳號餘額不足，解決方法：請確認帳戶餘額，並前往Deepseek頁面進行充值</string>
+    <string name="deepseek_input_key_error_info_403">可能的問題:\n\n返回403，未知錯誤</string>
+    <string name="deepseek_input_key_error_info_422">可能的問題:\n\n返回422，參數錯誤，解決方法：一般情況來說不太可能出現此錯誤，是否key沒填寫正確？</string>
+    <string name="deepseek_input_key_error_info_429">可能的問題:\n\n返回429，請求速率（TPM 或 RPM）達到上限，解決方法：請合理規劃您的請求速率。</string>
+    <string name="deepseek_input_key_error_info_500">可能的問題:\n\n返回500，DeepSeek伺服器內部故障，解決方法：請等待後重試。若問題一直存在，請聯繫DeepSeek解決。</string>
+    <string name="deepseek_input_key_error_info_503">可能的問題:\n\n返回503，伺服器負載過高，解決方法：請稍後重試您的請求。</string>
+    <string name="deepseek_input_key_error_info_other">可能的問題:\n\n返回未能識別的code，伺服器可能本次請求斷開了？，解決方法：請稍後重試您的請求。</string>
+
+    <string name="ai_settings">設置 AI</string>
+    <string name="ai_settings_summary">設置具體要的AI接口，DeepSeek或者其他自定義AI路徑</string>
+
+    <string name="ai_settings_main_deepseek">DeepSeek</string>
+    <string name="ai_settings_main_other">自定義</string>
+    <string name="ai_settings_main_summary">默認選擇的是DeepSeek,你可以使用選擇自定義來重新定義你的AI地址\n需要注意，如果切換不同的主體AI，歷史聊天記錄將只能在對應的主體AI當中顯示\n選擇完成切換之後，你需要在底部選項當中進行設置你的AI具體內容</string>
+
+    <string name="ai_settings_custom">自定義 AI 接口</string>
+    <string name="ai_settings_custom_summary">自定義你的AI連結口</string>
+
+    <string name="ai_custom_prompt">你是一個ZeroTermux助手，幫助使用ZeroTermux、Termux的用戶來回答一些基礎的 linux知識,所有的命令最好都使用一行如果有多行儘量使用&amp;&amp;來拼接為1行</string>
+
+    <string name="ai_custom_command">當前會話/終端文本:</string>
+
+    
+    <string name="ai_settings_title">AI 設置</string>
+    <string name="ai_provider_section">AI 提供者</string>
+    <string name="ai_provider_add">添加提供者</string>
+    <string name="ai_provider_edit">編輯提供者</string>
+    <string name="ai_provider_delete_confirm">確定要刪除提供者 \"%s\" 嗎？</string>
+    <string name="ai_provider_delete_last">無法刪除最後一個提供者</string>
+    <string name="ai_provider_name">名稱</string>
+    <string name="ai_provider_name_hint">例如: DeepSeek、OpenAI</string>
+    <string name="ai_provider_format">API 格式</string>
+    <string name="ai_provider_url">API 地址</string>
+    <string name="ai_provider_url_hint">https://api.example.com/v1/chat/completions</string>
+    <string name="ai_provider_key">API 密鑰</string>
+    <string name="ai_provider_key_hint">輸入你的 API 密鑰</string>
+    <string name="ai_provider_model">模型名稱</string>
+    <string name="ai_provider_model_hint">例如: deepseek-chat、gpt-4o</string>
+    <string name="ai_provider_name_required">請輸入提供者名稱</string>
+    <string name="ai_provider_url_required">請輸入 API 地址</string>
+    <string name="ai_provider_model_required">請輸入模型名稱</string>
+    <string name="ai_provider_saved">提供者已保存</string>
+    <string name="ai_provider_deleted">提供者已刪除</string>
+    <string name="ai_provider_default_badge">默認</string>
+    <string name="ai_provider_set_default">設為默認</string>
+    <string name="ai_provider_set_default_done">已設為默認</string>
+    <string name="ai_format_openai">OpenAI 兼容</string>
+    <string name="ai_format_claude">Anthropic Claude</string>
+    <string name="ai_format_gemini">Google Gemini</string>
+    <string name="ai_system_prompt_section">系統提示詞</string>
+    <string name="ai_system_prompt_hint">輸入自定義系統提示詞...</string>
+    <string name="ai_chat_title">AI 助手</string>
+    <string name="ai_confirm">確定</string>
+    <string name="ai_cancel">取消</string>
+    <string name="ai_delete">刪除</string>
+
+    <string name="ai_dialog_reset">切換成功，需要重啟生效</string>
+    <string name="ai_settings_other">設置其他AI</string>
+    <string name="ai_settings_other_summary">設置其他的 API_KEY 以及接口模型</string>
+
+    <string name="zt_agent_ai_settings_title">配置智能體AI</string>
+    <string name="zt_agent_ai_settings_summary">採用新的交互方式，可完全控制終端、讀取終端、控制和讀取ZeroTermux的所有設置</string>
+    <string name="zt_agent_ai_provider_title">選擇 AI 服務商</string>
+    <string name="zt_agent_ai_provider_deepseek">DeepSeek</string>
+    <string name="zt_agent_ai_provider_openai">ChatGPT</string>
+    <string name="zt_agent_ai_provider_google">Google AI</string>
+    <string name="zt_agent_ai_provider_custom">自定義</string>
+    <string name="zt_agent_ai_api_url">API 地址</string>
+    <string name="zt_agent_ai_api_url_hint">OpenAI 兼容接口地址</string>
+    <string name="zt_agent_ai_api_url_summary">切換服務商時會填入默認地址，也可自行修改</string>
+    <string name="zt_agent_ai_api_key">API Key</string>
+    <string name="zt_agent_ai_api_key_hint">輸入 API Key</string>
+    <string name="zt_agent_ai_api_key_toggle">顯示或隱藏 API Key</string>
+    <string name="zt_agent_ai_api_key_summary">密鑰僅保存在本機，用於智能體對話與工具調用</string>
+    <string name="zt_agent_ai_model">模型名稱</string>
+    <string name="zt_agent_ai_model_hint">例如 deepseek-chat / gpt-4o-mini / gemini-2.0-flash</string>
+    <string name="zt_agent_ai_system_prompt">系統提示詞（可選）</string>
+    <string name="zt_agent_ai_system_prompt_hint">留空則使用默認 ZeroTermux 智能體提示詞</string>
+    <string name="zt_agent_ai_skills_title">Skills（技能包）</string>
+    <string name="zt_agent_ai_skills_summary">統一存放在 ~/.skill/&lt;名稱&gt;/SKILL.md。創建後可在列表中編輯與開關啟用。</string>
+    <string name="zt_agent_ai_skills_entry_summary">管理本地 Skills：啟用、編輯、刪除或新建技能包</string>
+    <string name="zt_agent_ai_skills_create_entry_summary">輸入名稱後創建 ~/.skill 目錄下的 SKILL.md</string>
+    <string name="zt_agent_ai_skills_path_format">目錄：%1$s/&lt;skill-id&gt;/SKILL.md</string>
+    <string name="zt_agent_ai_skills_empty">暫無其他 Skill，內置「%1$s」可供對照；也可點擊下方創建</string>
+    <string name="zt_agent_ai_skills_create_new">創建新的 Skill</string>
+    <string name="zt_agent_ai_skills_create_dialog_title">創建新的 Skill</string>
+    <string name="zt_agent_ai_skills_create_dialog_message">輸入 Skill 名稱（作為目錄名，小寫字母、數字、連字符）</string>
+    <string name="zt_agent_ai_skills_create_name_hint">例如 my-workflow</string>
+    <string name="zt_agent_ai_skills_create_name_required">請輸入 Skill 名稱</string>
+    <string name="zt_agent_ai_skills_created">已創建 Skill：%1$s</string>
+    <string name="zt_agent_ai_skills_new_template"># %1$s\n\n## 說明\n在此編寫該 Skill 的用途與觸發場景。\n\n## 步驟\n1. </string>
+    <string name="zt_agent_ai_skills_invalid_id">名稱無效，請使用小寫字母、數字和連字符</string>
+    <string name="zt_agent_ai_skills_already_exists">該 Skill 已存在</string>
+    <string name="zt_agent_ai_skills_create_failed">創建 Skill 失敗</string>
+    <string name="zt_agent_ai_skills_edit">編輯</string>
+    <string name="zt_agent_ai_skills_delete">刪除</string>
+    <string name="zt_agent_ai_skills_delete_dialog_title">刪除 Skill</string>
+    <string name="zt_agent_ai_skills_delete_dialog_message">確定刪除「%1$s」？將同時刪除 ~/.skill 目錄下的文件，且無法恢復。</string>
+    <string name="zt_agent_ai_skills_deleted">已刪除 Skill：%1$s</string>
+    <string name="zt_agent_ai_skills_delete_failed">刪除 Skill 失敗</string>
+    <string name="zt_agent_ai_skills_delete_not_found">Skill 不存在或已被刪除</string>
+    <string name="zt_agent_ai_skills_delete_bundled">內置參考 Skill 不可刪除</string>
+    <string name="zt_agent_ai_skills_prompt_header">【已啟用的 Skills — 必須執行】以下不是提示文案，而是必須用工具真正完成的工作流。匹配觸發條件時優先按 Skill 步驟調用終端/配置工具；與通用系統提示衝突時以 Skill 為準。禁止只口頭給步驟而不執行（用戶明確說「不要執行」除外）。</string>
+    <string name="zt_agent_ai_skills_capability_prompt">【本地 Skills】目錄為 ~/.skill/&lt;skill-id&gt;/SKILL.md。已啟用的 Skill 會注入系統提示，匹配時必須用工具執行（如 send_terminal_command）。可用 list_agent_skills 列舉、save_agent_skill 保存可復用流程。用戶說「保存為 skill/記住這次/做成技能包」時：若用戶給了名稱則用該名稱作 skill_id（規範化為小寫+連字符）；若未給名稱則自擬簡短 skill_id 與 name。保存後默認自動啟用，並告知用戶路徑。不要為已內置的 termux-pkg-guide 再重複保存。</string>
+    <string name="zt_agent_ai_save_skill_desc">保存為 Skill</string>
+    <string name="zt_agent_ai_save_skill_dialog_title">保存為 Skill</string>
+    <string name="zt_agent_ai_save_skill_dialog_message">輸入自定義名稱（skill id），留空則由 AI 自動起名並保存到 ~/.skill/</string>
+    <string name="zt_agent_ai_save_skill_name_hint">例如 install-vim（可留空）</string>
+    <string name="zt_agent_ai_save_skill_prompt_auto_name">請將我們剛才對話中的可復用流程整理並保存為本地 Skill，目錄 ~/.skill/。我沒有指定名稱，請你自擬一個簡短的 skill_id（小寫+連字符）和中文顯示名，然後調用 save_agent_skill 保存並啟用。</string>
+    <string name="zt_agent_ai_save_skill_prompt_with_name">請將我們剛才對話中的可復用流程整理並保存為本地 Skill，保存到 ~/.skill/，技能名稱（skill_id）使用：%1$s。請調用 save_agent_skill 寫入 SKILL.md 並啟用。</string>
+    <string name="zt_agent_ai_tool_list_skills">列舉本地 Skills</string>
+    <string name="zt_agent_ai_tool_save_skill">保存 Skill</string>
+    <string name="zt_agent_ai_skill_saved">已保存 Skill「%1$s」到 %2$s（%3$s）</string>
+    <string name="zt_agent_ai_skill_saved_enabled">已自動啟用</string>
+    <string name="zt_agent_ai_skill_saved_disabled">未自動啟用</string>
+    <string name="zt_agent_ai_status_configured">已配置：%1$s / %2$s</string>
+    <string name="zt_agent_ai_status_incomplete">當前服務商配置不完整，請填寫 API 地址、Key 和模型</string>
+    <string name="zt_agent_ai_terminal_enabled">允許控制終端</string>
+    <string name="zt_agent_ai_terminal_enabled_summary">開啟後智能體可通過工具讀取終端內容並發送命令</string>
+    <string name="zt_agent_ai_zt_control_enabled">允許控制 ZeroTermux</string>
+    <string name="zt_agent_ai_zt_control_enabled_summary">開啟後可通過終端 zt 命令控制 App（打開頁面、側欄、彈窗等），需同時開啟「允許控制終端」</string>
+    <string name="zt_agent_ai_filesystem_enabled">允許直接讀寫文件</string>
+    <string name="zt_agent_ai_filesystem_enabled_summary">開啟後智能體可不經終端直接列出/讀取/寫入/創建文件與目錄</string>
+    <string name="zt_agent_ai_tool_rounds_title">工具調用輪數上限</string>
+    <string name="zt_agent_ai_tool_rounds_definition">1 輪 = AI 讀終端 → 理解 → 再發下一條命令</string>
+    <string name="zt_agent_ai_tool_rounds_summary">上限為單次對話最多可自動循環的輪數，用於節省 Token，默認 40</string>
+    <string name="zt_agent_ai_tool_rounds_warning">無人看管時任務可能一直跑；上限越大，浪費 Token 越多，請按需選低檔位</string>
+    <string name="zt_agent_ai_zt_control_system_prompt">你可通過 ZeroTermux 配置工具全面控制 App（無需逐項問用戶權限，但危險操作須先確認）：\n1. list_zerotermux_capabilities — 列舉全部設置鍵、美化項、openpage 頁面、zt 命令；不確定時先調用。\n2. get_zerotermux_config / set_zerotermux_config — 讀寫 ZT 設置與美化（含內部/外部通道 isInternalPassage、工作站、AI 開關等）。\n3. open_zerotermux_page — 打開設置頁（zt_settings、zero_termux_settings、agent_ai_settings 等）。\n4. run_zerotermux_zt — 優先用此執行 zt 命令（Socket，不依賴終端）：help、toast、openleft、openpage、reboot、x11status 等。\n5. run_zt_command — 備選，經終端執行 zt。\n6. get_zerotermux_left_menu / update_zerotermux_left_menu — 創建菜單前必須先 get 讀取 xml_rules 與 builtin_menu_catalog；click 必須用 java:/ztShell:/jumpUrl: 等前綴。\n7. list_zerotermux_pkg_sources / switch_zerotermux_pkg_source — 與左側「切換源」相同；默認清華源(tsinghua)；先列舉方案讓用戶選，用戶明確同意後再 switch 且 user_confirmed=true；會覆蓋 sources.list 並 apt update。\n美化歧義：美化裡「文字對比度」(text_shadow_enabled) 實際會讓終端文字發糊——用戶說「文字模糊/字糊/看不清字」應 set text_shadow_enabled=false；用戶說「背景模糊/壁紙糊」才調整 blur_enabled/blur_radius。\n終端特效：用戶說「雪花/下雪」→ set_zerotermux_config key=isSnowflakeShow value=true|false；「粒子/粒子動畫/下雨」→ key=isRainShow；二者互斥，用 set 控制勿改菜單 XML。可 list category=beautify 或 beautify_ui 查看鍵名。\n內部通道切換 isInternalPassage 後通常需 reboot；reboot/重啟 App 必須用戶明確同意。根據工具返回 JSON 判斷成功與否，禁止編造。</string>
+    <string name="zt_agent_ai_zt_requires_terminal">ZeroTermux 控制需通過終端執行 zt 命令，請同時開啟「允許控制終端」（路徑：ZeroTermux 設置 → 配置智能體AI）</string>
+    <string name="zt_agent_ai_tool_run_command">正在執行 ZT 命令…</string>
+    <string name="zt_agent_ai_tool_disabled">該工具未開啟，請在智能體 AI 配置中打開相應權限</string>
+    <string name="zt_agent_ai_perm_enabled">已開啟</string>
+    <string name="zt_agent_ai_perm_disabled">已關閉</string>
+    <string name="zt_agent_ai_permissions_status_header">【當前權限狀態】（以下開關在 ZeroTermux 設置 → 配置智能體AI 中）</string>
+    <string name="zt_agent_ai_permission_guard_prompt">【權限守衛 — 必須遵守】\n1. 僅當上方「當前權限狀態」為「已開啟」時，才可聲稱能執行對應能力；為「已關閉」時禁止假裝已執行。\n2. 用戶請求需要「已關閉」權限的能力時：禁止編造終端輸出、文件內容、安裝狀態、頁面已打開等任何結果；必須用與用戶相同的語言明確說明需要開啟哪一項開關，並給出路徑「ZeroTermux 設置 → 配置智能體AI」。\n3. 工具返回權限錯誤時，向用戶轉述該錯誤並再次提醒開啟對應開關，禁止忽略錯誤或編造成功結果。\n4. 普通問答、解釋概念時不受限；但一旦涉及「幫我執行/查看/修改/打開」，必須先核對權限狀態。</string>
+    <string name="zt_agent_ai_all_tools_disabled_prompt">【全部工具權限已關閉】你當前沒有任何工具（無終端、無 ZeroTermux 控制、無文件系統），只能做普通問答。用戶要求執行命令、讀寫文件、打開頁面、控制 App 時：必須說明三項權限均已關閉，並逐項告知在「配置智能體AI」中開啟「允許控制終端」「允許控制 ZeroTermux」「允許直接讀寫文件」；禁止編造任何已執行的結果。</string>
+    <string name="zt_agent_ai_terminal_tool_disabled">權限不足：「允許控制終端」已關閉。請到 ZeroTermux 設置 → 配置智能體AI 中開啟後再試。</string>
+    <string name="zt_agent_ai_zt_control_tool_disabled">權限不足：「允許控制 ZeroTermux」已關閉。請到 ZeroTermux 設置 → 配置智能體AI 中開啟後再試。</string>
+    <string name="zt_agent_ai_filesystem_tool_disabled">權限不足：「允許直接讀寫文件」已關閉。請到 ZeroTermux 設置 → 配置智能體AI 中開啟後再試；若已開啟「允許控制終端」，也可讓用戶改用終端命令間接操作。</string>
+    <string name="zt_agent_ai_filesystem_tool_disabled_no_terminal">權限不足：「允許直接讀寫文件」與「允許控制終端」均已關閉。請到 ZeroTermux 設置 → 配置智能體AI 中至少開啟其中一項後再試。</string>
+    <string name="zt_agent_ai_reset_dialog_title">注意</string>
+    <string name="zt_agent_ai_reset_dialog_message">此操作會清空你的AI智能體所有數據，推薦數據汙染的時候清空(就是AI不正常)</string>
+    <string name="zt_agent_ai_reset_title">還原AI所有數據</string>
+    <string name="zt_agent_ai_reset_summary">如果AI開始胡言亂語數據被汙染，就需要執行此操作</string>
+    <string name="zt_agent_ai_reset_done">已還原 AI 智能體數據</string>
+    <string name="zt_agent_ai_reset_panel_desc">還原 AI 智能體數據</string>
+    <string name="zt_agent_ai_tool_usage_prompt">普通問答、解釋、閒聊請用與用戶相同的語言回復，不要調用工具。僅在用戶明確要求打開頁面、讀取/控制終端、讀寫文件、或執行 zt 命令時才調用工具。工具執行完成後用與用戶相同的語言簡要說明結果。</string>
+    <string name="zt_agent_ai_default_system_prompt">你是 ZeroTermux 內置 AI 智能體。請用與用戶相同的語言簡潔回答，必要時使用 Markdown。\n\n重要：不要編造或猜測終端輸出、軟體是否已安裝、文件是否存在、命令是否已執行、頁面是否已打開等事實。未經工具返回的結果，或對應權限為「已關閉」時，必須明確說「無法執行/無法確認」，並告訴用戶需要在「配置智能體AI」中開啟哪一項權限。</string>
+    <string name="zt_agent_ai_terminal_system_prompt">你可以使用 read_terminal、send_terminal_command、send_terminal_key。每輪對話會附帶【當前可見屏幕】終端快照，描述終端時必須嚴格依據快照，尤其是「當前可見屏幕」段落：\n1. 可見屏幕顯示 Welcome to Termux / ~ $ → 就是 Termux 主環境，禁止說是 Ubuntu、root@localhost、SSH、passwd 等快照中不存在的內容。\n2. 末行是 shell 提示符 → 命令已結束，禁止說「正在安裝/請稍等」。\n3. 快照狀態為「等待確認」或末行含 [Y/n]、(y/N)、Do you want to continue 等 → 必須立刻用與用戶相同的語言向用戶說明終端在問什麼，等待用戶明確回復後再 send_terminal_command 發送 y/n/Enter；禁止自動替用戶確認。\n4. 對話歷史裡舊的終端描述可能已過期，一律以最新快照為準。\n5. 回答「終端顯示什麼」時，應概括可見屏幕中的實際文字，不得臆造。\n6. send_terminal_command 默認會等待命令結束（最長約 10 分鐘）；pkg/apt 安裝很慢時可傳 max_wait_ms=1800000（30 分鐘）。若返回「等待超時」且快照仍無提示符，應調用 read_terminal 繼續查看，不要假設安裝失敗。\n危險命令需用戶確認後再執行。</string>
+    <string name="zt_agent_ai_terminal_history_notice">【重要】下方對話歷史中關於終端狀態、Ubuntu、SSH、安裝進度等描述可能已過期。回答時必須以用戶最新消息末尾附帶的「終端快照」為準，與快照矛盾的歷史內容全部忽略。</string>
+    <string name="zt_agent_ai_terminal_disabled_prompt">【終端權限已關閉】你當前無法讀取或控制終端，也沒有 read_terminal / send_terminal_command 工具。用戶要求查看終端、執行命令、查詢安裝狀態、pkg/ssh 等時：禁止聲稱已執行、已安裝/未安裝或描述終端內容；必須用與用戶相同的語言說明需要開啟「允許控制終端」（ZeroTermux 設置 → 配置智能體AI），或讓用戶自行在終端運行命令後把結果貼給你。</string>
+    <string name="zt_agent_ai_zt_control_disabled_prompt">【ZeroTermux 控制權限已關閉】你當前無法跳轉 App 頁面、修改設置或執行 zt 命令。用戶要求打開設置頁、側欄、換源、美化等時：禁止聲稱已完成；必須說明需要開啟「允許控制 ZeroTermux」（ZeroTermux 設置 → 配置智能體AI）。run_zt_command 還需同時開啟「允許控制終端」。</string>
+    <string name="zt_agent_ai_filesystem_system_prompt">你可以使用文件系統工具直接操作磁碟（不經終端，優先於 cat/echo/mkdir/ls）：\n1. list_directory — 列目錄；path 可省略（默認 home）。\n2. read_file — 讀文本文件；大文件可設 max_bytes。\n3. write_file — 寫/覆蓋文本文件（自動創建父目錄）。\n4. create_file — 創建空文件；mkdir — 創建目錄（含多級）。\n5. stat_path — 查看是否存在及類型/大小。\n6. delete_path — 刪除文件/目錄；須用戶明確同意且 user_confirmed=true。\n路徑支持絕對路徑、相對 home、~/…，以及 /tmp（映射到 Termux $PREFIX/tmp）；僅允許 Termux files 與外部存儲。若工具返回 not found，應 list_directory 查看 home 或父目錄，不要反覆猜測相近路徑。描述文件內容必須以工具返回為準，禁止編造。安裝軟體、交互式命令仍用終端工具。</string>
+    <string name="zt_agent_ai_filesystem_disabled_prompt">【文件系統權限已關閉】你當前無法直接讀寫文件。用戶要求創建/修改/查看/列出文件時：禁止聲稱已完成；必須說明需要開啟「允許直接讀寫文件」（ZeroTermux 設置 → 配置智能體AI）。若「允許控制終端」已開啟，可建議用戶改用終端命令，但優先建議開啟文件權限。</string>
+    <string name="zt_agent_ai_filesystem_disabled_no_terminal">【文件系統權限已關閉】你當前無法直接讀寫文件，且「允許控制終端」也關閉，無法間接用 cat/echo 操作。用戶要求文件操作時：禁止聲稱已完成；必須說明需開啟「允許直接讀寫文件」或「允許控制終端」（ZeroTermux 設置 → 配置智能體AI）。</string>
+    <string name="zt_agent_ai_tool_read_terminal">正在讀取終端…</string>
+    <string name="zt_agent_ai_tool_send_command">正在發送命令…</string>
+    <string name="zt_agent_ai_tool_send_key">正在發送按鍵…</string>
+    <string name="zt_agent_ai_tool_read_after_send">命令已發送，讀取終端…</string>
+    <string name="zt_agent_ai_tool_list_directory">正在列出目錄…</string>
+    <string name="zt_agent_ai_tool_read_file">正在讀取文件…</string>
+    <string name="zt_agent_ai_tool_write_file">正在寫入文件…</string>
+    <string name="zt_agent_ai_tool_create_file">正在創建文件…</string>
+    <string name="zt_agent_ai_tool_mkdir">正在創建目錄…</string>
+    <string name="zt_agent_ai_tool_delete_path">正在刪除路徑…</string>
+    <string name="zt_agent_ai_tool_stat_path">正在查看路徑信息…</string>
+    <string name="zt_agent_ai_tool_running">正在調用工具…</string>
+    <string name="zt_agent_ai_tool_limit">智能體工具調用已達 %1$d 輪上限（與單次命令耗時無關）。任務未完成時可發送「繼續」讓 AI 接著排查，或拆分問題後重試</string>
+    <string name="zt_agent_ai_terminal_unavailable">終端不可用，請先在主界面打開終端會話</string>
+
+    <string name="zt_editor_ai_button">編輯器 AI</string>
+    <string name="zt_editor_ai_empty">描述你想寫的代碼或需要的修改，AI 會直接編輯上方文件。</string>
+    <string name="zt_editor_ai_hint">讓 AI 幫你寫代碼…</string>
+    <string name="zt_editor_ai_unavailable">編輯器不可用（可能處於預覽模式或未打開文本文件）</string>
+    <string name="zt_editor_ai_terminal_unavailable">編輯器終端不可用，請先在主界面打開 Termux 終端會話</string>
+    <string name="zt_editor_ai_system_prompt">你是 ZeroTermux 代碼編輯器內置 AI。你可以創建/打開多個文件，並編輯當前激活的文件；也可讀寫編輯器內嵌終端，用於編譯、運行和排查錯誤。\n\n規則：\n1. 需要多個文件時：對每個文件依次 create_file（或 open_file）→ read_editor → 寫入內容；不要在一個文件裡寫全部代碼。\n2. 切換到另一文件前，先 save_current_file 保存當前文件，再 open_file 打開目標文件。\n3. 修改前先 read_editor；可用 list_open_files 查看已打開標籤。\n4. 小改動用 insert_at_cursor / replace_range；整文件用 replace_all。\n5. path 可用絕對路徑，或相對當前文件所在目錄。\n6. 運行按鈕會執行當前目錄的 build.sh（不存在則自動創建）；長按運行按鈕會打開 build.sh。編譯/運行邏輯應寫入 build.sh，便於用戶和 AI 控制。\n7. 編譯或運行：優先 run_build_script（等同運行按鈕）；也可用 send_terminal_command 執行 ./build.sh；工具會等待 shell 提示符或確認提示（默認最長約 10 分鐘）。若快照狀態為「等待確認」或含 [Y/n] 等，必須用中文告知用戶並等用戶同意後再回復 y/n；禁止自動確認。\n8. 編譯失敗時：先 read_terminal 獲取完整錯誤，再修改代碼並重試；可用 ctrl_c 中斷卡住的命令。\n9. 用簡潔中文說明做了什麼；代碼寫入編輯器，回復裡不要重複大段代碼。\n10. 必須以工具返回的快照為準，不要編造文件內容或終端輸出。\n11. 本編輯器內置 GUI 面板（底部 Dock「GUI」標籤，嵌入式 VNC 連接本地 Xvfb DISPLAY=:99）。在此編譯/運行帶窗口程序時，禁止讓用戶安裝 sway 或使用主界面側欄「X11 環境」。\n12. 帶窗口程序（如 Java Swing/AWT）：build.sh 會自動 ensure_java_gui；編譯運行請用 run_build_script，不要用 sway 或外部 X11。\n13. GUI 程序啟動後（終端出現「GUI 程序已啟動」），調用 switch_editor_dock_tab tab=gui 切換到 GUI 面板，讓用戶看到窗口。\n14. 純命令行編譯可用 run_build_script 或 send_terminal_command ./build.sh；read_editor 快照含底部面板/GUI 狀態。</string>
+    <string name="zt_agent_ai_gui_compile_prompt">【帶窗口/GUI 程序編譯（僅在此類需求時適用）】\n當用戶要編譯或運行帶圖形界面的程序（如 Java Swing/AWT、需要 DISPLAY 的 GUI 應用）時：\n1. 不要建議安裝 sway、主界面側欄「X11 環境」或在外部 X11 窗口中運行。\n2. 應使用 open_zerotermux_page：page_id=\"editor\"，extras 傳 {\"edit_path\":\"項目目錄或源文件絕對路徑\"}，跳轉到代碼編輯器。\n3. 告知用戶：編輯器底部有內置「GUI」面板（嵌入式 VNC + Xvfb DISPLAY=:99），與 Run 按鈕/編輯器 AI 的 run_build_script 配套，可編譯並顯示窗口。\n4. 跳轉後簡要說明：可在編輯器點擊運行，或使用編輯器 AI 繼續完成編譯與調試。\n5. 若無 ZeroTermux 控制權限，請說明需開啟「允許控制 ZeroTermux」，或讓用戶手動從側欄打開項目進入編輯器。\n其他普通終端/配置任務仍按原有方式處理，不要誤跳到編輯器。</string>
+    <string name="zt_editor_ai_tool_run_build">正在運行 build.sh…</string>
+    <string name="zt_editor_ai_tool_switch_dock">正在切換面板…</string>
+    <string name="zt_editor_ai_build_in_progress">Error: 編譯已在進行中</string>
+    <string name="zt_editor_ai_build_unavailable">Error: 運行器不可用</string>
+    <string name="zt_editor_ai_build_no_directory">Error: 無法確定項目目錄</string>
+    <string name="zt_editor_ai_build_started">已啟動 run_build_script：正在執行 ./build.sh，請用 read_terminal 查看進度。</string>
+    <string name="zt_editor_ai_build_started_gui">已啟動 run_build_script（GUI 模式）：正在啟動嵌入式 VNC 並執行 ./build.sh；GUI 程序啟動後請 switch_editor_dock_tab tab=gui，並用 read_terminal 查看進度。</string>
+    <string name="zt_editor_ai_dock_unavailable">Error: 底部面板不可用</string>
+    <string name="zt_editor_ai_dock_switched_gui">已切換到 GUI 面板（嵌入式 VNC）</string>
+    <string name="zt_editor_ai_dock_switched_terminal">已切換到終端面板</string>
+    <string name="zt_editor_ai_dock_invalid_tab">Error: tab 必須是 gui 或 terminal</string>
+    <string name="zt_editor_ai_tool_read">正在讀取編輯器…</string>
+    <string name="zt_editor_ai_tool_insert">正在插入文本…</string>
+    <string name="zt_editor_ai_tool_replace">正在替換選區…</string>
+    <string name="zt_editor_ai_tool_replace_all">正在替換全部內容…</string>
+    <string name="zt_editor_ai_tool_create">正在創建文件…</string>
+    <string name="zt_editor_ai_tool_open">正在打開文件…</string>
+    <string name="zt_editor_ai_tool_save">正在保存文件…</string>
+    <string name="zt_editor_ai_tool_list">正在列出已打開文件…</string>
+    <string name="zt_editor_ai_reset_dialog_title">注意</string>
+    <string name="zt_editor_ai_reset_dialog_message">此操作僅清空編寫代碼頁面的 AI 對話歷史，不會影響主界面智能體 AI 的配置與聊天記錄。</string>
+    <string name="zt_editor_ai_reset_title">還原編輯器 AI 對話</string>
+    <string name="zt_editor_ai_reset_summary">僅清空代碼編輯器的 AI 歷史記錄，API 配置不受影響</string>
+    <string name="zt_editor_ai_reset_done">已還原編輯器 AI 對話</string>
+    <string name="zt_editor_ai_reset_panel_desc">還原編輯器 AI 對話</string>
+    <string name="zt_editor_ai_running_bubble">AI\n運行中</string>
+    <string name="zt_editor_ai_edit_confirm_title">確認修改：%1$s</string>
+    <string name="zt_editor_ai_edit_confirm_file">目標文件：%1$s</string>
+    <string name="zt_editor_ai_edit_preview_insert">將插入以下內容：\n\n%1$s</string>
+    <string name="zt_editor_ai_edit_preview_range">將替換字符 %1$d..%2$d 為：\n\n%3$s</string>
+    <string name="zt_editor_ai_edit_preview_replace_all">將替換整個文件（約 %1$d 行）：\n\n%2$s</string>
+    <string name="zt_editor_ai_edit_preview_insert_diff">將插入 +%1$d 行。綠色為新增：</string>
+    <string name="zt_editor_ai_edit_preview_range_diff">將替換字符 %1$d..%2$d（+%3$d / −%4$d 行）。紅色刪除，綠色新增：</string>
+    <string name="zt_editor_ai_edit_preview_replace_all_diff">將替換整個文件（約 %1$d 行，+%2$d / −%3$d）。紅色刪除，綠色新增：</string>
+    <string name="zt_editor_ai_edit_diff_hint">可上下滑動查看完整對比，確認後再點確定。</string>
+    <string name="zt_editor_ai_edit_rejected">用戶已拒絕此次代碼修改</string>
+    <string name="zt_editor_ai_edit_no_file">Error: 當前沒有可編輯的打開文件，請先在編輯器中打開文本文件</string>
+    <string name="zt_editor_ai_build_finished">編譯/運行已完成，AI 已自動結束。</string>
+    <string name="zt_editor_ai_build_finished_no_terminal">已啟動編譯，但終端不可用，無法等待完成。</string>
+    <string name="zt_editor_ai_system_prompt_edit_rules">13. 修改代碼時只能編輯當前已打開的文件，禁止用 open_file 切換到其他文件後再寫入；需要新文件時用 create_file。\n14. insert_at_cursor / replace_range / replace_all 會彈出確認框，用戶拒絕後不要重複相同修改。\n15. run_build_script 執行並等待編譯結束後會自動結束對話，無需繼續調用工具。</string>
+
+    <string name="back_menu_visible">左/右欄目顯示背景圖片</string>
+    <string name="back_menu_visible_summary">你必須確保路徑:\n~Ztinfo/menuBack/\n路徑下有 left.png 以及 right.png</string>
+    <string name="text_shadow_enable">啟用文字對比度</string>
+
+    <string name="guide_zerotermux_settings_agreement">ZeroTermux 使用協議</string>
+    <string name="guide_zerotermux_previous">返回</string>
+    <string name="guide_zerotermux_next">繼續</string>
+    <string name="guide_zerotermux_usage_habits">使用習慣</string>
+    <string name="guide_zerotermux_usage_habits_summary">選擇你的使用習慣:\n
+         \n
+        Termux:\n
+        1.雙擊滑動禁止顯示工具箱\n
+        2.音量上下鍵不彈出左右菜單欄\n
+        \n
+        ZeroTermux: \n
+        1.雙擊滑動彈出工具箱(可能與放大縮小字體發生衝突)\n
+        2.音量上下鍵則是彈出左右菜單欄
+        \n
+        \n
+        如果後續需要更改使用習慣，可在主頁面的左側欄進入設置來調整
+    </string>
+    <string name="guide_zerotermux_create_folder">創建文件夾</string>
+    <string name="guide_zerotermux_create_folder_summary"> ZeroTermux 需要在你的內部存儲創建以下文件夾\n\n
+        如果看不懂可直接點擊 「繼續」 \n\n
+        注意：\n
+        當前不支持的數據頁面:\n
+        1.Windows模擬\n
+        1.1 如果想使用windows模擬相關的只能在SD卡創建 內部存儲/xinhao/windows 文件夾\n
+        1.2 如果不想創建相關的文件夾到內部存儲，你可以拒絕使用此模塊功能(左側主菜單 -&gt; QEMU -&gt; Zero/UTermux 模擬)\n
+        2.模塊安裝\n
+        2.1 如果想使用模塊相關的只能在SD卡創建 內部存儲/xinhao/module 文件夾\n
+        2.2 如果不想創建相關的文件夾到內部存儲，你可以拒絕使用此模塊功能(左側主菜單 -&gt; 模塊安裝)\n
+        \n\n
+        建議：一般情況下請放到 內部存儲，如果放到 Android/data 目錄下卸載應用之後所有保存的數據包以及其他所有xinhao文件夾下的數據都會被清空請謹慎選擇\n\n
+        注意：設置 內部存儲/Android/data 下可能會有未知問題，如有遇到請在GITHUB上反饋\n
+        Android規範(/內部存儲/Android/data/com.termux/files/xinhao/)\n
+        簡單易用(/內部存儲/xinhao)\n\n
+        目錄說明 data(備份包)、apk(臨時APK)、windows(qemu目錄)、
+        command(命令目錄)、font(字體目錄)、iso(鏡像目錄)、mysql(mysql臨時文件)
+        online_system(離線termux包)、qemu(qemu目錄)、server(server目錄)、share(分享目錄)、web_config(web臨時目錄)\n\n
+        如果後期需要更改目錄，可在 ZeroTermux 設置當中重新修改, 需注意：兩個目錄下的數據是分開顯示的
+    </string>
+    <string name="guide_zerotermux_create_sdcard">內部存儲</string>
+    <string name="guide_zerotermux_create_android">內部存儲/Android/data</string>
+    <string name="guide_zerotermux_create_toast_ok">已成功創建</string>
+    <string name="guide_zerotermux_create_toast_no">未創建成功,請檢查你的權限情況</string>
+    <string name="guide_zerotermux_create_toast_created">當前功能在此版本不可用,等下個版本測試上線</string>
+    <string name="install_zerotermux_os_title">安裝OS</string>
+    <string name="install_zerotermux_os_summary">ZeroTermux 正在安裝基礎環境,請稍等…</string>
+    <string name="loading_zerotermux">正在載入 ZeroTermux, 請稍後…</string>
+    <string name="settings_keyword">設置雙擊功能</string>
+    <string name="zt_ai_debug_title">啟用外部AI調用ZeroTermux</string>
+    <string name="zt_ai_debug_summary">使用外部AI排查ZeroTermux(極高危) 終端/日誌/截屏/自動化/系統狀態；Root機可完全控制</string>
+    <string name="zt_ai_debug_summary_with_endpoint">使用外部AI排查ZeroTermux(極高危)\n當前地址：%1$s（把 IP:埠 和匹配碼發給 AI）</string>
+    <string name="zt_ai_debug_disclaimer_title">外部 AI 調試 — 極高危</string>
+    <string name="zt_ai_debug_disclaimer_message">開啟後，同一區域網內的電腦/AI 可通過 19998 埠完全控制本機：\n\n• 讀取並執行 Termux 終端命令\n• 讀取 logcat / 系統日誌\n• 截取屏幕、UI 自動化點擊滑動\n• 讀取簡訊、聯繫人、電話/SIM 信息\n• 讀寫文件、查看系統狀態\n\n【無論是否 Root 均適用】匹配碼一旦洩露，AI 可讀取本機全部可訪問數據。\n\n【Root 完全調試額外風險】若再開啟 Root 選項，AI 可通過 su 修改系統分區、刷寫文件、執行任意命令，可能導致變磚、黑屏、數據永久丟失，且無法恢復。\n\n此為極高危調試功能，用畢請立即關閉。繼續即表示您完全了解風險並自行承擔一切後果（含變磚）。</string>
+    <string name="zt_ai_debug_notification_title">外部 AI 調試</string>
+    <string name="zt_ai_debug_notification_text">AI 調試接口運行中，埠 19998</string>
+    <string name="zt_ai_debug_match_code_label">匹配碼</string>
+    <string name="zt_ai_debug_match_code_hidden">•••••••</string>
+    <string name="zt_ai_debug_match_code_warning">【極高危】匹配碼可讓 AI 完全控制本機全部數據（含簡訊/照片/文件）。Root 模式下 AI 還可變磚、黑屏。切勿提供給不信任的人。</string>
+    <string name="zt_ai_debug_match_code_reveal">顯示匹配碼</string>
+    <string name="zt_ai_debug_match_code_dialog_title">極高危 — 匹配碼</string>
+    <string name="zt_ai_debug_match_code_dialog_message">極高危：無論是否 Root，匹配碼都會讓 AI 完全控制手機可訪問的一切數據。\n\n若已開啟 Root 完全調試，AI 還可執行 su 命令、修改系統、導致變磚或黑屏且無法恢復。\n\n請勿在不知用途時將匹配碼交給任何人。\n\n確定要顯示匹配碼嗎？</string>
+    <string name="zt_ai_debug_port_note">默認埠：19998（區域網訪問，所有請求須帶 ?code=匹配碼）</string>
+    <string name="zt_ai_debug_root_title">Root 完全調試</string>
+    <string name="zt_ai_debug_root_summary">su/ADB/系統級控制/UI自動化（僅 Root 機，極高危）</string>
+    <string name="zt_ai_debug_root_disclaimer_title">Root 完全調試 — 致命風險</string>
+    <string name="zt_ai_debug_root_disclaimer_message">開啟後，AI 可通過 su 獲得與 Root 用戶相同的權限：\n\n• 執行任意系統命令（含 rm/dd 等）\n• 修改 /system、/data 等系統分區\n• UI 自動化（點擊/滑動/輸入）\n• 開啟網絡 ADB、讀寫任意路徑\n• 查看 dumpsys/dmesg/進程/包列表\n\n可能導致：永久變磚、黑屏無法開機、數據全部丟失、帳號洩露。\n\n此操作不可逆。僅建議在專用 Root 調試機上使用，用畢必須關閉。\n\n您確認承擔一切後果（含變磚）？</string>
+    <string name="zt_ai_debug_root_warning">【Root 警告】開啟後 AI 擁有 Root 級完全控制權，可能導致變磚、黑屏、數據永久丟失。無論是否 Root，上方匹配碼本身已是極高危。</string>
+    <string name="settings_keyword_summary">設置雙擊終端功能,選擇 自定義命令、鍵盤、禁用</string>
+    <string name="settings_keyword_summary1">當前選擇</string>
+    <string name="settings_keyword_item1">鍵盤</string>
+    <string name="settings_keyword_item2">禁用</string>
+    <string name="settings_keyword_item3">自定義命令</string>
+
+    <string name="command_gone">隱藏</string>
+    <string name="save_path">設置存儲路徑 (測試版本)</string>
+    <string name="save_path_summary">
+        設置當前存儲路徑目錄\n
+        內部存儲/xinhao\n
+        內部存儲/Android/data/com.termux/files/xinhao\n
+        請注意 Android data 目錄複製文件需要一點相關知識</string>
+    <string name="backup_success_android">備份完成，備份文件在-&gt;內部存儲/Android/data/com.termux/files/xinhao/data/|目錄下</string>
+    <string name="add_containers">新增容器</string>
+    <string name="item_containers_path">路徑:</string>
+    <string name="item_containers_toast_create_system_error">系統創建失敗!請重試</string>
+    <string name="item_containers_dialog_input_linux_name">"請輸入新的linux名稱"</string>
+    <string name="item_containers_toast_def_system">"默認系統"</string>
+    <string name="item_containers_error_system">"損壞的系統"</string>
+    <string name="item_containers_toast_not_config">"你當前的默認系統沒有配置文件"</string>
+    <string name="item_containers_toast_config_error">"配置文件已損壞，請重新進入創建,多點幾次,直到進入為止"</string>
+    <string name="item_containers_toast_settings_ok_reboot">"設置已生效!請重啟APP"</string>
+    <string name="item_containers_dialog_no_need">"不需要"</string>
+    <string name="item_containers_dialog_need">"需要"</string>
+    <string name="item_containers_dialog_manual_exit">"請手動退出APP"</string>
+    <string name="item_containers_dialog_msg">"切換成功!\n重啟APP生效\n需要重啟嗎\n其實點擊需要沒用\n自己手動重啟\n進入任務管理器,一般點擊 '□'這個建，然後滑退APP "</string>
+    <string name="item_containers_dialog_read_failed">"讀取失敗!"</string>
+    <string name="item_containers_toast_ignoring_operations">"操作忽略"</string>
+    <string name="item_containers_dialog_don_t_delete_it">"別刪除"</string>
+    <string name="item_containers_dialog_i_don_t_delete_it">我不刪除</string>
+    <string name="item_containers_dialog_deleted_successfully">"刪除成功!"</string>
+    <string name="item_containers_toast_clearing_system_residues">"正在清除系統殘留文件"</string>
+    <string name="item_containers_dialog_delete_system_loading_msg">"時間長短，由您的系統大小決定的"</string>
+    <string name="item_containers_dialog_delete_system_loading_title">正在刪除,請耐心等待...</string>
+    <string name="item_containers_toast_not_delete_main_system">你不能刪除主系統</string>
+    <string name="item_containers_dialog_i_m_sure">"我確定"</string>
+    <string name="item_containers_dialog_delete_system_msg">"請確保你的sd卡權限未被獲取!\n否則很可能會清空你SD卡(內部存儲)上的所有內容!\n否則很可能會清空你SD卡(內部存儲)上的所有內容!\n否則很可能會清空你SD卡(內部存儲)上的所有內容!\n你確定要刪除掉你的系統嗎?\n請慎重,刪除後你的數據不可恢復!!!!!!"</string>
+    <string name="item_containers_dialog_delete_system_title">你確定要刪除嗎</string>
+    <string name="item_containers_main_name">主容器</string>
+    <string name="item_containers_time">創建時間:</string>
+    <string name="install_empty_android">Android/data/files/xinhao/module,沒有模塊包</string>
+    <string name="code_editor_loading">Loading...(如果為打開目錄，則忽略此loading...，直接開始操作即可，無需等待)</string>
+
+    <string name="zt_crash_history_title">歷史報錯</string>
+    <string name="zt_crash_history_settings_summary">自動保存閃退記錄，可查看詳情、刪除單項或全部清空；AI 調試埠 19998 也可訪問</string>
+    <string name="zt_crash_history_hint">應用閃退時會自動記錄異常信息，最多保留 100 條。</string>
+    <string name="zt_crash_history_empty">暫無歷史報錯記錄</string>
+    <string name="zt_crash_history_clear_all">全部清空</string>
+    <string name="zt_crash_history_clear_all_confirm">確定要清空所有歷史報錯記錄嗎？此操作不可恢復。</string>
+    <string name="zt_crash_history_delete_confirm">確定要刪除這條報錯記錄嗎？</string>
+    <string name="zt_crash_history_detail_title">報錯詳情</string>
+    <string name="zt_crash_history_not_found">記錄不存在或已被刪除</string>
+    <string name="zt_crash_history_thread">線程: %1$s · 版本: %2$s</string>
+    <string name="zt_crash_history_detail_meta">時間: %1$s\n線程: %2$s\n版本: %3$s\n異常: %4$s\n消息: %5$s</string>
+
+    <string name="open_menu">打開菜單</string>
+    <string name="open_toolbox">打開工具箱</string>
+</resources>

@@ -162,9 +162,9 @@
     <!-- Termux Tasker App Preferences -->
     <string name="termux_tasker_preferences_title">&TERMUX_TASKER_APP_NAME;</string>
     <string name="termux_tasker_preferences_summary">配置文件在 &TERMUX_TASKER_APP_NAME; app</string>
-    <string name="action_autofill_username">Autofill username</string>
-    <string name="error_termux_service_start_failed_general">Failed to start TermuxService. Check logcat for exception message.</string>
-    <string name="error_termux_service_start_failed_bg">Failed to start TermuxService while app is in background due to android bg restrictions.</string>
+    <string name="action_autofill_username">自动填充用户名</string>
+    <string name="error_termux_service_start_failed_general">TermuxService 启动失败。请查看logcat中的异常信息。</string>
+    <string name="error_termux_service_start_failed_bg">应用在后台时TermuxService启动失败，原因是android启动了前台服务</string>
 
 
     <!-- About Preference -->
@@ -655,15 +655,15 @@
     <string name="系统切换成功">启动器切换成功,重启之后生效</string>
     <!-- TermuxService -->
 
-    <string name="error_termux_service_invalid_execution_command_runner">Invalid execution command runner to TermuxService: `%1$s`</string>
-    <string name="error_termux_service_unsupported_execution_command_runner">Unsupported execution command runner to TermuxService: `%1$s`</string>
-    <string name="error_termux_service_unsupported_execution_command_session_create_mode">Unsupported execution command session create mode to TermuxService: `%1$s`</string>
-    <string name="error_termux_service_execution_command_session_name_unset">Session name not set but `%1$s` session create mode passed</string>
+    <string name="error_termux_service_invalid_execution_command_runner">传给TermuxService的执行命令运行器无效：`%1$s`</string>
+    <string name="error_termux_service_unsupported_execution_command_runner">传给TermuxService的执行命令运行器不受支持：`%1$s`</string>
+    <string name="error_termux_service_unsupported_execution_command_session_create_mode">传给TermuxService的会话创建模式不受支持：`%1$s`</string>
+    <string name="error_termux_service_execution_command_session_name_unset">未设置会话名称，但传入了`%1$s`会话创建模式</string>
 
     <!-- Termux RunCommandService -->
-    <string name="error_run_command_service_invalid_execution_command_runner">Invalid execution command runner to RunCommandService: `%1$s`</string>
-    <string name="error_termux_service_unsupported_execution_command_shell_create_mode">Unsupported execution command shell create mode to TermuxService: `%1$s`</string>
-    <string name="error_termux_service_execution_command_shell_name_unset">Shell name not set but `%1$s` shell create mode passed</string>
+    <string name="error_run_command_service_invalid_execution_command_runner">传给RunCommandService的执行命令运行器无效：`%1$s`</string>
+    <string name="error_termux_service_unsupported_execution_command_shell_create_mode">传给TermuxService的shell创建模式不受支持：`%1$s`</string>
+    <string name="error_termux_service_execution_command_shell_name_unset">未设置shell名称，但传入了`%1$s`shell创建模式</string>
     <string name="error_display_over_other_apps_permission_not_granted_to_start_terminal">&TERMUX_APP_NAME;
         requires
         \"Display over other apps\" permission to start terminal sessions from background on Android >= 10.
@@ -673,10 +673,10 @@
         \nBootstrap binaries compiled for &TERMUX_APP_NAME; have hardcoded $PREFIX path and cannot be installed
         under any path other than:\n%1$s.</string>
 
-    <string name="title_share_selected_text">Terminal Text</string>
-    <string name="title_share_selected_text_with">Send selected text to:</string>
-    <string name="add_commend_msg_fail">"Can't add empty commands"</string>
-    <string name="add_commend_msg_ok">"The addition is successful. For details, please set the \"Command Definition\" function"</string>
+    <string name="title_share_selected_text">终端文本</string>
+    <string name="title_share_selected_text_with">将选中文本发送到：</string>
+    <string name="add_commend_msg_fail">无法添加空命令</string>
+    <string name="add_commend_msg_ok">添加成功。详见"命令定义"中的设置</string>
     <string name="tool_cent">工具箱</string>
     <string name="linux_commend">常用命令</string>
     <string name="linux_clipboard">剪贴板</string>
@@ -1497,7 +1497,7 @@
         -e 显示编辑弹框，示例 zt dialog -e -t 标题 \n
     </string>
     <string name="zt_command_image_backgroup">输入的背景图片路径无效</string>
-    <string name="no_permission">No permission</string>
+    <string name="no_permission">没有权限</string>
 
     <string name="deepseek_zs">你是一个ZeroTermux助手，帮助使用ZeroTermux、Termux的用户来回答一些基础的 linux知识,所有的命令最好都使用一行如果有多行尽量使用&amp;&amp;来拼接为1行</string>
     <string name="deepseek_zs_command">当前会话文本:</string>
@@ -2004,4 +2004,6 @@
     <string name="zt_crash_history_thread">线程: %1$s · 版本: %2$s</string>
     <string name="zt_crash_history_detail_meta">时间: %1$s\n线程: %2$s\n版本: %3$s\n异常: %4$s\n消息: %5$s</string>
 
+    <string name="open_menu">打开菜单</string>
+    <string name="open_toolbox">打开工具箱</string>
 </resources>
