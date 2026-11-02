@@ -19,6 +19,8 @@ import java.util.Locale
  * The zero-api command set: alarmclock, wifi-status, copy-terminal, check-update.
  * sessionProvider supplies the terminal session the copy command reads from.
  */
+class ApiResult(val status: Int, val output: String)
+
 object ZeroApiCommands {
     private const val TAG = "ZeroApi"
     const val REPO = "puraffert/ZeroTermux-plus"

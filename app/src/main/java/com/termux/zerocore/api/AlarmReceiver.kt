@@ -31,8 +31,8 @@ class AlarmReceiver : BroadcastReceiver() {
         nm.createNotificationChannel(channel)
 
         val notification = Notification.Builder(context, CHANNEL_ID)
-            .setSmallIcon(R.drawable.ic_notification)
-            .setContentTitle("Cortex+ alarm")
+            .setSmallIcon(android.R.drawable.ic_dialog_alert)
+            .setContentTitle("ZeroTermux+ alarm")
             .setContentText(label)
             .setStyle(Notification.BigTextStyle().bigText(label))
             .setCategory(Notification.CATEGORY_ALARM)
