@@ -2003,4 +2003,13 @@
 
     <string name="open_menu">打開菜單</string>
     <string name="open_toolbox">打開工具箱</string>
+    <string name="zt_plus_quick_commands">快捷命令</string>
+    <string name="zt_plus_copy_output">複製終端輸出</string>
+    <string name="zt_plus_check_update">檢查更新</string>
+    <string name="zt_plus_ai">AI助手</string>
+    <string name="zt_plus_about">關於ZeroTermux+</string>
+    <string name="zt_plus_toast_empty">終端無輸出</string>
+    <string name="zt_plus_toast_copied">已複製到剪貼簿</string>
+    <string name="zt_plus_toast_checking">正在檢查更新...</string>
+    <string name="zt_plus_about_text">ZeroTermux+是基於ZeroTermux(GPLv3)的增強版,作者puraffert。\n\n增強:選單與工具箱無障礙觸發按鈕、中文翻譯修復、繁體中文全量、termux-*命令、終端輸出複製、檢查更新。\n\n基於hanxinhao000的ZeroTermux與Termux(GPLv3)。</string>
 </resources>

@@ -2006,4 +2006,13 @@
 
     <string name="open_menu">打开菜单</string>
     <string name="open_toolbox">打开工具箱</string>
+    <string name="zt_plus_quick_commands">快捷命令</string>
+    <string name="zt_plus_copy_output">复制终端输出</string>
+    <string name="zt_plus_check_update">检查更新</string>
+    <string name="zt_plus_ai">AI助手</string>
+    <string name="zt_plus_about">关于ZeroTermux+</string>
+    <string name="zt_plus_toast_empty">终端无输出</string>
+    <string name="zt_plus_toast_copied">已复制到剪贴板</string>
+    <string name="zt_plus_toast_checking">正在检查更新...</string>
+    <string name="zt_plus_about_text">ZeroTermux+是基于ZeroTermux(GPLv3)的增强版,作者puraffert。\n\n增强:菜单与工具箱无障碍触发按钮、中文翻译修复、繁体中文全量、termux-*命令、终端输出复制、检查更新。\n\n基于hanxinhao000的ZeroTermux与Termux(GPLv3)。</string>
 </resources>

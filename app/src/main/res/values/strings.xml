@@ -2042,4 +2042,13 @@ cd ~ &amp;&amp; pkg update -y \n
     <string name="zt_crash_history_detail_meta">Time: %1$s\nThread: %2$s\nVersion: %3$s\nException: %4$s\nMessage: %5$s</string>
     <string name="open_menu">Open menu</string>
     <string name="open_toolbox">Open toolbox</string>
+    <string name="zt_plus_quick_commands">QUICK COMMANDS</string>
+    <string name="zt_plus_copy_output">Copy terminal output</string>
+    <string name="zt_plus_check_update">Check for updates</string>
+    <string name="zt_plus_ai">AI assistant</string>
+    <string name="zt_plus_about">About ZeroTermux+</string>
+    <string name="zt_plus_toast_empty">Terminal is empty</string>
+    <string name="zt_plus_toast_copied">Copied to clipboard</string>
+    <string name="zt_plus_toast_checking">Checking for updates...</string>
+    <string name="zt_plus_about_text">ZeroTermux+ is an enhanced build of ZeroTermux (GPLv3), by puraffert.\n\nEnhancements: accessibility triggers for menu and toolbox, Chinese localization fixes, full traditional Chinese, termux-* commands, terminal output copy, update checker.\n\nBased on ZeroTermux by hanxinhao000 and Termux (GPLv3).</string>
 </resources>

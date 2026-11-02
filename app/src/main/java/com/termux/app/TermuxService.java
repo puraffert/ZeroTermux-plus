@@ -109,6 +109,13 @@ public final class TermuxService extends Service implements AppShell.AppShellCli
 
     @Override
     public void onCreate() {
+        com.termux.zerocore.api.ApiServer.start(this);
+        com.termux.zerocore.api.ZeroApiCommands.sessionProvider = () -> {
+            java.util.List<TermuxSession> sessions = mShellManager.mTermuxSessions;
+            synchronized (sessions) {
+                return sessions.isEmpty() ? null : sessions.get(sessions.size() - 1);
+            }
+        };
         Logger.logVerbose(LOG_TAG, "onCreate");
 
         // Get Termux app SharedProperties without loading from disk since TermuxApplication handles
@@ -167,6 +174,7 @@ public final class TermuxService extends Service implements AppShell.AppShellCli
 
     @Override
     public void onDestroy() {
+        com.termux.zerocore.api.ApiServer.stop(this);
         Logger.logVerbose(LOG_TAG, "onDestroy");
 
         TermuxShellUtils.clearTermuxTMPDIR(true);

@@ -2988,6 +2988,73 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
                 openToolDialog(true, 0, -1);
             });
         }
+        android.widget.LinearLayout quickRow = findViewById(R.id.quick_commands_row);
+        if (quickRow != null) {
+            String[] commands = {"ls", "df -h", "uname -a", "apt update", "clear", "date"};
+            for (String command : commands) {
+                android.widget.TextView b = new android.widget.TextView(this);
+                b.setText(command);
+                b.setTextColor(0xFFFFFFFF);
+                b.setTextSize(13);
+                b.setPadding(18, 8, 18, 8);
+                android.graphics.drawable.GradientDrawable bg = new android.graphics.drawable.GradientDrawable();
+                bg.setColor(0x33FFFFFF);
+                bg.setCornerRadius(18);
+                b.setBackground(bg);
+                LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                lp.setMargins(0, 4, 12, 4);
+                b.setLayoutParams(lp);
+                b.setOnClickListener(v -> {
+                    TerminalSession session = getCurrentSession();
+                    if (session != null && session.getEmulator() != null) {
+                        session.getEmulator().write((command + "\r").getBytes());
+                        if (mSlidingConsumer != null && mSlidingConsumer.isOpened()) mSlidingConsumer.smoothCloseMenu();
+                    }
+                });
+                quickRow.addView(b);
+            }
+        }
+        android.view.View copyBtn = findViewById(R.id.btn_plus_copy_output);
+        if (copyBtn != null) {
+            copyBtn.setOnClickListener(v -> {
+                TerminalSession session = getCurrentSession();
+                if (session == null || session.getEmulator() == null) return;
+                String text = com.termux.shared.shell.ShellUtils.getTerminalSessionTranscriptText(session, true, false);
+                if (text == null || text.trim().isEmpty()) {
+                    android.widget.Toast.makeText(this, R.string.zt_plus_toast_empty, Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                android.content.ClipboardManager cm = (android.content.ClipboardManager) getSystemService(android.content.ClipboardManager.class);
+                cm.setPrimaryClip(android.content.ClipData.newPlainText("ZeroTermux+", text));
+                android.widget.Toast.makeText(this, R.string.zt_plus_toast_copied, Toast.LENGTH_SHORT).show();
+            });
+        }
+        android.view.View aiBtn = findViewById(R.id.btn_plus_ai);
+        if (aiBtn != null) {
+            aiBtn.setOnClickListener(v -> showAiAgentPanel());
+        }
+        android.view.View updateBtn = findViewById(R.id.btn_plus_check_update);
+        if (updateBtn != null) {
+            updateBtn.setOnClickListener(v -> {
+                android.widget.Toast.makeText(this, R.string.zt_plus_toast_checking, Toast.LENGTH_SHORT).show();
+                new Thread(() -> {
+                    com.termux.zerocore.api.ApiResult result = com.termux.zerocore.api.ZeroApiCommands.checkUpdatePublic();
+                    runOnUiThread(() -> android.widget.Toast.makeText(this, result.getOutput().trim(), Toast.LENGTH_LONG).show());
+                }).start();
+            });
+        }
+        android.view.View aboutBtn = findViewById(R.id.btn_plus_about);
+        if (aboutBtn != null) {
+            aboutBtn.setOnClickListener(v -> {
+                String text = getString(R.string.zt_plus_about_text);
+                new android.app.AlertDialog.Builder(this)
+                    .setTitle(R.string.zt_plus_about)
+                    .setMessage(text)
+                    .setPositiveButton(android.R.string.ok, null)
+                    .show();
+            });
+        }
     }
 
     private void openToolDialog(boolean isShowToolDialog, int index, int findKey) {
