@@ -342,7 +342,6 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_termux);
-        setupQuickTriggers();
 
         // Load termux shared preferences
         // This will also fail if TermuxConstants.TERMUX_PACKAGE_NAME does not equal applicationId
@@ -2821,6 +2820,7 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
     private void initZeroTermux() {
         mInternalPassage = UserSetManage.Companion.get().getZTUserBean().isInternalPassage();
         initSmartSwipe();
+        setupQuickTriggers();
         mOTGManager = new OTGManager();
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
             getWindow().setDecorFitsSystemWindows(false);
