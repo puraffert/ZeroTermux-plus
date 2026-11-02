@@ -3009,7 +3009,7 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
                     TerminalSession session = getCurrentSession();
                     if (session != null && session.getEmulator() != null) {
                         byte[] input = (command + "\r").getBytes();
-                        session.getEmulator().write(input, 0, input.length);
+                        session.write(input, 0, input.length);
                         if (mSlidingConsumer != null && mSlidingConsumer.isOpened()) mSlidingConsumer.smoothClose();
                     }
                 });

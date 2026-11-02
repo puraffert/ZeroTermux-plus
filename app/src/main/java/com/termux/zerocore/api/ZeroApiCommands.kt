@@ -8,7 +8,7 @@ import android.os.Build
 import android.util.Log
 import com.termux.BuildConfig
 import com.termux.shared.shell.ShellUtils
-import com.termux.shared.termux.shell.command.runner.terminal.TermuxSession
+import com.termux.terminal.TerminalSession
 import org.json.JSONObject
 import java.net.HttpURLConnection
 import java.net.URL
@@ -26,10 +26,10 @@ object ZeroApiCommands {
     const val REPO = "puraffert/ZeroTermux-plus"
 
     @Volatile
-    var sessionProvider: () -> TermuxSession? = { null }
+    var sessionProvider: () -> TerminalSession? = { null }
 
     @JvmStatic
-    fun setSessionSupplier(supplier: java.util.function.Supplier<TermuxSession?>) {
+    fun setSessionSupplier(supplier: java.util.function.Supplier<TerminalSession?>) {
         sessionProvider = { supplier.get() }
     }
 
@@ -95,7 +95,7 @@ object ZeroApiCommands {
     }
 
     private fun copyTerminal(context: Context): ApiResult {
-        val session = sessionProvider()?.getTerminalSession()
+        val session = sessionProvider()
             ?: return ApiResult(1, "zero-api: no running terminal session\n")
         val text = ShellUtils.getTerminalSessionTranscriptText(session, true, false)
         if (text.isBlank()) return ApiResult(1, "zero-api: terminal is empty\n")
@@ -134,6 +134,7 @@ object ZeroApiCommands {
         }
     }
 
+    @JvmStatic
     fun checkUpdatePublic(): ApiResult = checkUpdate()
 
     private fun compareVersions(a: String, b: String): Int {
