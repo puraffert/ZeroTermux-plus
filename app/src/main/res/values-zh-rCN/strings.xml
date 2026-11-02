@@ -2014,5 +2014,5 @@
     <string name="zt_plus_toast_empty">终端无输出</string>
     <string name="zt_plus_toast_copied">已复制到剪贴板</string>
     <string name="zt_plus_toast_checking">正在检查更新...</string>
-    <string name="zt_plus_about_text">ZeroTermux+是基于ZeroTermux(GPLv3)的增强版,作者puraffert。\n\n增强:菜单与工具箱无障碍触发按钮、中文翻译修复、繁体中文全量、termux-*命令、终端输出复制、检查更新。\n\n基于hanxinhao000的ZeroTermux与Termux(GPLv3)。</string>
+    <string name="zt_plus_about_text">ZeroTermux+是ZeroTermux(GPLv3)的增强分支。\n\n增强:菜单与工具箱无障碍触发按钮、中文翻译修复、繁体中文全量、termux-*命令、终端输出复制、检查更新。\n\n基于hanxinhao000的ZeroTermux与Termux(GPLv3)。</string>
 </resources>
