@@ -6,7 +6,6 @@
 
 - **无障碍修复**：侧栏菜单与工具箱新增屏幕悬浮按钮（原边缘滑动手势在TalkBack下无法触发），支持读屏聚焦与双击激活
 - **界面翻译**：简体中文补齐15条漏翻，新增繁体中文全量翻译（1542条）
-- **命令兼容**：内置termux-open、termux-clipboard、termux-wake-lock等12个常用命令
 - **CI构建**：GitHub Actions自动构建并发布release（tag触发或手动触发）
 
 ## 计划
