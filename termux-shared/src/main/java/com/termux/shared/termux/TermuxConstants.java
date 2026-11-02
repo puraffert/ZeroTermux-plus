@@ -691,7 +691,8 @@ public final class TermuxConstants {
 
     /** Termux app $PREFIX directory path ignored sub file paths to consider it empty */
     public static final List<String> TERMUX_PREFIX_DIR_IGNORED_SUB_FILES_PATHS_TO_CONSIDER_AS_EMPTY = Arrays.asList(
-        TermuxConstants.TERMUX_TMP_PREFIX_DIR_PATH, TermuxConstants.TERMUX_ENV_TEMP_FILE_PATH, TermuxConstants.TERMUX_ENV_FILE_PATH);
+        TermuxConstants.TERMUX_TMP_PREFIX_DIR_PATH, TermuxConstants.TERMUX_ENV_TEMP_FILE_PATH, TermuxConstants.TERMUX_ENV_FILE_PATH,
+        TermuxConstants.TERMUX_PREFIX_DIR_PATH + "/bin/zero-api");
 
 
 
