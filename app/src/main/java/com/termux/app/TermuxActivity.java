@@ -2974,8 +2974,10 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
     }
 
     private void setupQuickTriggers() {
-        android.widget.TextView menuBtn = findViewById(R.id.btn_open_menu);
-        android.widget.TextView toolboxBtn = findViewById(R.id.btn_open_toolbox);
+        android.view.View decor = getWindow() != null ? getWindow().getDecorView() : null;
+        if (decor == null) return;
+        android.widget.TextView menuBtn = decor.findViewById(R.id.btn_open_menu);
+        android.widget.TextView toolboxBtn = decor.findViewById(R.id.btn_open_toolbox);
         if (menuBtn != null) {
             menuBtn.setOnClickListener(v -> {
                 v.performHapticFeedback(android.view.HapticFeedbackConstants.VIRTUAL_KEY);
@@ -2988,7 +2990,7 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
                 openToolDialog(true, 0, -1);
             });
         }
-        android.widget.LinearLayout quickRow = findViewById(R.id.quick_commands_row);
+        android.widget.LinearLayout quickRow = decor.findViewById(R.id.quick_commands_row);
         if (quickRow != null) {
             String[] commands = {"ls", "df -h", "uname -a", "apt update", "clear", "date"};
             for (String command : commands) {
@@ -3016,7 +3018,7 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
                 quickRow.addView(b);
             }
         }
-        android.view.View copyBtn = findViewById(R.id.btn_plus_copy_output);
+        android.view.View copyBtn = decor.findViewById(R.id.btn_plus_copy_output);
         if (copyBtn != null) {
             copyBtn.setOnClickListener(v -> {
                 TerminalSession session = getCurrentSession();
@@ -3031,11 +3033,11 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
                 android.widget.Toast.makeText(this, R.string.zt_plus_toast_copied, Toast.LENGTH_SHORT).show();
             });
         }
-        android.view.View aiBtn = findViewById(R.id.btn_plus_ai);
+        android.view.View aiBtn = decor.findViewById(R.id.btn_plus_ai);
         if (aiBtn != null) {
             aiBtn.setOnClickListener(v -> showAiAgentPanel(""));
         }
-        android.view.View updateBtn = findViewById(R.id.btn_plus_check_update);
+        android.view.View updateBtn = decor.findViewById(R.id.btn_plus_check_update);
         if (updateBtn != null) {
             updateBtn.setOnClickListener(v -> {
                 android.widget.Toast.makeText(this, R.string.zt_plus_toast_checking, Toast.LENGTH_SHORT).show();
@@ -3045,7 +3047,7 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
                 }).start();
             });
         }
-        android.view.View aboutBtn = findViewById(R.id.btn_plus_about);
+        android.view.View aboutBtn = decor.findViewById(R.id.btn_plus_about);
         if (aboutBtn != null) {
             aboutBtn.setOnClickListener(v -> {
                 String text = getString(R.string.zt_plus_about_text);
