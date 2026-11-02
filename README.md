@@ -1,6 +1,6 @@
 # ZeroTermux-plus
 
-基于[ZeroTermux](https://github.com/hanxinhao000/ZeroTermux)的增强版，面向读屏用户与中文用户。
+基于[ZeroTermux](https://github.com/hanxinhao000/ZeroTermux)（[Termux](https://github.com/termux/termux-app)的中文增强分支）的再增强版本，面向读屏用户与中文用户。
 
 ## 增强
 
