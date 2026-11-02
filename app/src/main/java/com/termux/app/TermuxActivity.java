@@ -3008,8 +3008,9 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
                 b.setOnClickListener(v -> {
                     TerminalSession session = getCurrentSession();
                     if (session != null && session.getEmulator() != null) {
-                        session.getEmulator().write((command + "\r").getBytes());
-                        if (mSlidingConsumer != null && mSlidingConsumer.isOpened()) mSlidingConsumer.smoothCloseMenu();
+                        byte[] input = (command + "\r").getBytes();
+                        session.getEmulator().write(input, 0, input.length);
+                        if (mSlidingConsumer != null && mSlidingConsumer.isOpened()) mSlidingConsumer.smoothClose();
                     }
                 });
                 quickRow.addView(b);
@@ -3032,7 +3033,7 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         }
         android.view.View aiBtn = findViewById(R.id.btn_plus_ai);
         if (aiBtn != null) {
-            aiBtn.setOnClickListener(v -> showAiAgentPanel());
+            aiBtn.setOnClickListener(v -> showAiAgentPanel(""));
         }
         android.view.View updateBtn = findViewById(R.id.btn_plus_check_update);
         if (updateBtn != null) {

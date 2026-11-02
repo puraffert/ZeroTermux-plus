@@ -36,6 +36,7 @@ object ApiServer {
     private fun confFile(context: Context) = File(context.filesDir, "home/.zero-api")
 
     @Synchronized
+    @JvmStatic
     fun start(context: Context) {
         if (server != null) return
         val app = context.applicationContext
@@ -81,6 +82,7 @@ object ApiServer {
     }
 
     @Synchronized
+    @JvmStatic
     fun stop(context: Context) {
         try {
             server?.close()

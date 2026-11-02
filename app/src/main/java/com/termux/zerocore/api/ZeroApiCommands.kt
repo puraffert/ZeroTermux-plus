@@ -28,6 +28,11 @@ object ZeroApiCommands {
     @Volatile
     var sessionProvider: () -> TermuxSession? = { null }
 
+    @JvmStatic
+    fun setSessionSupplier(supplier: java.util.function.Supplier<TermuxSession?>) {
+        sessionProvider = { supplier.get() }
+    }
+
     fun run(context: Context, req: ApiRequest): ApiResult = try {
         when (req.command) {
             "alarmclock" -> alarmclock(context, req)
