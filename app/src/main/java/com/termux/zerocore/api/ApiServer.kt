@@ -68,12 +68,25 @@ object ApiServer {
         }
     }
 
-    /** Installs the zero-api shell command into the Termux bin directory (assets copy, updated on every start). */
+    /**
+     * Installs the zero-api shell command into $PREFIX/bin, but only after bootstrap has already
+     * landed. TermuxService.onCreate runs this method before TermuxInstaller.setupBootstrapIfNeeded,
+     * so a raw mkdirs() would otherwise create an empty-but-"non-empty" prefix and poison the
+     * bootstrap emptiness check → app falls back to /system/bin/sh permanently.
+     */
     private fun installScript(context: Context) {
         try {
-            val bin = File(context.filesDir, "usr/bin").apply { mkdirs() }
+            val prefixBin = File(context.filesDir, "usr/bin")
+            val bootstrapShells = arrayOf("bash", "sh", "zsh", "fish")
+            val bootstrapReady = bootstrapShells.any { name ->
+                File(prefixBin, name).exists()
+            }
+            if (!bootstrapReady) {
+                Log.i(TAG, "bootstrap not yet installed, skipping zero-api install")
+                return
+            }
             val script = context.assets.open("scripts/zero-api.sh").bufferedReader().readText()
-            val f = File(bin, "zero-api")
+            val f = File(prefixBin, "zero-api")
             f.writeText(script)
             f.setExecutable(true, false)
         } catch (e: Exception) {
