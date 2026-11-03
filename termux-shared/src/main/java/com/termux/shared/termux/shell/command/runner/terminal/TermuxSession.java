@@ -111,6 +111,11 @@ public class TermuxSession {
                 // https://cs.android.com/android/platform/superproject/+/android-11.0.0_r3:external/mksh/src/main.c;l=663
                 // https://cs.android.com/android/platform/superproject/+/android-11.0.0_r3:external/mksh/src/main.c;l=41
                 // https://cs.android.com/android/platform/superproject/+/android-11.0.0_r3:external/mksh/Android.bp;l=114
+                if (!executionCommand.isFailsafe) {
+                    Logger.logError(LOG_TAG, "No executable login shell found in \"" + defaultBinPath +
+                        "\" after bootstrap install. Falling back to /system/bin/sh (failsafe-like mode). " +
+                        "Check that $PREFIX/bin/bash exists and is executable.");
+                }
                 executionCommand.executable = "/system/bin/sh";
             } else {
                 isLoginShell = true;

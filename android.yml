@@ -85,7 +85,8 @@ jobs:
 
           for file in app/build/outputs/apk/debug/*.apk; do
             filename=$(basename "$file")
-            if [[ "$filename" =~ ^termux-app_.+-(debug|release)_(.+)\.apk$ ]]; then
+            # build.gradle outputFileName: ZeroTermux-<versionName>-<debug|release>_<abi>.apk
+            if [[ "$filename" =~ ^ZeroTermux-.+-(debug|release)_(.+)\.apk$ ]]; then
               build_type="${BASH_REMATCH[1]}"
               abi="${BASH_REMATCH[2]}"
             else
@@ -99,7 +100,7 @@ jobs:
 
           for file in app/build/outputs/apk/release/*.apk; do
             filename=$(basename "$file")
-            if [[ "$filename" =~ ^termux-app_.+-(debug|release)_(.+)\.apk$ ]]; then
+            if [[ "$filename" =~ ^ZeroTermux-.+-(debug|release)_(.+)\.apk$ ]]; then
               build_type="${BASH_REMATCH[1]}"
               abi="${BASH_REMATCH[2]}"
             else

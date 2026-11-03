@@ -233,6 +233,23 @@ public final class TermuxInstaller {
 
                     Logger.logInfo(LOG_TAG, "Bootstrap packages installed successfully.");
 
+                    // Verify that at least one login shell binary exists and is executable,
+                    // otherwise the app will silently fall back to /system/bin/sh (failsafe mode).
+                    String[] shellBinaries = {"bash", "sh", "zsh", "fish"};
+                    boolean shellFound = false;
+                    for (String shell : shellBinaries) {
+                        File shellFile = new File(TERMUX_PREFIX_DIR_PATH + "/bin/" + shell);
+                        if (shellFile.exists() && shellFile.canExecute()) {
+                            shellFound = true;
+                            Logger.logInfo(LOG_TAG, "Verified shell binary: " + shellFile.getAbsolutePath());
+                            break;
+                        }
+                    }
+                    if (!shellFound) {
+                        throw new RuntimeException("Bootstrap installed but no executable shell binary found in " +
+                            TERMUX_PREFIX_DIR_PATH + "/bin/. The embedded bootstrap zip may be corrupted or incomplete.");
+                    }
+
                     // Recreate env file since termux prefix was wiped earlier
                     TermuxShellEnvironment.writeEnvironmentToFile(activity);
 

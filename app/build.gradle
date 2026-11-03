@@ -424,5 +424,17 @@ task downloadBootstraps() {
 afterEvaluate {
     android.applicationVariants.all { variant ->
         variant.javaCompileProvider.get().dependsOn(downloadBootstraps)
+        // Native build (ndkBuild) embeds bootstrap zips via .incbin, so it must run AFTER downloadBootstraps.
+        // Without this, the .incbin in termux-bootstrap-zip.S fails or embeds an empty blob,
+        // causing the app to fall back to /system/bin/sh (failsafe) on startup.
+        def variantName = variant.name.capitalize()
+        try {
+            tasks.matching { it.name == "externalNativeBuild${variantName}" }.configureEach {
+                dependsOn downloadBootstraps
+            }
+            tasks.matching { it.name == "compile${variantName}Sources" }.configureEach {
+                dependsOn downloadBootstraps
+            }
+        } catch (Exception ignored) {}
     }
 }
