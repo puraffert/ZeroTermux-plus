@@ -2014,6 +2014,12 @@
     <string name="zt_plus_toast_empty">终端无输出</string>
     <string name="zt_plus_toast_copied">已复制到剪贴板</string>
     <string name="zt_plus_toast_checking">正在检查更新...</string>
+    <string name="zt_plus_enhance">加强功能</string>
+    <string name="zt_plus_enhance_desc">加强功能子菜单：快捷命令与增强功能</string>
+    <string name="zt_plus_quick_cmds">快捷命令</string>
+    <string name="zt_plus_quick_cmd_desc">执行命令 %1$s</string>
+    <string name="zt_plus_menu_btn_desc">打开导航菜单</string>
+    <string name="zt_plus_toolbox_btn_desc">打开工具箱</string>
     <string name="zt_plus_expand_desc">展开或折叠分区</string>
     <string name="zt_plus_expand_desc_menu">展开或折叠菜单包</string>
     <string name="zt_plus_expand_desc_data">展开或折叠数据包</string>

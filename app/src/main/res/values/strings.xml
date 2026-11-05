@@ -2050,6 +2050,12 @@ cd ~ &amp;&amp; pkg update -y \n
     <string name="zt_plus_toast_empty">Terminal is empty</string>
     <string name="zt_plus_toast_copied">Copied to clipboard</string>
     <string name="zt_plus_toast_checking">Checking for updates...</string>
+    <string name="zt_plus_enhance">Enhancements</string>
+    <string name="zt_plus_enhance_desc">Enhancements submenu: quick commands and extra features</string>
+    <string name="zt_plus_quick_cmds">Quick commands</string>
+    <string name="zt_plus_quick_cmd_desc">Run command %1$s</string>
+    <string name="zt_plus_menu_btn_desc">Open navigation menu</string>
+    <string name="zt_plus_toolbox_btn_desc">Open toolbox</string>
     <string name="zt_plus_expand_desc">Expand or collapse section</string>
     <string name="zt_plus_expand_desc_menu">Expand or collapse menu packages</string>
     <string name="zt_plus_expand_desc_data">Expand or collapse data packages</string>

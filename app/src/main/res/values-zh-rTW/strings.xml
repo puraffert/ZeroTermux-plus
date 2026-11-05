@@ -2011,6 +2011,12 @@
     <string name="zt_plus_toast_empty">終端無輸出</string>
     <string name="zt_plus_toast_copied">已複製到剪貼簿</string>
     <string name="zt_plus_toast_checking">正在檢查更新...</string>
+    <string name="zt_plus_enhance">加強功能</string>
+    <string name="zt_plus_enhance_desc">加強功能子選單：快捷命令與增強功能</string>
+    <string name="zt_plus_quick_cmds">快捷命令</string>
+    <string name="zt_plus_quick_cmd_desc">執行命令 %1$s</string>
+    <string name="zt_plus_menu_btn_desc">開啟導覽選單</string>
+    <string name="zt_plus_toolbox_btn_desc">開啟工具箱</string>
     <string name="zt_plus_expand_desc">展開或摺疊分區</string>
     <string name="zt_plus_expand_desc_menu">展開或摺疊選單包</string>
     <string name="zt_plus_expand_desc_data">展開或摺疊資料包</string>

@@ -2979,45 +2979,25 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         android.widget.TextView menuBtn = decor.findViewById(R.id.btn_open_menu);
         android.widget.TextView toolboxBtn = decor.findViewById(R.id.btn_open_toolbox);
         if (menuBtn != null) {
+            menuBtn.setContentDescription(getString(R.string.zt_plus_menu_btn_desc));
             menuBtn.setOnClickListener(v -> {
                 v.performHapticFeedback(android.view.HapticFeedbackConstants.VIRTUAL_KEY);
                 if (mSlidingConsumer != null) mSlidingConsumer.smoothLeftOpen();
             });
         }
         if (toolboxBtn != null) {
+            toolboxBtn.setContentDescription(getString(R.string.zt_plus_toolbox_btn_desc));
             toolboxBtn.setOnClickListener(v -> {
                 v.performHapticFeedback(android.view.HapticFeedbackConstants.VIRTUAL_KEY);
                 openToolDialog(true, 0, -1);
             });
         }
-        android.widget.LinearLayout quickRow = decor.findViewById(R.id.quick_commands_row);
-        if (quickRow != null) {
-            String[] commands = {"ls", "df -h", "uname -a", "apt update", "clear", "date"};
-            for (String command : commands) {
-                android.widget.TextView b = new android.widget.TextView(this);
-                b.setText(command);
-                b.setTextColor(0xFFFFFFFF);
-                b.setTextSize(13);
-                b.setPadding(18, 8, 18, 8);
-                android.graphics.drawable.GradientDrawable bg = new android.graphics.drawable.GradientDrawable();
-                bg.setColor(0x33FFFFFF);
-                bg.setCornerRadius(18);
-                b.setBackground(bg);
-                LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
-                    LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-                lp.setMargins(0, 4, 12, 4);
-                b.setLayoutParams(lp);
-                b.setOnClickListener(v -> {
-                    TerminalSession session = getCurrentSession();
-                    if (session != null && session.getEmulator() != null) {
-                        byte[] input = (command + "\r").getBytes();
-                        session.write(input, 0, input.length);
-                        if (mSlidingConsumer != null && mSlidingConsumer.isOpened()) mSlidingConsumer.smoothClose();
-                    }
-                });
-                quickRow.addView(b);
-            }
+        // ZeroTermux+ modify {@ — 快捷命令移入 菜单>加强功能 子菜单（无障碍补充描述）
+        android.view.View enhanceBtn = decor.findViewById(R.id.btn_plus_enhance);
+        if (enhanceBtn != null) {
+            enhanceBtn.setOnClickListener(v -> showEnhanceDialog());
         }
+        // @}
         android.view.View copyBtn = decor.findViewById(R.id.btn_plus_copy_output);
         if (copyBtn != null) {
             copyBtn.setOnClickListener(v -> {
@@ -3059,6 +3039,107 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
             });
         }
     }
+
+    /** ZeroTermux+ add {@ — 菜单>加强功能：快捷命令 + 增强功能子菜单 */
+    private void showEnhanceDialog() {
+        android.widget.ScrollView scroll = new android.widget.ScrollView(this);
+        android.widget.LinearLayout box = new android.widget.LinearLayout(this);
+        box.setOrientation(android.widget.LinearLayout.VERTICAL);
+        int pad = (int) (16 * getResources().getDisplayMetrics().density);
+        box.setPadding(pad, pad, pad, pad);
+        scroll.addView(box);
+
+        // 快捷命令标题
+        android.widget.TextView quickTitle = new android.widget.TextView(this);
+        quickTitle.setText(R.string.zt_plus_quick_cmds);
+        quickTitle.setTextColor(0xFFBBBBBB);
+        quickTitle.setTextSize(12);
+        box.addView(quickTitle);
+
+        // 快捷命令横向滚动 chips
+        android.widget.HorizontalScrollView hs = new android.widget.HorizontalScrollView(this);
+        android.widget.LinearLayout chipRow = new android.widget.LinearLayout(this);
+        chipRow.setOrientation(android.widget.LinearLayout.HORIZONTAL);
+        String[] commands = {"ls", "df -h", "uname -a", "apt update", "clear", "date"};
+        for (String command : commands) {
+            android.widget.TextView b = new android.widget.TextView(this);
+            b.setText(command);
+            b.setContentDescription(getString(R.string.zt_plus_quick_cmd_desc, command));
+            b.setTextColor(0xFFFFFFFF);
+            b.setTextSize(13);
+            b.setPadding(18, 8, 18, 8);
+            android.graphics.drawable.GradientDrawable bg = new android.graphics.drawable.GradientDrawable();
+            bg.setColor(0x33FFFFFF);
+            bg.setCornerRadius(18);
+            b.setBackground(bg);
+            android.widget.LinearLayout.LayoutParams lp = new android.widget.LinearLayout.LayoutParams(
+                android.widget.LinearLayout.LayoutParams.WRAP_CONTENT, android.widget.LinearLayout.LayoutParams.WRAP_CONTENT);
+            lp.setMargins(0, 4, 12, 4);
+            b.setLayoutParams(lp);
+            b.setOnClickListener(v -> {
+                TerminalSession session = getCurrentSession();
+                if (session != null && session.getEmulator() != null) {
+                    byte[] input = (command + "\r").getBytes();
+                    session.write(input, 0, input.length);
+                    if (mSlidingConsumer != null && mSlidingConsumer.isOpened()) mSlidingConsumer.smoothClose();
+                }
+            });
+            chipRow.addView(b);
+        }
+        hs.addView(chipRow);
+        box.addView(hs);
+
+        // 功能项
+        String[] items = {
+            getString(R.string.zt_plus_copy_output),
+            getString(R.string.zt_plus_check_update),
+            getString(R.string.zt_plus_ai),
+        };
+        android.app.AlertDialog dialog = new android.app.AlertDialog.Builder(this)
+            .setTitle(R.string.zt_plus_enhance)
+            .setView(scroll)
+            .setPositiveButton(android.R.string.ok, null)
+            .create();
+        android.widget.LinearLayout.LayoutParams itemLp = new android.widget.LinearLayout.LayoutParams(
+            android.widget.LinearLayout.LayoutParams.MATCH_PARENT,
+            (int) (44 * getResources().getDisplayMetrics().density));
+        for (int i = 0; i < items.length; i++) {
+            final int idx = i;
+            android.widget.TextView it = new android.widget.TextView(this);
+            it.setText(items[i]);
+            it.setContentDescription(items[i]);
+            it.setTextColor(0xFFFFFFFF);
+            it.setTextSize(14);
+            it.setGravity(android.view.Gravity.CENTER_VERTICAL);
+            it.setLayoutParams(itemLp);
+            it.setOnClickListener(v -> {
+                dialog.dismiss();
+                if (idx == 0) {
+                    TerminalSession session = getCurrentSession();
+                    if (session == null || session.getEmulator() == null) return;
+                    String text = com.termux.shared.shell.ShellUtils.getTerminalSessionTranscriptText(session, true, false);
+                    if (text == null || text.trim().isEmpty()) {
+                        android.widget.Toast.makeText(this, R.string.zt_plus_toast_empty, Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                    android.content.ClipboardManager cm = (android.content.ClipboardManager) getSystemService(android.content.ClipboardManager.class);
+                    cm.setPrimaryClip(android.content.ClipData.newPlainText("ZeroTermux+", text));
+                    android.widget.Toast.makeText(this, R.string.zt_plus_toast_copied, Toast.LENGTH_SHORT).show();
+                } else if (idx == 1) {
+                    android.widget.Toast.makeText(this, R.string.zt_plus_toast_checking, Toast.LENGTH_SHORT).show();
+                    new Thread(() -> {
+                        com.termux.zerocore.api.ApiResult result = com.termux.zerocore.api.ZeroApiCommands.checkUpdatePublic();
+                        runOnUiThread(() -> showUpdateDialog(result.getOutput()));
+                    }).start();
+                } else {
+                    showAiAgentPanel("");
+                }
+            });
+            box.addView(it);
+        }
+        dialog.show();
+    }
+    // @}
 
     /** ZeroTermux+ add {@ — friendly update dialog instead of raw JSON (issue #5). */
     private void showUpdateDialog(String rawOutput) {
