@@ -1287,7 +1287,7 @@
     <string name="zt_ai_agent_panel_hint">在此與 AI 對話…</string>
     <string name="zt_ai_agent_panel_send">發送</string>
     <string name="zt_ai_agent_panel_context_label">來自終端選中：</string>
-    <string name="zt_ai_agent_panel_empty">歡迎使用ZeroTermux智能體\n
+    <string name="zt_ai_agent_panel_empty">歡迎使用ZeroTermux+智能體\n
         注意：需要配置key\n
         \n
         你可以說: \n\"給我安裝ubuntu系統\"\n\"當前終端報錯\"\n\"你幫我修復下\"\n\n
@@ -2011,5 +2011,13 @@
     <string name="zt_plus_toast_empty">終端無輸出</string>
     <string name="zt_plus_toast_copied">已複製到剪貼簿</string>
     <string name="zt_plus_toast_checking">正在檢查更新...</string>
+    <string name="zt_plus_expand_desc">展開或摺疊分區</string>
+    <string name="zt_plus_expand_desc_menu">展開或摺疊選單包</string>
+    <string name="zt_plus_expand_desc_data">展開或摺疊資料包</string>
+    <string name="zt_plus_update_title">檢查更新</string>
+    <string name="zt_plus_update_available">發現新版本 %1$s（目前版本 %2$s）。</string>
+    <string name="zt_plus_update_uptodate">已是最新版本（%1$s）。</string>
+    <string name="zt_plus_update_failed">檢查更新失敗：%1$s</string>
+    <string name="zt_plus_update_download">下載</string>
     <string name="zt_plus_about_text">ZeroTermux+是ZeroTermux(GPLv3)的增強分支。\n\n增強:選單與工具箱無障礙觸發按鈕、中文翻譯修復、繁體中文全量、termux-*命令、終端輸出複製、檢查更新。\n\n基於hanxinhao000的ZeroTermux與Termux(GPLv3)。</string>
 </resources>

@@ -9,7 +9,8 @@ object HTTPIP {
     //论坛
     public const val ZERO_BBS = "https://termbbs.ixcm.org/"
     // GITHUB Version（请求必须带 User-Agent，否则 GitHub 返回 403）
-    public const val GITHUB_VERSION = "https://api.github.com/repos/hanxinhao000/ZeroTermux/releases/latest"
+    // ZeroTermux+ fix：更新检查原来指向 hanxinhao000/ZeroTermux，改成自己的仓库
+    public const val GITHUB_VERSION = "https://api.github.com/repos/puraffert/ZeroTermux-plus/releases/latest"
     // 左侧菜单包网络更新地址
     public const val MENU_PACKAGE_URL = "$IP/repository/main/menu/menu_latest.zip"
 

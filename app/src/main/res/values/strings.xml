@@ -1169,7 +1169,7 @@ Reset successfully</string>
     <string name="zt_ai_agent_panel_hint">Chat with AI here…</string>
     <string name="zt_ai_agent_panel_send">Send</string>
     <string name="zt_ai_agent_panel_context_label">From terminal selection:</string>
-    <string name="zt_ai_agent_panel_empty">Welcome to the ZeroTermux Agent\n
+    <string name="zt_ai_agent_panel_empty">Welcome to the ZeroTermux+ Agent\n
         Note: You need to configure an API key.\n
         You can say: "Install Ubuntu for me"\n"Fix the error in the current terminal"\n
         You can also say: "Change the font color to red"\n"Change the background to white"\n"Switch to another container"\n</string>
@@ -2050,5 +2050,13 @@ cd ~ &amp;&amp; pkg update -y \n
     <string name="zt_plus_toast_empty">Terminal is empty</string>
     <string name="zt_plus_toast_copied">Copied to clipboard</string>
     <string name="zt_plus_toast_checking">Checking for updates...</string>
+    <string name="zt_plus_expand_desc">Expand or collapse section</string>
+    <string name="zt_plus_expand_desc_menu">Expand or collapse menu packages</string>
+    <string name="zt_plus_expand_desc_data">Expand or collapse data packages</string>
+    <string name="zt_plus_update_title">Update</string>
+    <string name="zt_plus_update_available">New version %1$s is available (you have %2$s).</string>
+    <string name="zt_plus_update_uptodate">You are up to date (version %1$s).</string>
+    <string name="zt_plus_update_failed">Could not check for updates: %1$s</string>
+    <string name="zt_plus_update_download">Download</string>
     <string name="zt_plus_about_text">ZeroTermux+ is an enhanced build of ZeroTermux (GPLv3).\n\nEnhancements: accessibility triggers for menu and toolbox, Chinese localization fixes, full traditional Chinese, termux-* commands, terminal output copy, update checker.\n\nBased on ZeroTermux by hanxinhao000 and Termux (GPLv3).</string>
 </resources>

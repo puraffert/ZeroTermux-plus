@@ -115,6 +115,9 @@ public final class TermuxInstaller {
             if (TermuxFileUtils.isTermuxPrefixDirectoryEmpty()) {
                 Logger.logInfo(LOG_TAG, "The termux prefix directory \"" + TERMUX_PREFIX_DIR_PATH + "\" exists but is empty or only contains specific unimportant files.");
             } else {
+                // ZeroTermux+ add {@ — already-installed prefix: make sure the welcome
+                // motd is there too (upgrade path from builds that shipped the default)
+                ensureWelcomeMotd();
                 whenDone.run();
                 return;
             }
@@ -253,6 +256,11 @@ public final class TermuxInstaller {
                     // Recreate env file since termux prefix was wiped earlier
                     TermuxShellEnvironment.writeEnvironmentToFile(activity);
 
+                    // ZeroTermux+ add {@ — write the app welcome message (bootstrap zip
+                    // ships the upstream Termux default motd)
+                    ensureWelcomeMotd();
+                    // @}
+
                     activity.runOnUiThread(whenDone);
 
                 } catch (final Exception e) {
@@ -273,6 +281,32 @@ public final class TermuxInstaller {
             }
         }.start();
     }
+
+    /** ZeroTermux+ add {@ — write the app welcome message into $PREFIX/usr/etc/motd.
+     *  Skipped when the motd already mentions ZeroTermux+ (user may have customized it). */
+    private static void ensureWelcomeMotd() {
+        try {
+            File motd = new File(TERMUX_PREFIX_DIR_PATH, "usr/etc/motd");
+            if (motd.exists()) {
+                String current = new String(java.nio.file.Files.readAllBytes(motd.toPath()), "UTF-8");
+                if (current.contains("ZeroTermux+")) {
+                    return; // already ours or customized; leave it alone
+                }
+            }
+            motd.getParentFile().mkdirs();
+            String welcome =
+                "欢迎使用ZeroTermux+\n\n" +
+                "ZeroTermux+是基于hanxinhao000/ZeroTermux的加强版，详见菜单>关于ZeroTermux+\n" +
+                "和 https://github.com/puraffert/ZeroTermux-plus。\n" +
+                "如果您有问题想要反馈，请前往上面仓库的issue页面反馈。\n" +
+                "更多信息请参见应用内相关说明。祝您使用愉快！\n";
+            java.nio.file.Files.write(motd.toPath(), welcome.getBytes("UTF-8"));
+            motd.setReadable(true, false);
+        } catch (Exception motdError) {
+            Logger.logWarn(LOG_TAG, "Could not write welcome motd: " + motdError.getMessage());
+        }
+    }
+    // @}
 
     public static void showBootstrapErrorDialog(Activity activity, Runnable whenDone, String message) {
         Logger.logErrorExtended(LOG_TAG, "Bootstrap Error:\n" + message);
@@ -309,9 +343,9 @@ public final class TermuxInstaller {
             true, false, TermuxUtils.AppInfoMode.TERMUX_AND_PLUGIN_PACKAGES, true);
     }
     // ZeroTermux add {@
-	// static void setupStorageSymlinks(final Context context) {
+        // static void setupStorageSymlinks(final Context context) {
     public static void setupStorageSymlinks(final Context context) {
-	// @}
+        // @}
         final String LOG_TAG = "termux-storage";
         final String title = TermuxConstants.TERMUX_APP_NAME + " Setup Storage Error";
 
@@ -445,6 +479,6 @@ public final class TermuxInstaller {
         throw new RuntimeException("Unable to determine arch from Build.SUPPORTED_ABIS =  " +
             Arrays.toString(Build.SUPPORTED_ABIS));
     }
-	// @}
+        // @}
 
 }

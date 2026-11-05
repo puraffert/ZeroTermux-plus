@@ -223,9 +223,9 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
      * The {@link TerminalSessionClient} interface implementation to allow for communication between
      * {@link TerminalSession} and {@link TermuxActivity}.
      */
-	// ZeroTermux modify {@
+        // ZeroTermux modify {@
     public TermuxTerminalSessionActivityClient mTermuxTerminalSessionActivityClient;
-	// @}
+        // @}
 
     /**
      * Termux app shared preferences manager.
@@ -253,7 +253,7 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
     ExtraKeysView mExtraKeysView;
 
     /**
-	 * The client for the {@link #mExtraKeysView}.
+         * The client for the {@link #mExtraKeysView}.
      */
     TermuxTerminalExtraKeys mTermuxTerminalExtraKeys;
 
@@ -296,11 +296,11 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
     private boolean mIsInvalidState;
 
     private int mNavBarHeight;
-	// ZeroTermux modify {@
-	//  private float mTerminalToolbarDefaultHeight;
+        // ZeroTermux modify {@
+        //  private float mTerminalToolbarDefaultHeight;
     private int mTerminalToolbarDefaultHeight;
     public boolean mInternalPassage;
-	// @}
+        // @}
 
 
     private static final int CONTEXT_MENU_SELECT_URL_ID = 0;
@@ -453,7 +453,7 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         mIsOnResumeAfterOnCreate = false;
         // ZeroTermux add OTG{@
         onResumeInit();
-		// @}
+                // @}
 
     }
 
@@ -504,7 +504,7 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         // ZeroTermux add {@
         onDestroyInit();
         //  unregisterReceiver(mUsbReceiver);
-		// @}
+                // @}
     }
 
     @Override
@@ -532,7 +532,7 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         // ZeroTermux add {@
         fragmentManager(0);
         locaBroadcast();
-		// @}
+                // @}
         final Intent intent = getIntent();
         setIntent(null);
 
@@ -679,7 +679,7 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
 
         if (mTermuxTerminalViewClient != null)
             mTermuxTerminalViewClient.onCreate();
-		// ZeroTermux add {@
+                // ZeroTermux add {@
         if (mTermuxTerminalViewClient != null) {
             mTermuxTerminalViewClient.setKeyUpDown(key -> {
                 ZTUserBean bean = UserSetManage.Companion.get().getZTUserBean();
@@ -701,7 +701,7 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
                     openRightSideOrAiPanel();
                 }
             });
-			// @}
+                        // @}
         }
 
         if (mTermuxTerminalSessionActivityClient != null)
@@ -795,26 +795,26 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
 
     private void setToggleKeyboardView() {
         findViewById(R.id.toggle_keyboard_button).setOnClickListener(v -> {
-		  // ZeroTermux add {@
+                  // ZeroTermux add {@
           /*  mTermuxTerminalViewClient.onToggleSoftKeyboardRequest();
             getDrawer().closeDrawers();*/
             indexSwitch(0);
             fragmentManager(0);
-			// @}
+                        // @}
         });
 
         findViewById(R.id.key_bord_button).setOnLongClickListener(v -> {
             toggleTerminalToolbar();
             return true;
         });
-		  // ZeroTermux add {@
+                  // ZeroTermux add {@
         findViewById(R.id.select_new_session_button).setOnClickListener(v -> {
             indexSwitch(1);
         });
         findViewById(R.id.deepseek).setOnClickListener(view -> {
             showAiAgentTabContent();
         });
-		// @}
+                // @}
     }
 
 
@@ -1171,7 +1171,7 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
     private void updateDrawerOpenProgress(float progress) {
         updateDrawerOpenProgress(progress, false);
     }
-	// @}
+        // @}
 
 
     public ViewPager getTerminalToolbarViewPager() {
@@ -1262,18 +1262,18 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         unregisterReceiver(mTermuxActivityBroadcastReceiver);
     }
 
-	// ZeroTermux modify {@
+        // ZeroTermux modify {@
     //    private void fixTermuxActivityBroadcastReceiverIntent(Intent intent) {
     //    if (intent == null) return;
-	private boolean fixTermuxActivityBroadcastReceiverIntent(Intent intent) {
+        private boolean fixTermuxActivityBroadcastReceiverIntent(Intent intent) {
         if (intent == null) return false;
-	//@}
+        //@}
         String extraReloadStyle = intent.getStringExtra(TERMUX_ACTIVITY.EXTRA_RELOAD_STYLE);
         if ("storage".equals(extraReloadStyle)) {
             intent.removeExtra(TERMUX_ACTIVITY.EXTRA_RELOAD_STYLE);
             intent.setAction(TERMUX_ACTIVITY.ACTION_REQUEST_PERMISSIONS);
         }
-		// ZeroTermux add {@
+                // ZeroTermux add {@
         resBroadcastReceiever(extraReloadStyle);
 
         if ("readsms".equals(extraReloadStyle) || "contactperson".equals(extraReloadStyle)) {
@@ -1281,7 +1281,7 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         }
 
         return false;
-		// @}
+                // @}
     }
 
     @Override
@@ -1302,12 +1302,12 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
             if (intent == null) return;
 
             if (mIsVisible) {
-				// ZeroTermux modify {@
-				//fixTermuxActivityBroadcastReceiverIntent(intent);
+                                // ZeroTermux modify {@
+                                //fixTermuxActivityBroadcastReceiverIntent(intent);
                 if (fixTermuxActivityBroadcastReceiverIntent(intent)) {
                     return;
                 }
-				//@}
+                                //@}
 
                 switch (intent.getAction()) {
                     case TERMUX_ACTIVITY.ACTION_NOTIFY_APP_CRASH:
@@ -1428,7 +1428,7 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
     private ImageView open_settings;
     private boolean mMenuPackageExpanded;
     private Button mKeyBordButton;
-	private SlidingConsumer mSlidingConsumer;
+        private SlidingConsumer mSlidingConsumer;
     private View mLayoutMenuAll;
     private View mIncludeRightMenu;
     private TextView mGuideContent;
@@ -2852,7 +2852,7 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         localBroadcastManager.registerReceiver(messageReceiver, filter);
         SingletonCommunicationUtils.getInstance().setSingletonCommunicationListener(this);
     }
-	// ZeroTermux add {@
+        // ZeroTermux add {@
     private void scheduleApplyX11SystemInsets() {
         if (!mInternalPassage || mTermuxActivityRootView == null) {
             return;
@@ -3043,7 +3043,7 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
                 android.widget.Toast.makeText(this, R.string.zt_plus_toast_checking, Toast.LENGTH_SHORT).show();
                 new Thread(() -> {
                     com.termux.zerocore.api.ApiResult result = com.termux.zerocore.api.ZeroApiCommands.checkUpdatePublic();
-                    runOnUiThread(() -> android.widget.Toast.makeText(this, result.getOutput().trim(), Toast.LENGTH_LONG).show());
+                    runOnUiThread(() -> showUpdateDialog(result.getOutput()));
                 }).start();
             });
         }
@@ -3059,6 +3059,51 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
             });
         }
     }
+
+    /** ZeroTermux+ add {@ — friendly update dialog instead of raw JSON (issue #5). */
+    private void showUpdateDialog(String rawOutput) {
+        String local = "", remote = "", apkUrl = "", releaseUrl = "";
+        boolean newer = false;
+        boolean parsed = false;
+        try {
+            org.json.JSONObject o = new org.json.JSONObject(rawOutput.trim());
+            newer = o.optBoolean("update_available", false);
+            local = o.optString("local_version", "");
+            remote = o.optString("remote_version", "");
+            apkUrl = o.optString("apk_url", "");
+            releaseUrl = o.optString("release_url", "");
+            parsed = true;
+        } catch (Exception ignored) {
+        }
+        String title = getString(R.string.zt_plus_about);
+        String message;
+        if (!parsed) {
+            // Network/API error path: show the reason plainly, not JSON
+            message = getString(R.string.zt_plus_update_failed, rawOutput.trim());
+        } else if (newer) {
+            title = getString(R.string.zt_plus_update_title);
+            message = getString(R.string.zt_plus_update_available, remote, local);
+        } else {
+            title = getString(R.string.zt_plus_update_title);
+            message = getString(R.string.zt_plus_update_uptodate, local);
+        }
+        android.app.AlertDialog.Builder b = new android.app.AlertDialog.Builder(this)
+            .setTitle(title)
+            .setMessage(message)
+            .setPositiveButton(android.R.string.ok, null);
+        if (parsed && newer) {
+            String url = apkUrl.isEmpty() ? releaseUrl : apkUrl;
+            b.setNegativeButton(R.string.zt_plus_update_download, (d, w) -> {
+                try {
+                    startActivity(new android.content.Intent(android.content.Intent.ACTION_VIEW,
+                        android.net.Uri.parse(url)));
+                } catch (Exception ignored) {
+                }
+            });
+        }
+        b.show();
+    }
+    // @}
 
     private void openToolDialog(boolean isShowToolDialog, int index, int findKey) {
         if (isShowToolDialog) {
@@ -3226,7 +3271,7 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
                 back_img.setVisibility(View.VISIBLE);
             }
         }
-		// @}
+                // @}
     }
 
     private void setSummaryVisible() {
@@ -3259,7 +3304,7 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         registerReceiver(mUsbReceiver, filter);
     }
 
-	 // ZeroTermux add {@
+         // ZeroTermux add {@
     private void initUserData() {
         ZTUserBean ztUserBean = UserSetManage.Companion.get().getZTUserBean();
         if (ztUserBean.isOpenDownloadFileServices()) {
@@ -3287,7 +3332,7 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
     protected void onRestart() {
         super.onRestart();
     }
-	// @}
+        // @}
 
     private void onDestroyInit() {
         ZtForegroundActivityHolder.set(null);

@@ -205,7 +205,7 @@
                         android:layout_height="14dp"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
-                        android:src="@mipmap/up_down" />
+                        android:src="@mipmap/up_down" android:contentDescription="@string/zt_plus_expand_desc" />
                 </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
@@ -344,7 +344,7 @@
                                 android:layout_height="14dp"
                                 android:layout_alignParentEnd="true"
                                 android:layout_centerVertical="true"
-                                android:src="@mipmap/up_down" />
+                                android:src="@mipmap/up_down" android:contentDescription="@string/zt_plus_expand_desc_menu" />
                         </RelativeLayout>
 
                         <androidx.recyclerview.widget.RecyclerView
@@ -391,7 +391,7 @@
                             android:layout_height="14dp"
                             android:layout_alignParentEnd="true"
                             android:layout_centerVertical="true"
-                            android:src="@mipmap/up_down" />
+                            android:src="@mipmap/up_down" android:contentDescription="@string/zt_plus_expand_desc_data" />
                     </RelativeLayout>
                 </androidx.cardview.widget.CardView>
 
