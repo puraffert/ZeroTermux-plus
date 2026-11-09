@@ -125,8 +125,8 @@ android {
         // ZeroTermux modify {@
         // versionCode 121
         // versionName "0.118.0"
-        versionCode 122
-        versionName "0.118.4.2114.102931"
+        versionCode 123
+        versionName "0.118.4.2119.103941"
         // @}
         if (appVersionName) versionName = appVersionName
         validateVersionName(versionName)
