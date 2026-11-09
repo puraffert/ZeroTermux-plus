@@ -8,22 +8,11 @@
 - **界面翻译**：简体中文补齐15条漏翻，新增繁体中文全量翻译（1542条）
 - **CI构建**：GitHub Actions自动构建并发布release（tag触发或手动触发）
 
-## 计划
-
-- 应用级API服务：检查更新、闹钟、WiFi状态、AI助手（自Cortex+移植）
-- proot-distro预装与一键Ubuntu
+- 应用级API服务：检查更新、闹钟、WiFi状态、AI助手
 
 ## 安装
 
 从[Releases](https://github.com/puraffert/ZeroTermux-plus/releases)下载APK安装。签名密钥与上游ZeroTermux一致，可直接覆盖升级。
-
-## 构建
-
-```bash
-./gradlew assembleRelease
-```
-
-bootstrap压缩包由gradle任务`downloadBootstraps`自动从termux-packages获取。
 
 ## 许可
 
