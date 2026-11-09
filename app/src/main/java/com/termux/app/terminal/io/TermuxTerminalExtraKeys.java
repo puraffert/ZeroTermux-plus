@@ -107,6 +107,18 @@ public class TermuxTerminalExtraKeys extends TerminalExtraKeys {
             TerminalView terminalView = mTermuxTerminalViewClient.getActivity().getTerminalView();
             if (terminalView != null && terminalView.mEmulator != null)
                 terminalView.mEmulator.toggleAutoScrollDisabled();
+        } else if ("MENU".equals(key)) {
+            mTermuxTerminalViewClient.getActivity().ztOpenMenu();
+        } else if ("TOOL".equals(key)) {
+            mTermuxTerminalViewClient.getActivity().ztOpenToolbox();
+        } else if ("SETTINGS".equals(key)) {
+            mTermuxTerminalViewClient.getActivity().ztOpenSettings();
+        } else if ("COPY".equals(key)) {
+            mTermuxTerminalViewClient.getActivity().ztCopyOutput();
+        } else if ("UPDATE".equals(key)) {
+            mTermuxTerminalViewClient.getActivity().ztCheckUpdate();
+        } else if ("ABOUT".equals(key)) {
+            mTermuxTerminalViewClient.getActivity().ztShowAbout();
         } else {
             super.onTerminalExtraKeyButtonClick(view, key, ctrlDown, altDown, shiftDown, fnDown);
         }

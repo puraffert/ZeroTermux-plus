@@ -109,6 +109,7 @@ public final class TermuxService extends Service implements AppShell.AppShellCli
 
     @Override
     public void onCreate() {
+        com.termux.zerocore.utils.ZtPropertiesNormalizer.normalize();
         com.termux.zerocore.api.ApiServer.start(this);
         com.termux.zerocore.api.ZeroApiCommands.setSessionSupplier(() -> {
             java.util.List<TermuxSession> sessions = mShellManager.mTermuxSessions;

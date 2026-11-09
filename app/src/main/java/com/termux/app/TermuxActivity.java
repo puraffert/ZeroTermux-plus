@@ -548,7 +548,9 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
                 } else {
                     TermuxInstaller.setupBootstrapIfNeeded(TermuxActivity.this, () -> {
                         if (mTermuxService == null) return; // Activity might have been destroyed.
-                        // ZeroTermux add {@
+                        // ZeroTermux+ add {@ — bootstrap is ready now, retry the zero-api install
+                        // that ApiServer.start skipped while $PREFIX/bin was still empty.
+                        com.termux.zerocore.api.ApiServer.ensureInstalled(TermuxActivity.this);
                         initCommand();
                         // @}
                         try {
@@ -2973,71 +2975,63 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         mTerminalView.setActionPointer2ClickListener(() -> openToolDialog(true, 0, -1));
     }
 
+    /** ZeroTermux+ add {@ — shared actions, wired both to extra keys and (formerly) buttons */
+    public void ztOpenMenu() {
+        if (getDrawer() != null) getDrawer().smoothLeftOpen();
+    }
+
+    public void ztOpenToolbox() {
+        openToolDialog(true, 0, -1);
+    }
+
+    public void ztOpenSettings() {
+        startActivity(new Intent(TermuxActivity.this, ZtSettingsActivity.class));
+    }
+
+    public void ztCopyOutput() {
+        TerminalSession session = getCurrentSession();
+        if (session == null || session.getEmulator() == null) return;
+        String text = com.termux.shared.shell.ShellUtils.getTerminalSessionTranscriptText(session, true, false);
+        if (text == null || text.trim().isEmpty()) {
+            android.widget.Toast.makeText(this, R.string.zt_plus_toast_empty, Toast.LENGTH_SHORT).show();
+            return;
+        }
+        android.content.ClipboardManager cm = (android.content.ClipboardManager) getSystemService(android.content.ClipboardManager.class);
+        cm.setPrimaryClip(android.content.ClipData.newPlainText("ZeroTermux+", text));
+        android.widget.Toast.makeText(this, R.string.zt_plus_toast_copied, Toast.LENGTH_SHORT).show();
+    }
+
+    public void ztCheckUpdate() {
+        android.widget.Toast.makeText(this, R.string.zt_plus_toast_checking, Toast.LENGTH_SHORT).show();
+        new Thread(() -> {
+            com.termux.zerocore.api.ApiResult result = com.termux.zerocore.api.ZeroApiCommands.checkUpdatePublic();
+            runOnUiThread(() -> showUpdateDialog(result.getOutput()));
+        }).start();
+    }
+
+    public void ztShowAbout() {
+        new android.app.AlertDialog.Builder(this)
+            .setTitle(R.string.zt_plus_about)
+            .setMessage(getString(R.string.zt_plus_about_text))
+            .setPositiveButton(android.R.string.ok, null)
+            .show();
+    }
+    // @}
+
     private void setupQuickTriggers() {
         android.view.View decor = getWindow() != null ? getWindow().getDecorView() : null;
         if (decor == null) return;
-        android.widget.TextView menuBtn = decor.findViewById(R.id.btn_open_menu);
-        android.widget.TextView toolboxBtn = decor.findViewById(R.id.btn_open_toolbox);
-        if (menuBtn != null) {
-            menuBtn.setContentDescription(getString(R.string.zt_plus_menu_btn_desc));
-            menuBtn.setOnClickListener(v -> {
-                v.performHapticFeedback(android.view.HapticFeedbackConstants.VIRTUAL_KEY);
-                if (mSlidingConsumer != null) mSlidingConsumer.smoothLeftOpen();
-            });
-        }
-        if (toolboxBtn != null) {
-            toolboxBtn.setContentDescription(getString(R.string.zt_plus_toolbox_btn_desc));
-            toolboxBtn.setOnClickListener(v -> {
-                v.performHapticFeedback(android.view.HapticFeedbackConstants.VIRTUAL_KEY);
-                openToolDialog(true, 0, -1);
-            });
-        }
-        // ZeroTermux+ modify {@ — 快捷命令移入 菜单>加强功能 子菜单（无障碍补充描述）
+        // ZeroTermux+ modify {@ — 菜单/工具箱/复制/检查更新/_about 改为 extra keys
+        // (MENU/TOOL/SETTINGS/COPY/UPDATE/ABOUT)，顶部触发按钮与抽屉重复项已移除。
         android.view.View enhanceBtn = decor.findViewById(R.id.btn_plus_enhance);
         if (enhanceBtn != null) {
             enhanceBtn.setOnClickListener(v -> showEnhanceDialog());
-        }
-        // @}
-        android.view.View copyBtn = decor.findViewById(R.id.btn_plus_copy_output);
-        if (copyBtn != null) {
-            copyBtn.setOnClickListener(v -> {
-                TerminalSession session = getCurrentSession();
-                if (session == null || session.getEmulator() == null) return;
-                String text = com.termux.shared.shell.ShellUtils.getTerminalSessionTranscriptText(session, true, false);
-                if (text == null || text.trim().isEmpty()) {
-                    android.widget.Toast.makeText(this, R.string.zt_plus_toast_empty, Toast.LENGTH_SHORT).show();
-                    return;
-                }
-                android.content.ClipboardManager cm = (android.content.ClipboardManager) getSystemService(android.content.ClipboardManager.class);
-                cm.setPrimaryClip(android.content.ClipData.newPlainText("ZeroTermux+", text));
-                android.widget.Toast.makeText(this, R.string.zt_plus_toast_copied, Toast.LENGTH_SHORT).show();
-            });
         }
         android.view.View aiBtn = decor.findViewById(R.id.btn_plus_ai);
         if (aiBtn != null) {
             aiBtn.setOnClickListener(v -> showAiAgentPanel(""));
         }
-        android.view.View updateBtn = decor.findViewById(R.id.btn_plus_check_update);
-        if (updateBtn != null) {
-            updateBtn.setOnClickListener(v -> {
-                android.widget.Toast.makeText(this, R.string.zt_plus_toast_checking, Toast.LENGTH_SHORT).show();
-                new Thread(() -> {
-                    com.termux.zerocore.api.ApiResult result = com.termux.zerocore.api.ZeroApiCommands.checkUpdatePublic();
-                    runOnUiThread(() -> showUpdateDialog(result.getOutput()));
-                }).start();
-            });
-        }
-        android.view.View aboutBtn = decor.findViewById(R.id.btn_plus_about);
-        if (aboutBtn != null) {
-            aboutBtn.setOnClickListener(v -> {
-                String text = getString(R.string.zt_plus_about_text);
-                new android.app.AlertDialog.Builder(this)
-                    .setTitle(R.string.zt_plus_about)
-                    .setMessage(text)
-                    .setPositiveButton(android.R.string.ok, null)
-                    .show();
-            });
-        }
+        // @}
     }
 
     /** ZeroTermux+ add {@ — 菜单>加强功能：快捷命令 + 增强功能子菜单 */

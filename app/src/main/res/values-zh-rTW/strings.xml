@@ -463,7 +463,7 @@
     <string name="本机IP">本機IP</string>
 
     <string name="Zero功能">Zero功能</string>
-    <string name="ZeroTermux内置功能">ZeroTermux 腳本區域(長按打開作者地址)</string>
+    <string name="ZeroTermux内置功能">ZeroTermux+ 腳本區域(長按打開作者地址)</string>
     <string name="内置nginx">Nginx(內置)</string>
     <string name="Nginx开关">Nginx開關</string>
     <string name="访问linux目录">訪問linux目錄</string>
@@ -483,7 +483,7 @@
     <string name="MyServer">MyServer</string>
     <string name="Termux_ADB">Termux-ADB</string>
     <string name="实验功能">實驗功能</string>
-    <string name="ZeroTermux实验功能">ZeroTermux 實驗功能</string>
+    <string name="ZeroTermux实验功能">ZeroTermux+ 實驗功能</string>
     <string name="网络ADB">網絡ADB</string>
     <string name="网络ADBNo">網絡ADB(無ROOT)</string>
     <string name="没有找到本机的ROOT权限">沒有找到本機的ROOT權限,是否強制繼續?</string>
@@ -1108,14 +1108,14 @@
     <string name="beautification_function">美化/UI</string>
     <string name="online_features">線上功能</string>
     <string name="zt_features">ZT功能</string>
-    <string name="zt_settings">ZeroTermux設置</string>
+    <string name="zt_settings">ZeroTermux+設置</string>
     <string name="zt_settings1">ZT設置</string>
-    <string name="zt_settings_note">ZeroTermux 相關設置選項</string>
+    <string name="zt_settings_note">ZeroTermux+ 相關設置選項</string>
 <string name="zt_editor_word_wrap">文本編輯器自動換行</string>
     <string name="zt_editor_word_wrap_summary">開啟後內置文本編輯器將自動換行顯示</string>
     <string name="container_settings">容器設置</string>
     <string name="container_settings_note">應用容器內應用程式，只針對當前容器設置</string>
-    <string name="about_zerotermux">關於ZeroTermux</string>
+    <string name="about_zerotermux">關於ZeroTermux+</string>
     <string name="about_zerotermux_note">版本信息、鳴謝、GITHUB</string>
     <string name="termux_settings">Termux原生設置</string>
     <string name="termux_settings_note">進入Termux原生設置內容</string>
@@ -1171,8 +1171,8 @@
     <string name="zt_about_zerotermux_note">跳轉到ZeroTermux GITHUB頁面</string>
     <string name="zt_about_zerotermux_core_manage">ZeroCoreManage GITHUB(擴展引擎)</string>
     <string name="zt_about_zerotermux_core_manage_note">跳轉到ZeroTermux GITHUB頁面\nZeroTermux的額外擴展引擎包</string>
-    <string name="zt_about_card_title">ZeroTermux</string>
-    <string name="zt_about_card_title_note">ZeroTermux 是基於Termux二次開發，增加了\n相對於Termux沒有的的輔助功能，方便快速上手\n此軟體可相當於一個微型linux系統,可額外安裝\n其他發行版本如：Ubuntu、CentOs等</string>
+    <string name="zt_about_card_title">ZeroTermux+</string>
+    <string name="zt_about_card_title_note">ZeroTermux+ 是基於Termux二次開發，增加了\n相對於Termux沒有的的輔助功能，方便快速上手\n此軟體可相當於一個微型linux系統,可額外安裝\n其他發行版本如：Ubuntu、CentOs等</string>
     <string name="zeroCore_about_card_title">ZeroCoreManage</string>
     <string name="zeroCore_about_card_title_note">ZeroCoreManage 是基於ZeroTermux的擴展包,對於\nZeroTermux功能的擴展,目的是為了減小ZeroTermux\n的軟體包大小,不安裝此擴展包ZeroTermux依舊可以正常運行\n引擎額外內容:\n\n1. 內置鍵盤\n2. WEB訪問內存卡\n3. X86 Alpine</string>
     <string name="zt_developer">開發/貢獻</string>
@@ -1243,7 +1243,7 @@
 
     <string name="zt_nav_page_opened">已打開：%1$s</string>
     <string name="zt_nav_page_termux">主終端</string>
-    <string name="zt_nav_page_zt_settings">ZeroTermux 設置</string>
+    <string name="zt_nav_page_zt_settings">ZeroTermux+ 設置</string>
     <string name="zt_nav_page_zero_termux_settings">ZeroTermux 功能設置</string>
     <string name="zt_nav_page_left_menu_settings">左側菜單設置</string>
     <string name="zt_nav_page_menu_settings">菜單設置</string>

@@ -74,6 +74,12 @@ object ApiServer {
      * so a raw mkdirs() would otherwise create an empty-but-"non-empty" prefix and poison the
      * bootstrap emptiness check → app falls back to /system/bin/sh permanently.
      */
+    /** Called after the bootstrap has landed so a skipped install is retried. */
+    @JvmStatic
+    fun ensureInstalled(context: Context) {
+        synchronized(this) { installScript(context.applicationContext) }
+    }
+
     private fun installScript(context: Context) {
         try {
             val prefixBin = File(context.filesDir, "usr/bin")

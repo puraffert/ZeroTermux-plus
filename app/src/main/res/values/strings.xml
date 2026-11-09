@@ -484,7 +484,7 @@ error</string>
     <string name="本机IP">Local IP</string>
 
     <string name="Zero功能">Zero</string>
-    <string name="ZeroTermux内置功能">ZeroTermux command area (long press to open author address)</string>
+    <string name="ZeroTermux内置功能">ZeroTermux+ command area (long press to open author address)</string>
     <string name="内置nginx">Nginx (built-in)</string>
     <string name="Nginx开关">Nginx switch</string>
     <string name="访问linux目录">Access linux directory</string>
@@ -504,7 +504,7 @@ error</string>
     <string name="MyServer">MyServer</string>
     <string name="Termux_ADB">Termux-ADB</string>
     <string name="实验功能">Labs</string>
-    <string name="ZeroTermux实验功能">ZeroTermux ExperimentalFunction</string>
+    <string name="ZeroTermux实验功能">ZeroTermux+ ExperimentalFunction</string>
     <string name="网络ADB">Net ADB</string>
     <string name="网络ADBNo">Network ADB (no ROOT)</string>
     <string name="没有找到本机的ROOT权限">The ROOT permission of the machine is not found. Do you want to force it to continue?</string>
@@ -1078,14 +1078,14 @@ Reset successfully</string>
     <string name="beautification_function">UI</string>
     <string name="online_features">Online</string>
     <string name="zt_features">ZT</string>
-    <string name="zt_settings">ZeroTermux settings</string>
+    <string name="zt_settings">ZeroTermux+ settings</string>
     <string name="zt_settings1">Settings</string>
-    <string name="zt_settings_note">ZeroTermux Related settings options</string>
+    <string name="zt_settings_note">ZeroTermux+ Related settings options</string>
 <string name="zt_editor_word_wrap">Editor word wrap</string>
     <string name="zt_editor_word_wrap_summary">Enable automatic line wrapping in the built-in text editor</string>
     <string name="container_settings">Container settings</string>
     <string name="container_settings_note">Applications within the application container are only set for the current container.</string>
-    <string name="about_zerotermux">About ZeroTermux</string>
+    <string name="about_zerotermux">About ZeroTermux+</string>
     <string name="about_zerotermux_note">Version information, acknowledgments, GITHUB</string>
     <string name="termux_settings">Termux native settings</string>
     <string name="termux_settings_note">Enter the Termux native settings content</string>
@@ -1111,8 +1111,8 @@ Reset successfully</string>
     <string name="zt_about_zerotermux_note">Jump to ZeroTermux GITHUB page</string>
     <string name="zt_about_zerotermux_core_manage">ZeroCoreManage GITHUB (extension engine)</string>
     <string name="zt_about_zerotermux_core_manage_note">Jump to ZeroTermux GITHUB page\nAdditional extension engine package for ZeroTermux</string>
-    <string name="zt_about_card_title">ZeroTermux</string>
-    <string name="zt_about_card_title_note">ZeroTermux is a secondary development based on Termux, adding\nauxiliary functions that are not available in Termux, making it easy to get started quickly\nThis software can be equivalent to a mini-linux system and can be additionally installed\nOther distributions such as: Ubuntu, CentOs, etc.</string>
+    <string name="zt_about_card_title">ZeroTermux+</string>
+    <string name="zt_about_card_title_note">ZeroTermux+ is a secondary development based on Termux, adding\nauxiliary functions that are not available in Termux, making it easy to get started quickly\nThis software can be equivalent to a mini-linux system and can be additionally installed\nOther distributions such as: Ubuntu, CentOs, etc.</string>
     <string name="zeroCore_about_card_title">ZeroCoreManage</string>
     <string name="zeroCore_about_card_title_note">ZeroCoreManage is an expansion pack based on ZeroTermux. The purpose of extending the ZeroTermux function is to reduce the size of the ZeroTermux software package. ZeroTermux can still run normally without installing this expansion pack. Extra engine content:\n\n1. Built-in Keyboard\n2. WEB access memory card\n3. X86 Alpine</string>
     <string name="zt_developer">Development/Contribution</string>
@@ -1125,7 +1125,7 @@ Reset successfully</string>
 
     <string name="zt_nav_page_opened">Opened: %1$s</string>
     <string name="zt_nav_page_termux">Main terminal</string>
-    <string name="zt_nav_page_zt_settings">ZeroTermux settings</string>
+    <string name="zt_nav_page_zt_settings">ZeroTermux+ settings</string>
     <string name="zt_nav_page_zero_termux_settings">ZeroTermux feature settings</string>
     <string name="zt_nav_page_left_menu_settings">Left menu settings</string>
     <string name="zt_nav_page_menu_settings">Menu settings</string>

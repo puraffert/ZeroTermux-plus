@@ -487,39 +487,11 @@
                         android:textSize="14sp" />
 
                     <TextView
-                        android:id="@+id/btn_plus_copy_output"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:layout_marginTop="4dp"
-                        android:gravity="center_vertical"
-                        android:text="@string/zt_plus_copy_output"
-                        android:textColor="@color/white"
-                        android:textSize="14sp" />
-
-                    <TextView
-                        android:id="@+id/btn_plus_check_update"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:gravity="center_vertical"
-                        android:text="@string/zt_plus_check_update"
-                        android:textColor="@color/white"
-                        android:textSize="14sp" />
-
-                    <TextView
                         android:id="@+id/btn_plus_ai"
                         android:layout_width="match_parent"
                         android:layout_height="40dp"
                         android:gravity="center_vertical"
                         android:text="@string/zt_plus_ai"
-                        android:textColor="@color/white"
-                        android:textSize="14sp" />
-
-                    <TextView
-                        android:id="@+id/btn_plus_about"
-                        android:layout_width="match_parent"
-                        android:layout_height="40dp"
-                        android:gravity="center_vertical"
-                        android:text="@string/zt_plus_about"
                         android:textColor="@color/white"
                         android:textSize="14sp" />
                 </LinearLayout>
