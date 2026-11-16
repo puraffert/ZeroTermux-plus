@@ -1581,6 +1581,7 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
 
     private void showAiAgentTabContent() {
         prepareAiAgentTabInDrawer();
+        mRightDrawerLastTab = 1;
         if (mAiAgentPanelHelper != null) {
             mAiAgentPanelHelper.setPanelTabVisible(true);
         }
@@ -1601,6 +1602,10 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
             getDrawer().smoothClose();
             return;
         }
+        if (mRightDrawerLastTab == 0) {
+            ztOpenFiles();
+            return;
+        }
         if (mAiAgentPanelHelper != null) {
             mAiAgentPanelHelper.show(null);
         } else {
@@ -1610,7 +1615,16 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
 
     /** Volume-/drawer shortcuts when「还原音量+-键」is off (isResetVolume=false). */
     public boolean shouldInterceptVolumeKeysForZeroTermux() {
-        return !UserSetManage.Companion.get().getZTUserBean().isResetVolume();
+        // 天坦读屏等无障碍服务依赖音量键快捷操作，启用时不拦截
+        return !UserSetManage.Companion.get().getZTUserBean().isResetVolume()
+            && !isAccessibilityServiceActive();
+    }
+
+    /** 是否有启用的无障碍服务（TalkBack/天坦读屏等）。 */
+    public boolean isAccessibilityServiceActive() {
+        String services = android.provider.Settings.Secure.getString(
+            getContentResolver(), android.provider.Settings.Secure.ENABLED_ACCESSIBILITY_SERVICES);
+        return services != null && !services.trim().isEmpty();
     }
 
     @Override
@@ -2308,12 +2322,12 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
         }
         ZTUserBean ztUserBean = UserSetManage.Companion.get().getZTUserBean();
         if (keyCode == KeyEvent.KEYCODE_VOLUME_DOWN) {
-            if (!ztUserBean.isResetVolume() || MainActivity.isConnected()) {
+            if (!ztUserBean.isResetVolume() && !isAccessibilityServiceActive()) {
                 openRightSideOrAiPanel();
                 return true;
             }
         } else if (keyCode == KeyEvent.KEYCODE_VOLUME_UP) {
-            if (!ztUserBean.isResetVolume() || MainActivity.isConnected()) {
+            if (!ztUserBean.isResetVolume() && !isAccessibilityServiceActive()) {
                 if (getDrawer().isOpened()) {
                     getDrawer().smoothClose();
                 } else {
@@ -2356,6 +2370,25 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
             .findFragmentByTag("DeepSeekMainFragment");
         Fragment llmFragment = getSupportFragmentManager()
             .findFragmentByTag("LLMMainFragment");
+
+        // 文件管理页已存在则复用，保留浏览状态（持久化）
+        if (index == 0 && fileListFragment != null) {
+            boolean dirty = false;
+            if (deepSeekFragment != null) { fragmentTransaction.remove(deepSeekFragment); dirty = true; }
+            if (deepSeekMainFragment != null) { fragmentTransaction.remove(deepSeekMainFragment); dirty = true; }
+            if (llmFragment != null) { fragmentTransaction.remove(llmFragment); dirty = true; }
+            if (dirty) {
+                try {
+                    fragmentTransaction.commitNowAllowingStateLoss();
+                } catch (Exception e) {
+                    LogUtils.e(TAG, "Error in commitNowAllowingStateLoss: " + e.getMessage());
+                    fragmentTransaction.commitAllowingStateLoss();
+                    getSupportFragmentManager().executePendingTransactions();
+                }
+            }
+            ZTConfig.INSTANCE.setCloseListener(() -> getDrawer().smoothClose());
+            return;
+        }
 
         if (fileListFragment != null) {
             fragmentTransaction.remove(fileListFragment);
@@ -3017,9 +3050,15 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
             .show();
     }
 
+    /** 右侧抽屉当前内容：0=文件管理，其它=AI面板；-1=未选择（默认AI）。 */
+    private int mRightDrawerLastTab = -1;
+
     public void ztOpenFiles() {
+        if (mAiAgentPanelHelper != null) mAiAgentPanelHelper.setPanelTabVisible(false);
+        mRightDrawerLastTab = 0;
         indexSwitch(0);
         fragmentManager(0);
+        if (getDrawer() != null && !getDrawer().isOpened()) getDrawer().smoothRightOpen();
     }
     // @}
 
