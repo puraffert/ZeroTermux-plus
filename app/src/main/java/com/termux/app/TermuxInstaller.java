@@ -282,11 +282,11 @@ public final class TermuxInstaller {
         }.start();
     }
 
-    /** ZeroTermux+ add {@ — write the app welcome message into $PREFIX/usr/etc/motd.
+    /** ZeroTermux+ add {@ — write the app welcome message into $PREFIX/etc/motd.
      *  Skipped when the motd already mentions ZeroTermux+ (user may have customized it). */
     private static void ensureWelcomeMotd() {
         try {
-            File motd = new File(TERMUX_PREFIX_DIR_PATH, "usr/etc/motd");
+            File motd = new File(TERMUX_PREFIX_DIR_PATH, "etc/motd");
             if (motd.exists()) {
                 String current = new String(java.nio.file.Files.readAllBytes(motd.toPath()), "UTF-8");
                 if (current.contains("ZeroTermux+")) {
