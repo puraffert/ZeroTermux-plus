@@ -52,7 +52,7 @@
                     app:plistFile="@raw/rain"/>
 
                 <!-- ZeroTermux+ removed: quick_trigger_bar (menu/toolbox buttons) — replaced by
-                     MENU/TOOL/SETTINGS/COPY/UPDATE/ABOUT extra keys -->
+                     MENU/TOOL/SETTINGS/COPY/UPDATE/ABOUT/FILE extra keys -->
 
                 <RelativeLayout
                     android:layout_width="match_parent"

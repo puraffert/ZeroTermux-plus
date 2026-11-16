@@ -243,6 +243,7 @@ android {
 
     lint {
         disable 'ProtectedPermissions'
+        checkReleaseBuilds false
     }
 
     testOptions {

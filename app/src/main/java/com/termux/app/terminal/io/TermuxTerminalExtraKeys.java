@@ -119,6 +119,8 @@ public class TermuxTerminalExtraKeys extends TerminalExtraKeys {
             mTermuxTerminalViewClient.getActivity().ztCheckUpdate();
         } else if ("ABOUT".equals(key)) {
             mTermuxTerminalViewClient.getActivity().ztShowAbout();
+        } else if ("FILE".equals(key)) {
+            mTermuxTerminalViewClient.getActivity().ztOpenFiles();
         } else {
             super.onTerminalExtraKeyButtonClick(view, key, ctrlDown, altDown, shiftDown, fnDown);
         }

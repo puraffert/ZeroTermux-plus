@@ -3016,6 +3016,11 @@ public final class TermuxActivity extends AppCompatActivity implements ServiceCo
             .setPositiveButton(android.R.string.ok, null)
             .show();
     }
+
+    public void ztOpenFiles() {
+        indexSwitch(0);
+        fragmentManager(0);
+    }
     // @}
 
     private void setupQuickTriggers() {
