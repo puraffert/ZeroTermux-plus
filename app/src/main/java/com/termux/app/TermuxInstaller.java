@@ -115,9 +115,9 @@ public final class TermuxInstaller {
             if (TermuxFileUtils.isTermuxPrefixDirectoryEmpty()) {
                 Logger.logInfo(LOG_TAG, "The termux prefix directory \"" + TERMUX_PREFIX_DIR_PATH + "\" exists but is empty or only contains specific unimportant files.");
             } else {
-                // ZeroTermux+ add {@ — already-installed prefix: make sure the welcome
-                // motd is there too (upgrade path from builds that shipped the default)
-                ensureWelcomeMotd();
+                // ZeroTermux+ add {@ — already-installed prefix: only drop leftovers of
+                // older builds, never touch a motd the user may have edited
+                cleanupNestedPrefix();
                 whenDone.run();
                 return;
             }
@@ -283,14 +283,15 @@ public final class TermuxInstaller {
     }
 
     /** ZeroTermux+ add {@ — write the app welcome message into $PREFIX/etc/motd.
-     *  Skipped when the motd already mentions ZeroTermux+ (user may have customized it). */
+     *  The stock upstream motd is replaced once; any motd the user edited is kept as is. */
     private static void ensureWelcomeMotd() {
+        cleanupNestedPrefix();
         try {
             File motd = new File(TERMUX_PREFIX_DIR_PATH, "etc/motd");
             if (motd.exists()) {
                 String current = new String(java.nio.file.Files.readAllBytes(motd.toPath()), "UTF-8");
-                if (current.contains("ZeroTermux+")) {
-                    return; // already ours or customized; leave it alone
+                if (!current.contains("Welcome to Termux")) {
+                    return;
                 }
             }
             motd.getParentFile().mkdirs();
@@ -305,6 +306,46 @@ public final class TermuxInstaller {
         } catch (Exception motdError) {
             Logger.logWarn(LOG_TAG, "Could not write welcome motd: " + motdError.getMessage());
         }
+    }
+
+    private static void cleanupNestedPrefix() {
+        try {
+            File nestedUsr = new File(TERMUX_PREFIX_DIR_PATH, "usr");
+            if (!nestedUsr.isDirectory()) return;
+            if (!onlyMotdLeftovers(nestedUsr)) {
+                Logger.logWarn(LOG_TAG, "Leaving " + nestedUsr.getAbsolutePath() + " alone, it holds more than stale motd data");
+                return;
+            }
+            if (purgeTree(nestedUsr) && nestedUsr.delete()) {
+                Logger.logInfo(LOG_TAG, "Removed stale nested prefix directory " + nestedUsr.getAbsolutePath());
+            }
+        } catch (Exception e) {
+            Logger.logWarn(LOG_TAG, "Could not clean stale nested prefix: " + e.getMessage());
+        }
+    }
+
+    private static boolean onlyMotdLeftovers(File dir) {
+        File[] kids = dir.listFiles();
+        if (kids == null) return false;
+        for (File f : kids) {
+            if (f.isDirectory()) {
+                if (!onlyMotdLeftovers(f)) return false;
+            } else if (!"motd".equals(f.getName())) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private static boolean purgeTree(File dir) {
+        File[] kids = dir.listFiles();
+        if (kids != null) {
+            for (File f : kids) {
+                if (f.isDirectory() && !purgeTree(f)) return false;
+                if (!f.delete()) return false;
+            }
+        }
+        return true;
     }
     // @}
 
